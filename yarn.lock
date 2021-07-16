@@ -2642,9 +2642,9 @@ configstore@^5.0.1:
     write-file-atomic "^3.0.0"
     xdg-basedir "^4.0.0"
 
-confusing-browser-globals@^1.0.9:
+confusing-browser-globals@^1.0.10:
   version "1.0.10"
-  resolved "https://registry.npm.taobao.org/confusing-browser-globals/download/confusing-browser-globals-1.0.10.tgz#30d1e7f3d1b882b25ec4933d1d1adac353d20a59"
+  resolved "https://registry.npm.taobao.org/confusing-browser-globals/download/confusing-browser-globals-1.0.10.tgz?cache=0&sync_timestamp=1603464100912&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fconfusing-browser-globals%2Fdownload%2Fconfusing-browser-globals-1.0.10.tgz#30d1e7f3d1b882b25ec4933d1d1adac353d20a59"
   integrity sha1-MNHn89G4grJexJM9HRraw1PSClk=
 
 convert-source-map@^1.4.0, convert-source-map@^1.6.0, convert-source-map@^1.7.0:
@@ -3286,19 +3286,17 @@ escodegen@^2.0.0:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-prettier@^6.0.0:
-  version "6.15.0"
-  resolved "https://registry.nlark.com/eslint-config-prettier/download/eslint-config-prettier-6.15.0.tgz?cache=0&sync_timestamp=1619270502916&other_urls=https%3A%2F%2Fregistry.nlark.com%2Feslint-config-prettier%2Fdownload%2Feslint-config-prettier-6.15.0.tgz#7f93f6cb7d45a92f1537a70ecc06366e1ac6fed9"
-  integrity sha1-f5P2y31FqS8VN6cOzAY2bhrG/tk=
-  dependencies:
-    get-stdin "^6.0.0"
+eslint-config-prettier@^8.3.0:
+  version "8.3.0"
+  resolved "https://registry.nlark.com/eslint-config-prettier/download/eslint-config-prettier-8.3.0.tgz#f7471b20b6fe8a9a9254cc684454202886a2dd7a"
+  integrity sha1-90cbILb+ipqSVMxoRFQgKIai3Xo=
 
-eslint-config-react-app@^5.2.1:
-  version "5.2.1"
-  resolved "https://registry.npm.taobao.org/eslint-config-react-app/download/eslint-config-react-app-5.2.1.tgz#698bf7aeee27f0cea0139eaef261c7bf7dd623df"
-  integrity sha1-aYv3ru4n8M6gE56u8mHHv33WI98=
+eslint-config-react-app@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.npm.taobao.org/eslint-config-react-app/download/eslint-config-react-app-6.0.0.tgz#ccff9fc8e36b322902844cbd79197982be355a0e"
+  integrity sha1-zP+fyONrMikChEy9eRl5gr41Wg4=
   dependencies:
-    confusing-browser-globals "^1.0.9"
+    confusing-browser-globals "^1.0.10"
 
 eslint-import-resolver-node@^0.3.4:
   version "0.3.4"
@@ -3316,14 +3314,15 @@ eslint-module-utils@^2.6.1:
     debug "^3.2.7"
     pkg-dir "^2.0.0"
 
-eslint-plugin-flowtype@^3.13.0:
-  version "3.13.0"
-  resolved "https://registry.nlark.com/eslint-plugin-flowtype/download/eslint-plugin-flowtype-3.13.0.tgz#e241ebd39c0ce519345a3f074ec1ebde4cf80f2c"
-  integrity sha1-4kHr05wM5Rk0Wj8HTsHr3kz4Dyw=
+eslint-plugin-flowtype@^5.8.0:
+  version "5.8.0"
+  resolved "https://registry.nlark.com/eslint-plugin-flowtype/download/eslint-plugin-flowtype-5.8.0.tgz#35b55e4ce559b90efbe913ed33630e391e301481"
+  integrity sha1-NbVeTOVZuQ776RPtM2MOOR4wFIE=
   dependencies:
     lodash "^4.17.15"
+    string-natural-compare "^3.0.1"
 
-eslint-plugin-import@^2.18.2:
+eslint-plugin-import@^2.23.4:
   version "2.23.4"
   resolved "https://registry.nlark.com/eslint-plugin-import/download/eslint-plugin-import-2.23.4.tgz#8dceb1ed6b73e46e50ec9a5bb2411b645e7d3d97"
   integrity sha1-jc6x7Wtz5G5Q7JpbskEbZF59PZc=
@@ -3344,9 +3343,9 @@ eslint-plugin-import@^2.18.2:
     resolve "^1.20.0"
     tsconfig-paths "^3.9.0"
 
-eslint-plugin-jsx-a11y@^6.2.3:
+eslint-plugin-jsx-a11y@^6.4.1:
   version "6.4.1"
-  resolved "https://registry.nlark.com/eslint-plugin-jsx-a11y/download/eslint-plugin-jsx-a11y-6.4.1.tgz#a2d84caa49756942f42f1ffab9002436391718fd"
+  resolved "https://registry.npm.taobao.org/eslint-plugin-jsx-a11y/download/eslint-plugin-jsx-a11y-6.4.1.tgz?cache=0&sync_timestamp=1603729170947&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Feslint-plugin-jsx-a11y%2Fdownload%2Feslint-plugin-jsx-a11y-6.4.1.tgz#a2d84caa49756942f42f1ffab9002436391718fd"
   integrity sha1-othMqkl1aUL0Lx/6uQAkNjkXGP0=
   dependencies:
     "@babel/runtime" "^7.11.2"
@@ -3361,19 +3360,19 @@ eslint-plugin-jsx-a11y@^6.2.3:
     jsx-ast-utils "^3.1.0"
     language-tags "^1.0.5"
 
-eslint-plugin-prettier@^3.1.0:
+eslint-plugin-prettier@^3.4.0:
   version "3.4.0"
   resolved "https://registry.npm.taobao.org/eslint-plugin-prettier/download/eslint-plugin-prettier-3.4.0.tgz#cdbad3bf1dbd2b177e9825737fe63b476a08f0c7"
   integrity sha1-zbrTvx29Kxd+mCVzf+Y7R2oI8Mc=
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
-eslint-plugin-react-hooks@^2.2.0:
-  version "2.5.1"
-  resolved "https://registry.nlark.com/eslint-plugin-react-hooks/download/eslint-plugin-react-hooks-2.5.1.tgz#4ef5930592588ce171abeb26f400c7fbcbc23cd0"
-  integrity sha1-TvWTBZJYjOFxq+sm9ADH+8vCPNA=
+eslint-plugin-react-hooks@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.nlark.com/eslint-plugin-react-hooks/download/eslint-plugin-react-hooks-4.2.0.tgz#8c229c268d468956334c943bb45fc860280f5556"
+  integrity sha1-jCKcJo1GiVYzTJQ7tF/IYCgPVVY=
 
-eslint-plugin-react@^7.14.3:
+eslint-plugin-react@^7.24.0:
   version "7.24.0"
   resolved "https://registry.nlark.com/eslint-plugin-react/download/eslint-plugin-react-7.24.0.tgz#eadedfa351a6f36b490aa17f4fa9b14e842b9eb4"
   integrity sha1-6t7fo1Gm82tJCqF/T6mxToQrnrQ=
@@ -3831,11 +3830,6 @@ get-package-type@^0.1.0:
   version "0.1.0"
   resolved "https://registry.npm.taobao.org/get-package-type/download/get-package-type-0.1.0.tgz#8de2d803cff44df3bc6c456e6668b36c3926e11a"
   integrity sha1-jeLYA8/0TfO8bEVuZmizbDkm4Ro=
-
-get-stdin@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.nlark.com/get-stdin/download/get-stdin-6.0.0.tgz#9e09bf712b360ab9225e812048f71fde9c89657b"
-  integrity sha1-ngm/cSs2CrkiXoEgSPcf3pyJZXs=
 
 get-stream@^4.1.0:
   version "4.1.0"
@@ -7591,6 +7585,11 @@ string-length@^4.0.1:
   dependencies:
     char-regex "^1.0.2"
     strip-ansi "^6.0.0"
+
+string-natural-compare@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.npm.taobao.org/string-natural-compare/download/string-natural-compare-3.0.1.tgz#7a42d58474454963759e8e8b7ae63d71c1e7fdf4"
+  integrity sha1-ekLVhHRFSWN1no6LeuY9ccHn/fQ=
 
 string-width@^1.0.1:
   version "1.0.2"
