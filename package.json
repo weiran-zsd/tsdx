@@ -1,5 +1,5 @@
 {
-  "name": "tsdx",
+  "name": "@weiran.zsd/tsdx",
   "version": "0.14.1",
   "author": "Jared Palmer <jared@palmer.net>",
   "description": "Zero-config TypeScript package development",
