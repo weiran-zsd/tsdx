@@ -10,7 +10,7 @@ import resolve, {
   DEFAULTS as RESOLVE_DEFAULTS,
 } from '@rollup/plugin-node-resolve';
 import sourceMaps from 'rollup-plugin-sourcemaps';
-import typescript from 'rollup-plugin-typescript2';
+import typescript from '@rollup/plugin-typescript';
 import ts from 'typescript';
 
 import { extractErrors } from './errors/extractErrors';
@@ -149,6 +149,8 @@ export async function createRollupConfig(
           };
         },
       },
+      // TODO: move to @rollup/typescript options
+      // it does not support tsconfigDefaults/tsconfigOverride
       typescript({
         typescript: ts,
         tsconfig: opts.tsconfig,
