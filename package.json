@@ -27,7 +27,7 @@
     "test": "yarn build && yarn test:post-build",
     "test:post-build": "node dist/index.js test",
     "start": "tsc -p tsconfig.json --watch",
-    "release": "np",
+    "release": "release-it",
     "deduplicate": "yarn dedupe",
     "deduplicate:check": "yarn dedupe -c"
   },
@@ -120,6 +120,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.13.0",
     "react-is": "^16.13.0",
+    "release-it": "^14.11.5",
     "rollup-plugin-postcss": "^4.0.1",
     "styled-components": "^5.3.1",
     "tiny-invariant": "^1.1.0",
