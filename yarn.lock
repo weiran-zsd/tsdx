@@ -2370,7 +2370,7 @@ __metadata:
     react-dom: ^16.13.0
     react-is: ^16.13.0
     regenerator-runtime: ^0.13.7
-    rollup: ^1.32.1
+    rollup: 2
     rollup-plugin-postcss: ^2.5.0
     rollup-plugin-sourcemaps: ^0.6.2
     rollup-plugin-terser: ^5.1.2
@@ -2430,7 +2430,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"acorn@npm:^7.1.0, acorn@npm:^7.1.1, acorn@npm:^7.4.0":
+"acorn@npm:^7.1.1, acorn@npm:^7.4.0":
   version: 7.4.1
   resolution: "acorn@npm:7.4.1"
   bin:
@@ -5291,7 +5291,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-fsevents@^2.3.2:
+"fsevents@^2.3.2, fsevents@~2.3.2":
   version: 2.3.2
   resolution: "fsevents@npm:2.3.2"
   dependencies:
@@ -5300,7 +5300,7 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"fsevents@patch:fsevents@^2.3.2#~builtin<compat/fsevents>":
+"fsevents@patch:fsevents@^2.3.2#~builtin<compat/fsevents>, fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>":
   version: 2.3.2
   resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=1cc4b2"
   dependencies:
@@ -10121,6 +10121,20 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
+"rollup@npm:2":
+  version: 2.56.3
+  resolution: "rollup@npm:2.56.3"
+  dependencies:
+    fsevents: ~2.3.2
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  bin:
+    rollup: dist/bin/rollup
+  checksum: e4c5a6e871f0340f18fc795cbb6b76bfbc5827580c443a7c4f5d9f9b1fec8c3d1553dae5e45bd7fc9dea4de56e01c244b1583f8f08f401d2ba81f5eb3ff83101
+  languageName: node
+  linkType: hard
+
 "rollup@npm:^0.63.4":
   version: 0.63.5
   resolution: "rollup@npm:0.63.5"
@@ -10130,19 +10144,6 @@ resolve@^2.0.0-next.3:
   bin:
     rollup: ./bin/rollup
   checksum: a8af189d03e402b1ea70788c4c8bffc3af7db612e8c1effbea63f411b1d683378b9e8d10c9b2fae81aaf6f12c8a0aad6802ab7e1a7dee006229398b03e92e5e5
-  languageName: node
-  linkType: hard
-
-"rollup@npm:^1.32.1":
-  version: 1.32.1
-  resolution: "rollup@npm:1.32.1"
-  dependencies:
-    "@types/estree": "*"
-    "@types/node": "*"
-    acorn: ^7.1.0
-  bin:
-    rollup: dist/bin/rollup
-  checksum: 3a02731c20c71321fae647c9c9cab0febee0580c6af029fdcd5dd6f424b8c85119d92c8554c6837327fd323c2458e92d955bbebc90ca6bed87cc626695e7c31f
   languageName: node
   linkType: hard
 
