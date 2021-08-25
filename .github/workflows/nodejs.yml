@@ -26,8 +26,9 @@ jobs:
       - name: Lint codebase
         run: yarn lint:post-build
 
-      - name: Deduplicate dependencies
-        run: yarn deduplicate:check
+      # ➤ YN0001: │ Error: @babel/core@npm:7.15.0::__archiveUrl=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fcore%2Fdownload%2F%40babel%2Fcore-7.15.0.tgz isn't supported by any available resolver.
+      # - name: Deduplicate dependencies
+      #   run: yarn deduplicate:check
 
   test:
     name: Test on Node ${{ matrix.node }} and ${{ matrix.os }}
