@@ -27,7 +27,7 @@
     "test": "yarn build && yarn test:post-build",
     "test:post-build": "node dist/index.js test",
     "start": "tsc -p tsconfig.json --watch",
-    "release": "release-it",
+    "release": "yarn test && release-it",
     "deduplicate": "yarn dedupe",
     "deduplicate:check": "yarn dedupe -c"
   },
