@@ -2,8 +2,7 @@ import * as shell from 'shelljs';
 
 import * as util from '../utils/fixture';
 
-// for debugging
-shell.config.silent = false;
+shell.config.silent = true;
 
 const testDir = 'e2e';
 const stageName = 'stage-lint';
