@@ -21,6 +21,9 @@ const reactTemplate: Template = {
       ...basicTemplate.packageJson.scripts,
       test: 'tsdx test --passWithNoTests',
     } as PackageJson['scripts'],
+    jest: {
+      testEnvironment: 'jsdom',
+    },
   },
 };
 

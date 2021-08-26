@@ -87,6 +87,7 @@
     "progress-estimator": "^0.3.0",
     "regenerator-runtime": "^0.13.9",
     "rollup": "2.56.3",
+    "rollup-plugin-node-polyfills": "^0.2.1",
     "rollup-plugin-sourcemaps": "^0.6.3",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",

@@ -2533,6 +2533,7 @@ __metadata:
     regenerator-runtime: ^0.13.9
     release-it: ^14.11.5
     rollup: 2.56.3
+    rollup-plugin-node-polyfills: ^0.2.1
     rollup-plugin-postcss: ^4.0.1
     rollup-plugin-sourcemaps: ^0.6.3
     rollup-plugin-terser: ^7.0.2
@@ -7940,6 +7941,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"magic-string@npm:^0.25.3":
+  version: 0.25.7
+  resolution: "magic-string@npm:0.25.7::__archiveUrl=https%3A%2F%2Fregistry.nlark.com%2Fmagic-string%2Fdownload%2Fmagic-string-0.25.7.tgz"
+  dependencies:
+    sourcemap-codec: ^1.4.4
+  checksum: 727a1fb70f9610304fe384f1df0251eb7d1d9dd779c07ef1225690361b71b216f26f5d934bfb11c919b5b0e7ba50f6240c823a6f2e44cfd33d4a07d7747ca829
+  languageName: node
+  linkType: hard
+
 "magic-string@npm:^0.25.7":
   version: 0.25.7
   resolution: "magic-string@npm:0.25.7"
@@ -10366,6 +10376,26 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
+"rollup-plugin-inject@npm:^3.0.0":
+  version: 3.0.2
+  resolution: "rollup-plugin-inject@npm:3.0.2::__archiveUrl=https%3A%2F%2Fregistry.nlark.com%2Frollup-plugin-inject%2Fdownload%2Frollup-plugin-inject-3.0.2.tgz"
+  dependencies:
+    estree-walker: ^0.6.1
+    magic-string: ^0.25.3
+    rollup-pluginutils: ^2.8.1
+  checksum: a014972c80fe34b8c8154056fa2533a8440066a31de831e3793fc21b15d108d92c22d8f7f472397bd5783d7c5e04d8cbf112fb72c5a26e997726e4eb090edad1
+  languageName: node
+  linkType: hard
+
+"rollup-plugin-node-polyfills@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "rollup-plugin-node-polyfills@npm:0.2.1::__archiveUrl=https%3A%2F%2Fregistry.nlark.com%2Frollup-plugin-node-polyfills%2Fdownload%2Frollup-plugin-node-polyfills-0.2.1.tgz"
+  dependencies:
+    rollup-plugin-inject: ^3.0.0
+  checksum: e84645212c443aca3cfae2ba69f01c6d8c5c250f0bf651416b69a4572b60aae9da7cdd687de3ab9b903f7a1ab96b06b71f0c4927d1b02a37485360d2b563937b
+  languageName: node
+  linkType: hard
+
 "rollup-plugin-postcss@npm:^4.0.1":
   version: 4.0.1
   resolution: "rollup-plugin-postcss@npm:4.0.1::__archiveUrl=https%3A%2F%2Fregistry.nlark.com%2Frollup-plugin-postcss%2Fdownload%2Frollup-plugin-postcss-4.0.1.tgz"
@@ -10432,6 +10462,15 @@ resolve@^2.0.0-next.3:
     rollup: ">=1.26.3"
     typescript: ">=2.4.0"
   checksum: e3097bb25c00e78cca556ed6a77b3bdf2330e5e5647847d1f967ade67dc6b66009b52bb8810de2b2c40857310693e4e663900a13da4f711f082fabac5165091a
+  languageName: node
+  linkType: hard
+
+"rollup-pluginutils@npm:^2.8.1":
+  version: 2.8.2
+  resolution: "rollup-pluginutils@npm:2.8.2::__archiveUrl=https%3A%2F%2Fregistry.nlark.com%2Frollup-pluginutils%2Fdownload%2Frollup-pluginutils-2.8.2.tgz"
+  dependencies:
+    estree-walker: ^0.6.1
+  checksum: 339fdf866d8f4ff6e408fa274c0525412f7edb01dc46b5ccda51f575b7e0d20ad72965773376fb5db95a77a7fcfcab97bf841ec08dbadf5d6b08af02b7a2cf5e
   languageName: node
   linkType: hard
 
