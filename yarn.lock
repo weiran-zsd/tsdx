@@ -4397,9 +4397,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dts-build@workspace:.":
+"dts-cli@workspace:.":
   version: 0.0.0-use.local
-  resolution: "dts-build@workspace:."
+  resolution: "dts-cli@workspace:."
   dependencies:
     "@babel/core": ^7.4.4
     "@babel/helper-module-imports": ^7.0.0

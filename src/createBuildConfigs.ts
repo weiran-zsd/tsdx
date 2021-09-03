@@ -15,7 +15,7 @@ let dtsBuildConfig = {
 };
 
 if (fs.existsSync(paths.appConfig)) {
-  dtsConfig = require(paths.appConfig);
+  dtsBuildConfig = require(paths.appConfig);
 }
 
 export async function createBuildConfigs(

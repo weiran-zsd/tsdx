@@ -37,9 +37,7 @@ export async function extractErrors(opts: any) {
   }
 
   if (!opts.name || !('name' in opts)) {
-    throw new Error(
-      'Missing options. Ensure you pass --name flag to dts-cli'
-    );
+    throw new Error('Missing options. Ensure you pass --name flag to dts-cli');
   }
 
   const errorMapFilePath = opts.errorMapFilePath;
