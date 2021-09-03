@@ -32,6 +32,6 @@ export function grep(pattern: RegExp, fileName: string[]): boolean {
   const output = shell.grep(pattern, fileName);
   // output.code is always 0 regardless of matched/unmatched patterns
   // so need to test output.stdout
-  // https://github.com/jaredpalmer/dts-cli/pull/525#discussion_r395571779
+  // https://github.com/jaredpalmer/tsdx/pull/525#discussion_r395571779
   return Boolean(output.stdout.match(pattern));
 }
