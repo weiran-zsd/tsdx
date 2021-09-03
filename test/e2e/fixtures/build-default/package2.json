@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "dts-cli build"
+    "build": "dts build"
   },
   "name": "build-default-2",
   "license": "MIT"
