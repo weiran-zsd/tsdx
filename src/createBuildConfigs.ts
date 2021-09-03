@@ -7,7 +7,7 @@ import { DtsOptions, NormalizedOpts } from './types';
 
 import { createRollupConfig } from './createRollupConfig';
 
-// check for custom dts-cli.config.js
+// check for custom dts.config.js
 let dtsBuildConfig = {
   rollup(config: RollupOptions, _options: DtsOptions): RollupOptions {
     return config;
