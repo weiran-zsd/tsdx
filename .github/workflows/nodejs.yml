@@ -49,6 +49,5 @@ jobs:
       - name: Install deps and build (with cache)
         run: yarn install && yarn build
 
-
       - name: Test package
         run: yarn test:post-build

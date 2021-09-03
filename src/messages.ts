@@ -4,14 +4,14 @@ import * as Output from './output';
 
 // This was copied from Razzle. Lots of unused stuff.
 const program = {
-  name: 'tsdx',
+  name: 'dts-cli',
 };
 
 export const help = function () {
   return `
     Only ${chalk.green('<project-directory>')} is required.
     If you have any problems, do not hesitate to file an issue:
-    ${chalk.cyan('https://github.com/formium/tsdx/issues/new')}
+    ${chalk.cyan('https://github.com/formium/dts-cli/issues/new')}
   `;
 };
 
@@ -20,7 +20,7 @@ export const missingProjectName = function () {
 Please specify the project directory:
   ${chalk.cyan(program.name)} ${chalk.green('<project-directory>')}
 For example:
-  ${chalk.cyan(program.name)} ${chalk.green('my-tsdx-lib')}
+  ${chalk.cyan(program.name)} ${chalk.green('my-dts-cli-lib')}
 Run ${chalk.cyan(`${program.name} --help`)} to see all options.
 `;
 };
@@ -86,7 +86,7 @@ export const start = async function (projectName: string) {
     ${Output.cmd(commands.test)}
     
   Questions? Feedback? Please let me know!
-  ${chalk.green('https://github.com/formium/tsdx/issues')}
+  ${chalk.green('https://github.com/formium/dts-cli/issues')}
 `;
 };
 

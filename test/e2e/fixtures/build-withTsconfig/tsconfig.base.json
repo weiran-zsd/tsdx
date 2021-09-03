@@ -19,5 +19,5 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true
   },
-  "include": ["src", "types"], // test parsing of trailing comma & comment
+  "include": ["src", "types"] // test parsing of trailing comma & comment
 }
