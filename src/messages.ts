@@ -4,7 +4,7 @@ import * as Output from './output';
 
 // This was copied from Razzle. Lots of unused stuff.
 const program = {
-  name: 'dts-cli',
+  name: 'dts',
 };
 
 export const help = function () {
