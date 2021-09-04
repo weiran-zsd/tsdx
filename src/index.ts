@@ -50,7 +50,7 @@ import { composePackageJson } from './templates/utils';
 import * as deprecated from './deprecated';
 const pkg = require('../package.json');
 
-const prog = sade('dts-cli');
+const prog = sade('dts');
 
 let appPackageJson: PackageJson;
 
