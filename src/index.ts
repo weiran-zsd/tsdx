@@ -563,7 +563,7 @@ prog
         console.log(
           chalk.yellow(
             `Defaulting to "dts lint ${defaultInputs.join(' ')}"`,
-            '\nYou can override this in the package.json scripts, like "lint": "dts-cli lint src otherDir"'
+            '\nYou can override this in the package.json scripts, like "lint": "dts lint src otherDir"'
           )
         );
       }
