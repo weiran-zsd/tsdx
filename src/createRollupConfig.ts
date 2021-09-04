@@ -61,7 +61,7 @@ export async function createRollupConfig(
     input: opts.input,
     // Tell Rollup which packages to ignore
     external: (id: string) => {
-      // bundle in polyfills as DTS-CLI can't (yet) ensure they're installed as deps
+      // bundle in polyfills as DTS can't (yet) ensure they're installed as deps
       if (id.startsWith('regenerator-runtime')) {
         return false;
       }
@@ -71,7 +71,7 @@ export async function createRollupConfig(
     // Rollup has treeshaking by default, but we can optimize it further...
     treeshake: {
       // We assume reading a property of an object never has side-effects.
-      // This means dts-cli WILL remove getters and setters defined directly on objects.
+      // This means dts WILL remove getters and setters defined directly on objects.
       // Any getters or setters defined on classes will not be effected.
       //
       // @example
