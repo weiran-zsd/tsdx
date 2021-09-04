@@ -101,7 +101,7 @@ async function getInputs(
 prog
   .version(pkg.version)
   .command('create <pkg>')
-  .describe('Create a new package with DTS-CLI')
+  .describe('Create a new package with DTS')
   .example('create mypackage')
   .option(
     '--template',
