@@ -20,7 +20,7 @@ export async function createEslintConfig({
     extends: ['react-app', 'prettier', 'plugin:prettier/recommended'],
     settings: {
       react: {
-        // Fix for https://github.com/jaredpalmer/dts-cli/issues/279
+        // Fix for https://github.com/jaredpalmer/tsdx/issues/279
         version: isReactLibrary ? 'detect' : '999.999.999',
       },
     },
