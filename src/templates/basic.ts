@@ -1,6 +1,6 @@
 import { Template } from './template';
 
-//TODO: REPLACE  `@weiran.zsd/tsdx` WITH `@dts-build/dts-build`
+//TODO: REPLACE  `@weiran.zsd/tsdx` WITH `dts-cli`
 
 const basicTemplate: Template = {
   name: 'basic',
