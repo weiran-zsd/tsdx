@@ -9,7 +9,7 @@ const stageName = 'stage-lint';
 
 const lintDir = `test/${testDir}/fixtures/lint`;
 
-describe('dts-cli lint', () => {
+describe('dts lint', () => {
   it('should fail to lint a ts file with errors', () => {
     const testFile = `${lintDir}/file-with-lint-errors.ts`;
     const output = shell.exec(`node dist/index.js lint ${testFile}`);
