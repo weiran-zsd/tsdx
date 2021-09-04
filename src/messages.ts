@@ -20,7 +20,7 @@ export const missingProjectName = function () {
 Please specify the project directory:
   ${chalk.cyan(program.name)} ${chalk.green('<project-directory>')}
 For example:
-  ${chalk.cyan(program.name)} ${chalk.green('my-dts-cli-lib')}
+  ${chalk.cyan(program.name)} ${chalk.green('my-dts-lib')}
 Run ${chalk.cyan(`${program.name} --help`)} to see all options.
 `;
 };
