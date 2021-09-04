@@ -18,7 +18,7 @@ export async function moveTypes() {
 
   // see note above about deprecation window
   console.warn(
-    '[dts-cli]: Your rootDir is currently set to "./". Please change your ' +
+    '[dts]: Your rootDir is currently set to "./". Please change your ' +
       'rootDir to "./src".\n' +
       'DTS-CLI has deprecated setting tsconfig.compilerOptions.rootDir to ' +
       '"./" as it caused buggy output for declarationMaps and more.\n' +
