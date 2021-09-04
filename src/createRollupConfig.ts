@@ -61,7 +61,7 @@ export async function createRollupConfig(
     input: opts.input,
     // Tell Rollup which packages to ignore
     external: (id: string) => {
-      // bundle in polyfills as DTS-CLI can't (yet) ensure they're installed as deps
+      // bundle in polyfills as DTS can't (yet) ensure they're installed as deps
       if (id.startsWith('regenerator-runtime')) {
         return false;
       }
