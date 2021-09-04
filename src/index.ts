@@ -112,7 +112,7 @@ prog
   .example('create --template react mypackage')
   .action(async (pkg: string, opts: any) => {
     console.log(
-      chalk.cyan(figlet.textSync('DTS-CLI', { horizontalLayout: 'full' }))
+      chalk.cyan(figlet.textSync('DTS', { horizontalLayout: 'full' }))
     );
     const bootSpinner = ora(`Creating ${chalk.bold.green(pkg)}...`);
     let template;
