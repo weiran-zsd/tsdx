@@ -92,7 +92,7 @@ describe('dts-cli lint', () => {
       'Defaulting to "dts-cli lint src test"'
     );
     expect(output.toString()).toContain(
-      'You can override this in the package.json scripts, like "lint": "dts-cli lint src otherDir"'
+      'You can override this in the package.json scripts, like "lint": "dts lint src otherDir"'
     );
   });
 
