@@ -1,12 +1,10 @@
 import { Template } from './template';
 
-//TODO: REPLACE  `@weiran.zsd/tsdx` WITH `dts-cli`
-
 const basicTemplate: Template = {
   name: 'basic',
   dependencies: [
     'husky',
-    '@weiran.zsd/tsdx',
+    'dts-cli',
     'tslib',
     'typescript',
     'size-limit',
