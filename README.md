@@ -1,14 +1,12 @@
-![tsdx](https://user-images.githubusercontent.com/4060187/56918426-fc747600-6a8b-11e9-806d-2da0b49e89e4.png)
-
-[![NPM version](https://img.shields.io/npm/v/@weiran.zsd/tsdx.svg?style=flat)](https://npmjs.org/package/@weiran.zsd/tsdx)
-[![Blazing Fast](https://badgen.now.sh/badge/speed/blazing%20%F0%9F%94%A5/green)](https://npm.im/tsdx) [![Blazing Fast](https://badgen.now.sh/badge/speed/blazing%20%F0%9F%94%A5/green)](https://npm.im/tsdx) [![Blazing Fast](https://badgen.now.sh/badge/speed/blazing%20%F0%9F%94%A5/green)](https://npm.im/tsdx) [![Discord](https://img.shields.io/discord/769256827007139912.svg?style=flat-square)](https://discord.gg/pJSg287)
+[![NPM version](https://img.shields.io/npm/v/dts-cli.svg?style=flat)](https://npmjs.org/package/dts-cli)
+[![Blazing Fast](https://badgen.now.sh/badge/speed/blazing%20%F0%9F%94%A5/green)](https://npm.im/dts-cli) [![Blazing Fast](https://badgen.now.sh/badge/speed/blazing%20%F0%9F%94%A5/green)](https://npm.im/dts-cli) [![Blazing Fast](https://badgen.now.sh/badge/speed/blazing%20%F0%9F%94%A5/green)](https://npm.im/dts-cli)
 
 > a fork of the official tsdx.
 
 ```bash
-$ npm install @weiran.zsd/tsdx -D   # for npm users
-$ yarn add @weiran.zsd/tsdx -D      # for yarn users
-$ pnpm install @weiran.zsd/tsdx -D  # for pnpm users
+$ npm install dts-cli -D   # for npm users
+$ yarn add dts-cli -D      # for yarn users
+$ pnpm install dts-cli -D  # for pnpm users
 ```
 
 The main changes are:
@@ -19,6 +17,8 @@ The main changes are:
 * upgrade jest v27
 * upgrade rollup v2
 * upgrade prettier v2
+
+<!--TOOD: repalce tsdx => dts-->
 
 Despite all the recent hype, setting up a new TypeScript (x React) library can be tough. Between [Rollup](https://github.com/rollup/rollup), [Jest](https://github.com/facebook/jest), `tsconfig`, [Yarn resolutions](https://yarnpkg.com/en/docs/selective-version-resolutions), ESLint, and getting VSCode to play nicely....there is just a whole lot of stuff to do (and things to screw up). TSDX is a zero-config CLI that helps you develop, test, and publish modern TypeScript packages with ease--so you can focus on your awesome new library and not waste another afternoon on the configuration.
 
