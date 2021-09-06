@@ -1,5 +1,7 @@
 import { Template } from './template';
 
+//TODO: REPLACE  `@weiran.zsd/tsdx` WITH `dts-cli`
+
 const basicTemplate: Template = {
   name: 'basic',
   dependencies: [
@@ -23,11 +25,11 @@ const basicTemplate: Template = {
       node: '>=10',
     },
     scripts: {
-      start: 'tsdx watch',
-      build: 'tsdx build',
-      test: 'tsdx test',
-      lint: 'tsdx lint',
-      prepare: 'tsdx build',
+      start: 'dts watch',
+      build: 'dts build',
+      test: 'dts test',
+      lint: 'dts lint',
+      prepare: 'dts build',
       size: 'size-limit',
       analyze: 'size-limit --why',
     },
@@ -46,7 +48,7 @@ const basicTemplate: Template = {
     */
     husky: {
       hooks: {
-        'pre-commit': 'tsdx lint',
+        'pre-commit': 'dts lint',
       },
     },
     prettier: {
