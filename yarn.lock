@@ -83,7 +83,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/helper-compilation-targets@npm:^7.10.4, @babel/helper-compilation-targets@npm:^7.13.0, @babel/helper-compilation-targets@npm:^7.14.5, @babel/helper-compilation-targets@npm:^7.15.4":
+"@babel/helper-compilation-targets@npm:^7.13.0, @babel/helper-compilation-targets@npm:^7.14.5, @babel/helper-compilation-targets@npm:^7.15.4":
   version: 7.15.4
   resolution: "@babel/helper-compilation-targets@npm:7.15.4"
   dependencies:
@@ -122,24 +122,6 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0
   checksum: c2636d0a6ea6d57eb3603ba9b223fd6ec273a3d8171eb8d84a357ff028cd747ab383b1d7cef84a4df5f9aebb321d43599895f562f3c8aa96314d4847aa59710e
-  languageName: node
-  linkType: hard
-
-"@babel/helper-define-polyfill-provider@npm:^0.0.3":
-  version: 0.0.3
-  resolution: "@babel/helper-define-polyfill-provider@npm:0.0.3"
-  dependencies:
-    "@babel/helper-compilation-targets": ^7.10.4
-    "@babel/helper-module-imports": ^7.10.4
-    "@babel/helper-plugin-utils": ^7.10.4
-    "@babel/traverse": ^7.11.5
-    debug: ^4.1.1
-    lodash.debounce: ^4.0.8
-    resolve: ^1.14.2
-    semver: ^6.1.2
-  peerDependencies:
-    "@babel/core": ^7.4.0-0
-  checksum: f2daf1719cc4b336dc1abc547a7dc42ad5e0e234b06036990a5b4eec9d7949badc8ff87e8dbfb21bb0756892cc6071eb8b3376f2bdb09123cf61022be720eb89
   languageName: node
   linkType: hard
 
@@ -3005,18 +2987,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-plugin-polyfill-regenerator@npm:^0.0.4":
-  version: 0.0.4
-  resolution: "babel-plugin-polyfill-regenerator@npm:0.0.4"
-  dependencies:
-    "@babel/helper-define-polyfill-provider": ^0.0.3
-  peerDependencies:
-    "@babel/core": ^7.0.0-0
-  checksum: 2dc23d73b1161ecbe2c58c81a03500ae964c6155c88a3bcd6018a0adcd4740ca10baedeb92e04a824c50a098a28d8944510ffb547197c9c055492760e0f0b72d
-  languageName: node
-  linkType: hard
-
-"babel-plugin-polyfill-regenerator@npm:^0.2.2":
+"babel-plugin-polyfill-regenerator@npm:^0.2.0, babel-plugin-polyfill-regenerator@npm:^0.2.2":
   version: 0.2.2
   resolution: "babel-plugin-polyfill-regenerator@npm:0.2.2"
   dependencies:
@@ -4434,7 +4405,7 @@ __metadata:
     babel-plugin-annotate-pure-calls: ^0.4.0
     babel-plugin-dev-expression: ^0.2.1
     babel-plugin-macros: ^2.6.1
-    babel-plugin-polyfill-regenerator: ^0.0.4
+    babel-plugin-polyfill-regenerator: ^0.2.0
     babel-plugin-replace-identifiers: ^0.1.1
     babel-plugin-transform-rename-import: ^2.3.0
     camelcase: ^6.0.0
