@@ -31,7 +31,7 @@
     "babel-plugin-macros": "^2.8.0",
     "postcss-preset-env": "^6.7.0",
     "preval.macro": "^5.0.0",
-    "tailwindcss": "^1.4.6",
+    "tailwindcss": "^2.0.0",
     "title": "^3.4.2"
   }
 }
