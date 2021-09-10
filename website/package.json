@@ -11,7 +11,7 @@
   "author": "Jared Palmer",
   "license": "MIT",
   "dependencies": {
-    "@reach/skip-nav": "^0.10.5",
+    "@reach/skip-nav": "^0.16.0",
     "@sindresorhus/slugify": "^1.0.0",
     "classnames": "^2.2.6",
     "focus-visible": "^5.1.0",
