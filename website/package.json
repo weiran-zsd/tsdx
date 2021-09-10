@@ -24,7 +24,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-intersection-observer": "^8.26.2",
-    "string-strip-html": "^4.5.0"
+    "string-strip-html": "^9.0.0"
   },
   "devDependencies": {
     "@mdx-js/loader": "^1.6.5",
