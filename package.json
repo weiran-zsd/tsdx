@@ -105,7 +105,7 @@
     "@types/figlet": "^1.5.4",
     "@types/fs-extra": "^9.0.12",
     "@types/lodash": "^4.14.172",
-    "@types/node": "^14.17.15",
+    "@types/node": "^16.0.0",
     "@types/react": "^16.14.15",
     "@types/rollup-plugin-json": "^3.0.3",
     "@types/sade": "^1.7.3",
