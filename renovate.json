@@ -1,4 +1,4 @@
 {
-  "dependencyDashboard": true,
+  "extends": ["config:base", ":dependencyDashboard", "group:allNonMajor"],
   "ignorePaths": ["website/*", "./stage-*", "./test/*", "example/*" ]
 }
