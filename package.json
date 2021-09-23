@@ -82,7 +82,7 @@
     "jest-watch-typeahead": "^0.5.0",
     "jpjs": "^1.2.1",
     "lodash.merge": "^4.6.2",
-    "ora": "^5.4.1",
+    "ora": "^6.0.1",
     "pascal-case": "^3.1.2",
     "prettier": "2.4.0",
     "progress-estimator": "^0.3.0",
