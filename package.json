@@ -55,7 +55,7 @@
     "@types/jest": "^27.0.1",
     "@typescript-eslint/eslint-plugin": "^4.31.0",
     "@typescript-eslint/parser": "^4.31.0",
-    "ansi-escapes": "^4.3.2",
+    "ansi-escapes": "^5.0.0",
     "asyncro": "^3.0.0",
     "babel-eslint": "^10.1.0",
     "babel-plugin-annotate-pure-calls": "^0.4.0",
