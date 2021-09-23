@@ -1,4 +1,21 @@
 {
-  "dependencyDashboard": true,
-  "ignorePaths": ["website/*", "./stage-*", "./test/*", "example/*" ]
+  "extends": ["config:base", ":dependencyDashboard", "group:allNonMajor"],
+  "ignorePaths": ["website/*", "./stage-*", "./test/*", "example/*" ],
+  "pin": false,
+  "node": false,
+  "rangeStrategy": "bump",
+  "ignoreDeps": [
+    "node",
+    "typescript",
+    "prettier",
+    "jest",
+    "eslint",
+    "rollup",
+
+    "react",
+    "react-dom",
+    "ansi-escapes",
+    "ansi-skip",
+    "ora"
+  ]
 }
