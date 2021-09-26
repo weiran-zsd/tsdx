@@ -1,6 +1,6 @@
 {
   "extends": ["config:base", ":dependencyDashboard", "group:allNonMajor"],
-  "ignorePaths": ["website/*", "./stage-*", "./test/*", "example/*" ],
+  "ignorePaths": ["website/*", "./stage-*", "./test/*", "example/*", "templates/*" ],
   "pin": false,
   "node": false,
   "rangeStrategy": "bump",
@@ -14,6 +14,7 @@
 
     "react",
     "react-dom",
+    "react-is",
     "ansi-escapes",
     "ansi-skip",
     "ora"
