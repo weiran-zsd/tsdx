@@ -123,7 +123,7 @@
     "react-dom": "^16.14.0",
     "react-is": "^16.13.1",
     "release-it": "^14.11.6",
-    "rollup-plugin-postcss": "^3.1.8",
+    "rollup-plugin-postcss": "^4.0.1",
     "styled-components": "^5.3.1",
     "tiny-invariant": "^1.1.0",
     "tiny-warning": "^1.0.3"
