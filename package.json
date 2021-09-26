@@ -75,7 +75,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.25.1",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "execa": "^4.1.0",
+    "execa": "^5.1.1",
     "figlet": "^1.5.2",
     "fs-extra": "^9.1.0",
     "jest": "^27.1.1",
