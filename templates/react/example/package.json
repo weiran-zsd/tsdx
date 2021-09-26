@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "start": "npx parcel index.html",
+    "build": "npx parcel build index.html"
   },
   "dependencies": {
     "react-app-polyfill": "^1.0.0"
@@ -18,7 +18,6 @@
   "devDependencies": {
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.8.4",
-    "parcel": "^1.12.3",
     "typescript": "^4"
   }
 }
