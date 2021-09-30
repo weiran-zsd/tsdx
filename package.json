@@ -116,7 +116,7 @@
     "autoprefixer": "^9.8.6",
     "babel-plugin-replace-identifiers": "^0.1.1",
     "cssnano": "^4.1.11",
-    "doctoc": "^1.4.0",
+    "doctoc": "^2.0.1",
     "husky": "^4.3.8",
     "pretty-quick": "^3.1.1",
     "react": "^16.14.0",
