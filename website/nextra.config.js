@@ -2,12 +2,12 @@ import React from 'react';
 import { Logo } from 'components/logo';
 
 export default {
-  github: 'https://github.com/formium/tsdx',
+  github: 'https://github.com/weiran-zsd/dts-cli',
   titleSuffix: ' – TSDX',
   logo: (
     <>
       <Logo height={36} />
-      <span className=" font-extrabold hidden md:inline sr-only">TSDX</span>
+      <span className=" font-extrabold hidden md:inline sr-only">DTS</span>
     </>
   ),
   head: () => (
@@ -77,7 +77,7 @@ export default {
         <a
           className="text-sm"
           href={
-            'https://github.com/formium/tsdx/tree/master/website/pages' +
+            'https://github.com/weiran-zsd/dts-cli/tree/master/website/pages' +
             filepath
           }
           target="_blank"

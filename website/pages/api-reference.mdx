@@ -1,13 +1,13 @@
 # API Reference
 
-## `tsdx watch`
+## `dts-cli watch`
 
 ```sh
 Description
   Rebuilds on any change
 
 Usage
-  $ tsdx watch [options]
+  $ dts-cli watch [options]
 
 Options
   -i, --entry           Entry module(s)
@@ -24,26 +24,26 @@ Options
   -h, --help            Displays this message
 
 Examples
-  $ tsdx watch --entry src/foo.tsx
-  $ tsdx watch --target node
-  $ tsdx watch --name Foo
-  $ tsdx watch --format cjs,esm,umd
-  $ tsdx watch --tsconfig ./tsconfig.foo.json
-  $ tsdx watch --noClean
-  $ tsdx watch --onFirstSuccess "echo The first successful build!"
-  $ tsdx watch --onSuccess "echo Successful build!"
-  $ tsdx watch --onFailure "echo The build failed!"
-  $ tsdx watch --transpileOnly
+  $ dts-cli watch --entry src/foo.tsx
+  $ dts-cli watch --target node
+  $ dts-cli watch --name Foo
+  $ dts-cli watch --format cjs,esm,umd
+  $ dts-cli watch --tsconfig ./tsconfig.foo.json
+  $ dts-cli watch --noClean
+  $ dts-cli watch --onFirstSuccess "echo The first successful build!"
+  $ dts-cli watch --onSuccess "echo Successful build!"
+  $ dts-cli watch --onFailure "echo The build failed!"
+  $ dts-cli watch --transpileOnly
 ```
 
-## `tsdx build`
+## `dts-cli build`
 
 ```sh
 Description
   Build your project once and exit
 
 Usage
-  $ tsdx build [options]
+  $ dts-cli build [options]
 
 Options
   -i, --entry           Entry module(s)
@@ -56,37 +56,37 @@ Options
   -h, --help            Displays this message
 
 Examples
-  $ tsdx build --entry src/foo.tsx
-  $ tsdx build --target node
-  $ tsdx build --name Foo
-  $ tsdx build --format cjs,esm,umd
-  $ tsdx build --extractErrors
-  $ tsdx build --tsconfig ./tsconfig.foo.json
-  $ tsdx build --transpileOnly
+  $ dts-cli build --entry src/foo.tsx
+  $ dts-cli build --target node
+  $ dts-cli build --name Foo
+  $ dts-cli build --format cjs,esm,umd
+  $ dts-cli build --extractErrors
+  $ dts-cli build --tsconfig ./tsconfig.foo.json
+  $ dts-cli build --transpileOnly
 ```
 
-## `tsdx test`
+## `dts-cli test`
 
-This runs Jest v24.x, forwarding all CLI flags to it. See [https://jestjs.io](https://jestjs.io) for options. For example, if you would like to run in watch mode, you can run `tsdx test --watch`. So you could set up your `package.json` `scripts` like:
+This runs Jest v24.x, forwarding all CLI flags to it. See [https://jestjs.io](https://jestjs.io) for options. For example, if you would like to run in watch mode, you can run `dts-cli test --watch`. So you could set up your `package.json` `scripts` like:
 
 ```json
 {
   "scripts": {
-    "test": "tsdx test",
-    "test:watch": "tsdx test --watch",
-    "test:coverage": "tsdx test --coverage"
+    "test": "dts-cli test",
+    "test:watch": "dts-cli test --watch",
+    "test:coverage": "dts-cli test --coverage"
   }
 }
 ```
 
-## `tsdx lint`
+## `dts-cli lint`
 
 ```sh
 Description
   Run eslint with Prettier
 
 Usage
-  $ tsdx lint [options]
+  $ dts-cli lint [options]
 
 Options
   --fix               Fixes fixable errors and warnings
@@ -96,9 +96,9 @@ Options
   -h, --help          Displays this message
 
 Examples
-  $ tsdx lint src
-  $ tsdx lint src --fix
-  $ tsdx lint src test --ignore-pattern test/foo.ts
-  $ tsdx lint src --write-file
-  $ tsdx lint src --report-file report.json
+  $ dts-cli lint src
+  $ dts-cli lint src --fix
+  $ dts-cli lint src test --ignore-pattern test/foo.ts
+  $ dts-cli lint src --write-file
+  $ dts-cli lint src --report-file report.json
 ```

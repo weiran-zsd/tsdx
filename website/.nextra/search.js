@@ -100,7 +100,7 @@ const Search = ({ directories }) => {
       {renderList && (
         <div className="search-overlay z-1" onClick={() => setShow(false)} />
       )}
-      <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
         <svg
           fill="none"
           strokeLinecap="round"
