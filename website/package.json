@@ -7,7 +7,7 @@
     "dev": "next",
     "start": "next",
     "build": "next build",
-    "publish": "yarn build && next export"
+    "publish": "next build && next export"
   },
   "author": "Jared Palmer",
   "license": "MIT",
