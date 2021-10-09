@@ -7,7 +7,7 @@
     "dev": "next",
     "start": "next",
     "build": "next build",
-    "publish": "vercel --build-env CI=false"
+    "publish": "yarn build && next export"
   },
   "author": "Jared Palmer",
   "license": "MIT",
