@@ -1,12 +1,13 @@
 {
-  "name": "tsdx-site",
+  "name": "dts-cli-docs",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "next",
     "start": "next",
-    "build": "next build"
+    "build": "next build",
+    "publish": "vercel --build-env CI=false"
   },
   "author": "Jared Palmer",
   "license": "MIT",
@@ -31,6 +32,7 @@
   "devDependencies": {
     "@mdx-js/loader": "^1.6.22",
     "babel-plugin-macros": "^2.8.0",
+    "eslint": "^7.32.0",
     "postcss-preset-env": "^6.7.0",
     "preval.macro": "^5.0.0",
     "tailwindcss": "^2.2.16",
