@@ -3,9 +3,9 @@
 ## Rollup
 
 > **❗⚠️❗ Warning**: <br/>
-> These modifications will override the default behavior and configuration of DTS-cli. As such they can invalidate internal guarantees and assumptions. These types of changes can break internal behavior and can be very fragile against updates. Use with discretion!
+> These modifications will override the default behavior and configuration of TSDX. As such they can invalidate internal guarantees and assumptions. These types of changes can break internal behavior and can be very fragile against updates. Use with discretion!
 
-DTS-cli uses Rollup under the hood. The defaults are solid for most packages (Formik uses the defaults!). However, if you do wish to alter the rollup configuration, you can do so by creating a file called `dts-cli.config.js` at the root of your project like so:
+TSDX uses Rollup under the hood. The defaults are solid for most packages (Formik uses the defaults!). However, if you do wish to alter the rollup configuration, you can do so by creating a file called `tsdx.config.js` at the root of your project like so:
 
 ```js
 // Not transpiled with TypeScript or Babel, so use plain Es6/Node.js!
@@ -73,12 +73,12 @@ module.exports = {
 
 ## Babel
 
-You can add your own `.babelrc` to the root of your project and DTS-cli will **merge** it with [its own Babel transforms](https://github.com/formium/dts-cli/blob/master/src/babelPluginTsdx.ts) (which are mostly for optimization), putting any new presets and plugins at the end of its list.
+You can add your own `.babelrc` to the root of your project and TSDX will **merge** it with [its own Babel transforms](https://github.com/formium/tsdx/blob/master/src/babelPluginTsdx.ts) (which are mostly for optimization), putting any new presets and plugins at the end of its list.
 
 ## Jest
 
-You can add your own `jest.config.js` to the root of your project and DTS-cli will **shallow merge** it with [its own Jest config](https://github.com/formium/dts-cli/blob/master/src/createJestConfig.ts).
+You can add your own `jest.config.js` to the root of your project and TSDX will **shallow merge** it with [its own Jest config](https://github.com/formium/tsdx/blob/master/src/createJestConfig.ts).
 
 ## ESLint
 
-You can add your own `.eslintrc.js` to the root of your project and DTS-cli will **deep merge** it with [its own ESLint config](https://github.com/formium/dts-cli/blob/master/src/createEslintConfig.ts).
+You can add your own `.eslintrc.js` to the root of your project and TSDX will **deep merge** it with [its own ESLint config](https://github.com/formium/tsdx/blob/master/src/createEslintConfig.ts).
