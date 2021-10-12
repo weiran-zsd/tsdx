@@ -4,7 +4,6 @@ name: GitHub Pages
 on:
   push:
     branches:
-      - gh-pages
       - main
   pull_request:
 
