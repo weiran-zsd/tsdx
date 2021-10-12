@@ -1,42 +1,46 @@
-name: Documentation
+
+name: GitHub Pages
 
 on:
   push:
     branches:
-      - 'gh-pages'
-    paths:
-      - '.github/workflows/documentation.yml'
-      - 'website/**'
+      - gh-pages
+      - main
+  pull_request:
 
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./website
-
+  deploy:
+    runs-on: ubuntu-20.04
+    working-directory: ./website
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
-        with:
-          persist-credentials: false
+      - uses: actions/checkout@v2
 
-      - name: Cache  💾
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Get yarn cache
+        id: yarn-cache
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Cache dependencies
         uses: actions/cache@v2
         with:
-          path: ${{ github.workspace }}/.next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}
+          path: ${{ steps.yarn-cache.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
 
-      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
-        uses: actions/setup-node@v1
-      - run: npm install
-        env:
-            CI: true
+      - run: yarn install --frozen-lockfile
+      - run: yarn build
+      - run: yarn export
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@3.6.2
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: out # The folder the action should deploy.
-          CLEAN: true # Automatically remove deleted files from the deploy branch
+          github_token: ${{ secrets.ACCESS_TOKEN }}
+          publish_dir: ./out
