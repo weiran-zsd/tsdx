@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './features.module.css';
+import React from "react";
+import styles from "./features.module.css";
 
 const Feature = ({ text, icon }) => (
   <div className={styles.feature}>
@@ -8,7 +8,7 @@ const Feature = ({ text, icon }) => (
   </div>
 );
 
-export default () => (
+const Logo = () => (
   <div>
     <p className="text-lg mb-2 text-gray-600 md:text-xl">
       Zero-config CLI for TypeScript package development
@@ -723,7 +723,7 @@ export default () => (
                   fill="#1F9CF0"
                 />
               </g>
-              <g style={{ mixBlendMode: 'overlay' }} opacity="0.25">
+              <g style={{ mixBlendMode: "overlay" }} opacity="0.25">
                 <path
                   fillRule="evenodd"
                   clipRule="evenodd"
@@ -817,3 +817,5 @@ export default () => (
     </div>
   </div>
 );
+
+export default Logo;

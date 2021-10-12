@@ -1,13 +1,15 @@
+---
+name: API Reference
+---
+
 # API Reference
 
-## `dts-cli watch`
+## dts watch
+>  Rebuilds on any change
 
 ```sh
-Description
-  Rebuilds on any change
-
 Usage
-  $ dts-cli watch [options]
+  $ dts watch [options]
 
 Options
   -i, --entry           Entry module(s)
@@ -24,26 +26,24 @@ Options
   -h, --help            Displays this message
 
 Examples
-  $ dts-cli watch --entry src/foo.tsx
-  $ dts-cli watch --target node
-  $ dts-cli watch --name Foo
-  $ dts-cli watch --format cjs,esm,umd
-  $ dts-cli watch --tsconfig ./tsconfig.foo.json
-  $ dts-cli watch --noClean
-  $ dts-cli watch --onFirstSuccess "echo The first successful build!"
-  $ dts-cli watch --onSuccess "echo Successful build!"
-  $ dts-cli watch --onFailure "echo The build failed!"
-  $ dts-cli watch --transpileOnly
+  $ dts watch --entry src/foo.tsx
+  $ dts watch --target node
+  $ dts watch --name Foo
+  $ dts watch --format cjs,esm,umd
+  $ dts watch --tsconfig ./tsconfig.foo.json
+  $ dts watch --noClean
+  $ dts watch --onFirstSuccess "echo The first successful build!"
+  $ dts watch --onSuccess "echo Successful build!"
+  $ dts watch --onFailure "echo The build failed!"
+  $ dts watch --transpileOnly
 ```
 
-## `dts-cli build`
+## dts build
+>   Build your project once and exit
 
 ```sh
-Description
-  Build your project once and exit
-
 Usage
-  $ dts-cli build [options]
+  $ dts build [options]
 
 Options
   -i, --entry           Entry module(s)
@@ -56,37 +56,34 @@ Options
   -h, --help            Displays this message
 
 Examples
-  $ dts-cli build --entry src/foo.tsx
-  $ dts-cli build --target node
-  $ dts-cli build --name Foo
-  $ dts-cli build --format cjs,esm,umd
-  $ dts-cli build --extractErrors
-  $ dts-cli build --tsconfig ./tsconfig.foo.json
-  $ dts-cli build --transpileOnly
+  $ dts build --entry src/foo.tsx
+  $ dts build --target node
+  $ dts build --name Foo
+  $ dts build --format cjs,esm,umd
+  $ dts build --extractErrors
+  $ dts build --tsconfig ./tsconfig.foo.json
+  $ dts build --transpileOnly
 ```
 
-## `dts-cli test`
-
-This runs Jest v24.x, forwarding all CLI flags to it. See [https://jestjs.io](https://jestjs.io) for options. For example, if you would like to run in watch mode, you can run `dts-cli test --watch`. So you could set up your `package.json` `scripts` like:
-
+## dts test
+> This runs Jest v24.x, forwarding all CLI flags to it. See [https://jestjs.io](https://jestjs.io) for options. For example, if you would like to run in watch mode, you can run `dts test --watch`. So you could set up your `package.json` `scripts` like:
+ 
 ```json
 {
   "scripts": {
-    "test": "dts-cli test",
-    "test:watch": "dts-cli test --watch",
-    "test:coverage": "dts-cli test --coverage"
+    "test": "dts test",
+    "test:watch": "dts test --watch",
+    "test:coverage": "dts test --coverage"
   }
 }
 ```
 
-## `dts-cli lint`
+## dts lint
+>  Run eslint with Prettier
 
 ```sh
-Description
-  Run eslint with Prettier
-
 Usage
-  $ dts-cli lint [options]
+  $ dts lint [options]
 
 Options
   --fix               Fixes fixable errors and warnings
@@ -96,9 +93,9 @@ Options
   -h, --help          Displays this message
 
 Examples
-  $ dts-cli lint src
-  $ dts-cli lint src --fix
-  $ dts-cli lint src test --ignore-pattern test/foo.ts
-  $ dts-cli lint src --write-file
-  $ dts-cli lint src --report-file report.json
+  $ dts lint src
+  $ dts lint src --fix
+  $ dts lint src test --ignore-pattern test/foo.ts
+  $ dts lint src --write-file
+  $ dts lint src --report-file report.json
 ```

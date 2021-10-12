@@ -1,2 +1,7 @@
-const withNextra = require('./.nextra/nextra')();
-module.exports = withNextra();
+const compose = require("compose-function");
+const { withDokz } = require("dokz/dist/plugin");
+const composed = compose(withDokz);
+
+module.exports = composed({
+  pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
+});

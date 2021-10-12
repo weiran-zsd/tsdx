@@ -8,7 +8,8 @@ After DTS-cli compiles your code with TypeScript, it processes your code with 3 
 - [`babel-plugin-dev-expressions`](https://github.com/4Catalyzer/babel-plugin-dev-expression): A mirror of Facebook's dev-expression Babel plugin. It reduces or eliminates development checks from production code
 - [`babel-plugin-rename-import`](https://github.com/laat/babel-plugin-transform-rename-import): Used to rewrite any `lodash` imports
 
-## Development-only Expressions + Treeshaking
+## Dev-only Expressions
+
 
 `babel-plugin-annotate-pure-calls` + `babel-plugin-dev-expressions` work together to fully eliminate dead code (aka treeshake) development checks from your production code. Let's look at an example to see how it works.
 
@@ -24,7 +25,7 @@ export const sum = (a: number, b: number) => {
 };
 ```
 
-`dts-cli build` will output an ES module file and 3 CommonJS files (dev, prod, and an entry file). If you want to specify a UMD build, you can do that as well. For brevity, let's examine the CommonJS output (comments added for emphasis):
+> `dts-cli build` will output an ES module file and 3 CommonJS files (dev, prod, and an entry file). If you want to specify a UMD build, you can do that as well. For brevity, let's examine the CommonJS output (comments added for emphasis):
 
 ```js
 // Entry File
@@ -64,7 +65,7 @@ exports.sum = (s, t) => s + t;
 //# sourceMappingURL=test-react-dts-cli.cjs.production.js.map
 ```
 
-AS you can see, DTS-cli stripped out the development check from the production code. **This allows you to safely add development-only behavior (like more useful error messages) without any production bundle size impact.**
+As you can see, DTS-cli stripped out the development check from the production code. **This allows you to safely add development-only behavior (like more useful error messages) without any production bundle size impact.**
 
 For ESM build, it's up to end-user to build environment specific build with NODE_ENV replace (done by Webpack 4 automatically).
 
@@ -76,7 +77,7 @@ DTS-cli's rollup config [removes getters and setters on objects](https://github.
 
 DTS-cli will use `babel-plugin-dev-expressions` to make the following replacements _before_ treeshaking.
 
-#### `__DEV__`
+`__DEV__`
 
 Replaces
 

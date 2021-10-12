@@ -1,6 +1,8 @@
+---
+name: Getting started
+---
 
-
-import Features from 'components/features';
+import Features from "../components/features";
 
 # DTS-cli
 
@@ -37,7 +39,7 @@ After you select one, DTS-cli will create a folder with the project template in 
 
 Below is a list of commands you will probably find useful:
 
-### `npm start` or `yarn start`
+`npm start` or `yarn start`
 
 Runs the project in development/watch mode. Your project will be rebuilt upon changes. DTS-cli has a special logger for your convenience. Error messages are pretty printed and formatted for compatibility VS Code's Problems tab.
 
@@ -48,7 +50,7 @@ Runs the project in development/watch mode. Your project will be rebuilt upon ch
 
 Your library will be rebuilt if you make edits.
 
-### `npm run build` or `yarn build`
+`npm run build` or `yarn build`
 
 Bundles the package to the `dist` folder.
 The package is optimized and bundled with Rollup into multiple formats (CommonJS, UMD, and ES Module).
@@ -58,22 +60,27 @@ The package is optimized and bundled with Rollup into multiple formats (CommonJS
   width="600"
 />
 
-### `npm test` or `yarn test`
+- `npm test` or `yarn test`
 
 Runs your tests using Jest.
 
-### `npm run lint` or `yarn lint`
+- `npm run lint` or `yarn lint`
 
 Runs Eslint with Prettier on .ts and .tsx files.
 If you want to customize eslint you can add an `eslint` block to your package.json, or you can run `yarn lint --write-file` and edit the generated `.eslintrc.js` file.
 
-### `prepare` script
+- `prepare` script
 
 Bundles and packages to the `dist` folder.
 Runs automatically when you run either `npm publish` or `yarn publish`. The `prepare` script will run the equivalent of `npm run build` or `yarn build`. It will also be run if your module is installed as a git dependency (ie: `"mymodule": "github:myuser/mymodule#some-branch"`) so it can be depended on without checking the transpiled code into git.
 
 ## Best Practices
 
-DTS-cli includes best-practices and optimizations for modern NPM packages. These include things like the ability to have different development and production builds, multiple bundle formats, proper lodash-optimizations, treeshaking, and minification to name a few. All of these come out-of-the-box with DTS-cli. While you probably won't need to configure anything, [you totally can do so with dts-cli.config.js](customization).
+DTS-cli includes best-practices and optimizations for modern NPM packages. These include things like the ability to have different development and production builds, multiple bundle formats, proper lodash-optimizations, treeshaking, and minification to name a few. All of these come out-of-the-box with DTS-cli. While you probably won't need to configure anything, [you totally can do so with dts.config.js](customization).
 
 Before you start extending DTS-cli though, you'll want to fully understand what _exactly_ DTS-cli does. In the next section, we'll go over all of these optimizations in finer detail.
+
+
+
+
+

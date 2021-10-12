@@ -18,9 +18,7 @@
   white-space: nowrap;
 }
 @media (max-width: 860px) {
-  .feature {
-    padding-left: 0;
-  }
+  
   .feature h4 {
     font-size: 0.75rem;
   }

@@ -1,3 +1,7 @@
+---
+name: Customization
+---
+
 # Customization
 
 ## Rollup
@@ -5,7 +9,7 @@
 > **❗⚠️❗ Warning**: <br/>
 > These modifications will override the default behavior and configuration of DTS-cli. As such they can invalidate internal guarantees and assumptions. These types of changes can break internal behavior and can be very fragile against updates. Use with discretion!
 
-DTS-cli uses Rollup under the hood. The defaults are solid for most packages (Formik uses the defaults!). However, if you do wish to alter the rollup configuration, you can do so by creating a file called `dts-cli.config.js` at the root of your project like so:
+DTS-cli uses Rollup under the hood. The defaults are solid for most packages (Formik uses the defaults!). However, if you do wish to alter the rollup configuration, you can do so by creating a file called `dts.config.js` at the root of your project like so:
 
 ```js
 // Not transpiled with TypeScript or Babel, so use plain Es6/Node.js!
