@@ -11,7 +11,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-20.04
-    working-directory: /website
+    defaults:
+      run:
+        working-directory: website
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
