@@ -103,6 +103,7 @@
     "typescript": "^4.4.3"
   },
   "devDependencies": {
+    "@release-it/conventional-changelog": "^3.3.0",
     "@types/eslint": "^7.28.0",
     "@types/figlet": "^1.5.4",
     "@types/fs-extra": "^9.0.13",
@@ -146,14 +147,15 @@
     "registry": "https://registry.npmjs.org/"
   },
   "release-it": {
-    "git": {
-      "changelog": "auto-changelog --stdout --commit-limit false -u --template https://cdn.jsdelivr.net/gh/release-it/release-it/templates/changelog-compact.hbs"
-    },
-    "hooks": {
-      "after:bump": "auto-changelog -p"
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular",
+        "infile": "CHANGELOG.md"
+      }
     },
     "github": {
       "release": true
     }
-  }
+  },
+  "packageManager": "yarn@3.0.2"
 }
