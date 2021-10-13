@@ -120,6 +120,7 @@
     "babel-plugin-replace-identifiers": "^0.1.1",
     "commitizen": "^4.2.4",
     "cssnano": "^5.0.8",
+    "cz-conventional-changelog": "^3.3.0",
     "doctoc": "^2.0.1",
     "husky": "^4.3.8",
     "pretty-quick": "^3.1.1",
@@ -134,6 +135,7 @@
   },
   "husky": {
     "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
       "pre-commit": "pretty-quick --staged --pattern '!test/tests/lint/**' && yarn lint && yarn deduplicate:check && doctoc README.md"
     }
   },
@@ -154,5 +156,11 @@
     "github": {
       "release": true
     }
-  }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "packageManager": "yarn@3.0.2"
 }
