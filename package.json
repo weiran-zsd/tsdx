@@ -31,7 +31,8 @@
     "start": "tsc -p tsconfig.json --watch",
     "release": "yarn test && release-it",
     "deduplicate": "yarn dedupe",
-    "deduplicate:check": "yarn dedupe -c"
+    "deduplicate:check": "yarn dedupe -c",
+    "commit": "cz"
   },
   "files": [
     "dist",
@@ -117,6 +118,7 @@
     "auto-changelog": "^2.3.0",
     "autoprefixer": "^10.3.6",
     "babel-plugin-replace-identifiers": "^0.1.1",
+    "commitizen": "^4.2.4",
     "cssnano": "^5.0.8",
     "doctoc": "^2.0.1",
     "husky": "^4.3.8",
@@ -146,11 +148,8 @@
     "registry": "https://registry.npmjs.org/"
   },
   "release-it": {
-    "git": {
-      "changelog": "auto-changelog --stdout --commit-limit false -u --template https://cdn.jsdelivr.net/gh/release-it/release-it/templates/changelog-compact.hbs"
-    },
     "hooks": {
-      "after:bump": "auto-changelog -p"
+      "after:bump": "auto-changelog -u --template ./tools/conventionalcommits.hbs"
     },
     "github": {
       "release": true
