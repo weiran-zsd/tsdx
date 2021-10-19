@@ -31,7 +31,10 @@
     "start": "tsc -p tsconfig.json --watch",
     "release": "yarn test && release-it",
     "deduplicate": "yarn dedupe",
-    "deduplicate:check": "yarn dedupe -c"
+    "deduplicate:check": "yarn dedupe -c",
+    "postinstall": "husky install",
+    "prepublishOnly": "pinst --disable",
+    "postpublish": "pinst --enable"
   },
   "files": [
     "dist",
@@ -120,7 +123,8 @@
     "babel-plugin-replace-identifiers": "^0.1.1",
     "cssnano": "^5.0.8",
     "doctoc": "^2.0.1",
-    "husky": "^4.3.8",
+    "husky": "^7.0.0",
+    "pinst": "^2.0.0",
     "pretty-quick": "^3.1.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
