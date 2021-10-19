@@ -147,9 +147,12 @@
     "registry": "https://registry.npmjs.org/"
   },
   "release-it": {
+    "git": {
+      "commitMessage": "chore: release v${version}"
+    },
     "plugins": {
       "@release-it/conventional-changelog": {
-        "preset": "angular",
+        "preset": "conventionalcommits",
         "infile": "CHANGELOG.md"
       }
     },
