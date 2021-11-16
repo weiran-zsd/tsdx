@@ -168,11 +168,14 @@ prog
           overwrite: true,
         }
       );
-      // fix gitignore
-      await fs.move(
-        path.resolve(projectPath, './gitignore'),
-        path.resolve(projectPath, './.gitignore')
-      );
+      // fix dotfiles
+      const dotfiles = ['gitignore', 'gitattributes'];
+      for (const dotfile of dotfiles) {
+        await fs.move(
+          path.resolve(projectPath, `./${dotfile}`),
+          path.resolve(projectPath, `./.${dotfile}`)
+        );
+      }
 
       // update license year and author
       let license: string = await fs.readFile(
