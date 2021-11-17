@@ -1,3 +1,11 @@
+### [0.19.6](https://github.com/weiran-zsd/dts-cli/compare/v0.19.5...v0.19.6) (2021-11-17)
+
+
+### Bug Fixes
+
+* lint always fails on windows github runners due to line endings ([#92](https://github.com/weiran-zsd/dts-cli/issues/92)) ([c6f0b8b](https://github.com/weiran-zsd/dts-cli/commit/c6f0b8bfd864cc6e8b45d7db671cc62e95b71113))
+* node v17 => Error loading tslib helper library (fixes [#78](https://github.com/weiran-zsd/dts-cli/issues/78)) ([#93](https://github.com/weiran-zsd/dts-cli/issues/93)) ([e298771](https://github.com/weiran-zsd/dts-cli/commit/e29877190f85fb9bb6b9b11def16d944e2411476))
+
 ### [0.19.5](https://github.com/weiran-zsd/dts-cli/compare/v0.19.4...v0.19.5) (2021-11-12)
 
 
