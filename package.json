@@ -140,7 +140,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged --pattern '!test/tests/lint/**' && yarn lint && yarn deduplicate:check && doctoc README.md"
+      "pre-commit": "pretty-quick --staged --pattern '!test/tests/lint/**' && yarn lint"
     }
   },
   "prettier": {
