@@ -48,6 +48,7 @@ import { createProgressEstimator } from './createProgressEstimator';
 import { templates } from './templates';
 import { composePackageJson } from './templates/utils';
 import * as deprecated from './deprecated';
+import sortPackageJson from 'sort-package-json';
 const pkg = require('../package.json');
 
 const prog = sade('dts');
@@ -221,8 +222,11 @@ prog
         bootSpinner.fail(Messages.incorrectNodeVersion(nodeVersionReq));
         process.exit(1);
       }
-
-      await fs.outputJSON(path.resolve(projectPath, 'package.json'), pkgJson);
+      const pkgContent = sortPackageJson(JSON.stringify(pkgJson, null, 2));
+      await fs.outputFile(
+        path.resolve(projectPath, 'package.json'),
+        pkgContent
+      );
       bootSpinner.succeed(`Created ${chalk.bold.green(pkg)}`);
       await Messages.start(pkg);
     } catch (error) {
