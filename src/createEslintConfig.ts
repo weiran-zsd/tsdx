@@ -1,6 +1,6 @@
 import fs from 'fs-extra';
 import path from 'path';
-import { CLIEngine } from 'eslint';
+import { Linter } from 'eslint';
 import { PackageJson } from './types';
 import { getReactVersion } from './utils';
 
@@ -13,7 +13,7 @@ export async function createEslintConfig({
   pkg,
   rootDir,
   writeFile,
-}: CreateEslintConfigArgs): Promise<CLIEngine.Options['baseConfig'] | void> {
+}: CreateEslintConfigArgs): Promise<Linter.Config | void> {
   const isReactLibrary = Boolean(getReactVersion(pkg));
 
   const config = {

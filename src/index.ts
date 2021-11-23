@@ -15,7 +15,7 @@ import chalk from 'chalk';
 import figlet from 'figlet';
 import * as fs from 'fs-extra';
 import * as jest from 'jest';
-import { CLIEngine } from 'eslint';
+import { ESLint } from 'eslint';
 import logError from './logError';
 import path from 'path';
 import execa from 'execa';
@@ -578,38 +578,51 @@ prog
           )
         );
       }
+      try {
+        const config = await createEslintConfig({
+          pkg: appPackageJson,
+          rootDir: paths.appRoot,
+          writeFile: opts['write-file'],
+        });
 
-      const config = await createEslintConfig({
-        pkg: appPackageJson,
-        rootDir: paths.appRoot,
-        writeFile: opts['write-file'],
-      });
+        const linter = new ESLint({
+          baseConfig: {
+            ...config,
+            ...appPackageJson.eslint,
+            ignorePatterns: opts['ignore-pattern'],
+          },
+          extensions: ['.ts', '.tsx', '.js', '.jsx'],
+          fix: opts.fix,
+        });
+        const results = await linter.lintFiles(opts['_']);
+        if (opts.fix) {
+          await ESLint.outputFixes(results);
+        }
 
-      const cli = new CLIEngine({
-        baseConfig: {
-          ...config,
-          ...appPackageJson.eslint,
-        },
-        extensions: ['.ts', '.tsx', '.js', '.jsx'],
-        fix: opts.fix,
-        ignorePattern: opts['ignore-pattern'],
-      });
-      const report = cli.executeOnFiles(opts['_']);
-      if (opts.fix) {
-        CLIEngine.outputFixes(report);
-      }
-      console.log(cli.getFormatter()(report.results));
-      if (opts['report-file']) {
-        await fs.outputFile(
-          opts['report-file'],
-          cli.getFormatter('json')(report.results)
-        );
-      }
-      if (report.errorCount) {
-        process.exit(1);
-      }
-      if (report.warningCount > opts['max-warnings']) {
-        process.exit(1);
+        const formatter = await linter.loadFormatter('stylish');
+        const jsonFormatter = await linter.loadFormatter('json');
+        console.log(formatter.format(results));
+        if (opts['report-file']) {
+          await fs.outputFile(
+            opts['report-file'],
+            jsonFormatter.format(results)
+          );
+        }
+        let errorCount = 0;
+        let warningCount = 0;
+        results.forEach((result) => {
+          errorCount += result.errorCount;
+          warningCount += result.warningCount;
+        });
+        if (errorCount > 0) {
+          process.exit(1);
+        }
+        if (warningCount > opts['max-warnings']) {
+          process.exit(1);
+        }
+      } catch (e) {
+        process.exitCode = 1;
+        console.error(e);
       }
     }
   );
