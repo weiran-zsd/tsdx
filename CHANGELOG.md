@@ -1,3 +1,11 @@
+### [0.19.7](https://github.com/weiran-zsd/dts-cli/compare/v0.19.6...v0.19.7) (2021-11-23)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#62](https://github.com/weiran-zsd/dts-cli/issues/62)) ([b58b110](https://github.com/weiran-zsd/dts-cli/commit/b58b1104e9f8c147cf859a6def7a08f6c006684c))
+* sort generated package.json (fixes [#97](https://github.com/weiran-zsd/dts-cli/issues/97)) ([#98](https://github.com/weiran-zsd/dts-cli/issues/98)) ([f73cb4e](https://github.com/weiran-zsd/dts-cli/commit/f73cb4e63e2f83443d01513cc53eeb2989cb1257))
+
 ### [0.19.6](https://github.com/weiran-zsd/dts-cli/compare/v0.19.5...v0.19.6) (2021-11-17)
 
 
