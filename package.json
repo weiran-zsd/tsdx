@@ -99,6 +99,7 @@
     "sade": "^1.7.4",
     "semver": "^7.3.5",
     "shelljs": "^0.8.4",
+    "sort-package-json": "^1.53.1",
     "tiny-glob": "^0.2.9",
     "ts-jest": "^27.0.5",
     "tslib": "^2.3.1",
