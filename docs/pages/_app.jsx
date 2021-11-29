@@ -1,8 +1,8 @@
-import { DokzProvider, GithubLink, ColorModeSwitch } from "dokz";
-import React, { Fragment } from "react";
-import Head from "next/head";
-import { ChakraProvider } from "@chakra-ui/react";
-import Logo from "../components/logo";
+import { DokzProvider, GithubLink, ColorModeSwitch } from 'dokz';
+import React, { Fragment } from 'react';
+import Head from 'next/head';
+import { ChakraProvider } from '@chakra-ui/react';
+import Logo from '../components/logo';
 
 export default function App(props) {
   const { Component, pageProps } = props;
@@ -22,13 +22,12 @@ export default function App(props) {
           <ColorModeSwitch key="1" />,
         ]}
         sidebarOrdering={{
-          "index.mdx": true,
-          "api-reference.mdx": true,
-          "customization.mdx": true,
-          "change-log.mdx": true,
+          'index.mdx': true,
+          'api-reference.mdx': true,
+          'customization.mdx': true,
+          'change-log.mdx': true,
         }}
       >
-        
         <Component {...pageProps} />
       </DokzProvider>
     </ChakraProvider>

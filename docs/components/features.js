@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./features.module.css";
+import React from 'react';
+import styles from './features.module.css';
 
 const Feature = ({ text, icon }) => (
   <div className={styles.feature}>
@@ -723,7 +723,7 @@ const Logo = () => (
                   fill="#1F9CF0"
                 />
               </g>
-              <g style={{ mixBlendMode: "overlay" }} opacity="0.25">
+              <g style={{ mixBlendMode: 'overlay' }} opacity="0.25">
                 <path
                   fillRule="evenodd"
                   clipRule="evenodd"

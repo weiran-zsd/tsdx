@@ -1,5 +1,5 @@
-import { Box, Text } from "@chakra-ui/react";
-import Markdown from "markdown-to-jsx";
+import { Box, Text } from '@chakra-ui/react';
+import Markdown from 'markdown-to-jsx';
 
 const Release = (props) => {
   const { url, name, date, body } = props;
@@ -7,13 +7,13 @@ const Release = (props) => {
   return (
     <Box>
       <Text fontWeight="bold" fontSize="3xl">
-        #{" "}
+        #{' '}
         <a href={url} target="_blank" rel="noopener">
           {name}
         </a>
       </Text>
       <Text>
-        Published on{" "}
+        Published on{' '}
         <Text as="span" color="blue.500">{`${new Date(
           date
         ).toDateString()}.`}</Text>
