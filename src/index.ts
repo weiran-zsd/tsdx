@@ -371,6 +371,8 @@ prog
   .example('build --name Foo')
   .option('--format', 'Specify module format(s)', 'cjs,esm')
   .example('build --format cjs,esm')
+  .option('--noClean', "Don't clean the dist folder")
+  .example('build --noClean')
   .option('--tsconfig', 'Specify custom tsconfig path')
   .example('build --tsconfig ./tsconfig.foo.json')
   .option('--transpileOnly', 'Skip type checking')
@@ -385,7 +387,9 @@ prog
   .action(async (dirtyOpts: BuildOpts) => {
     const opts = await normalizeOpts(dirtyOpts);
     const buildConfigs = await createBuildConfigs(opts);
-    await cleanDistFolder();
+    if (!opts.noClean) {
+      await cleanDistFolder();
+    }
     const logger = await createProgressEstimator();
     if (opts.format.includes('cjs')) {
       const promise = writeCjsEntryFile(opts.name).catch(logError);
