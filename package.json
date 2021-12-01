@@ -165,6 +165,9 @@
     },
     "github": {
       "release": true
+    },
+    "npm": {
+      "skipChecks": true
     }
   },
   "packageManager": "yarn@3.1.1"
