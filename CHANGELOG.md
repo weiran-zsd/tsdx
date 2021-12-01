@@ -1,3 +1,19 @@
+## [0.20.0](https://github.com/weiran-zsd/dts-cli/compare/v0.19.7...v0.20.0) (2021-12-01)
+
+
+### Features
+
+* support `dts build --noClean` (fixes [#103](https://github.com/weiran-zsd/dts-cli/issues/103)) ([#105](https://github.com/weiran-zsd/dts-cli/issues/105)) ([e55136e](https://github.com/weiran-zsd/dts-cli/commit/e55136e3220c8c12eb88f152265257855914b868))
+* upgrade prettier 2.5 ([0ee72fd](https://github.com/weiran-zsd/dts-cli/commit/0ee72fd6f6f7ae2ef0dadb3e4c0277a72df38b61))
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-app-polyfill to v2 ([#46](https://github.com/weiran-zsd/dts-cli/issues/46)) ([079b4eb](https://github.com/weiran-zsd/dts-cli/commit/079b4eb293299d5159ab3a76b6c9ae9bb6668f30))
+* **deps:** update typescript-eslint monorepo to v5 ([#74](https://github.com/weiran-zsd/dts-cli/issues/74)) ([a84727d](https://github.com/weiran-zsd/dts-cli/commit/a84727d18692ac9cce1427344f55fb85f6e4ea88))
+* upgrade ts/rollup/prettier to latest ([64566df](https://github.com/weiran-zsd/dts-cli/commit/64566dfddfc67966c17d1a42c91d7dd54c02973f))
+* website eslint config ([6b8be5b](https://github.com/weiran-zsd/dts-cli/commit/6b8be5bbf4a48242b0055942cd7400096125e373))
+
 ### [0.19.7](https://github.com/weiran-zsd/dts-cli/compare/v0.19.6...v0.19.7) (2021-11-23)
 
 
