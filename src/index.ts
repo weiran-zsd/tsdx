@@ -586,6 +586,7 @@ prog
         });
 
         const linter = new ESLint({
+          cwd: paths.appRoot,
           baseConfig: {
             ...config,
             ...appPackageJson.eslint,
