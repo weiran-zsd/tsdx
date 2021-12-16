@@ -4,4 +4,4 @@
 yarn pretty-quick --staged --pattern '!test/tests/lint/**'
 yarn lint
 yarn deduplicate:check
-doctoc README.md
+yarn doctoc

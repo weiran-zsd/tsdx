@@ -34,7 +34,8 @@
     "deduplicate:check": "yarn dedupe -c",
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
-    "postpublish": "pinst --enable"
+    "postpublish": "pinst --enable",
+    "doctoc": "doctoc README.md"
   },
   "files": [
     "dist",
