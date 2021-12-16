@@ -3,7 +3,6 @@ import path from 'path';
 import { Linter } from 'eslint';
 import { PackageJson } from './types';
 import { getReactVersion } from './utils';
-
 interface CreateEslintConfigArgs {
   pkg: PackageJson;
   rootDir: string;
@@ -18,20 +17,10 @@ export async function createEslintConfig({
 
   const config = {
     extends: [
-      'eslint:recommended',
-      'plugin:import/recommended',
-      'plugin:import/typescript',
-      'plugin:react/recommended',
-      'plugin:react-hooks/recommended',
-      'plugin:@typescript-eslint/recommended',
+      path.join(__dirname, '../conf/eslint-config-react-app/index.js'),
       'prettier',
-      'plugin:prettier/recommended'
+      'plugin:prettier/recommended',
     ],
-    env: {
-      browser: true,
-      node: true,
-      jest: true,
-    },
     settings: {
       react: {
         // Fix for https://github.com/jaredpalmer/tsdx/issues/279

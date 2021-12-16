@@ -592,7 +592,7 @@ prog
             ...appPackageJson.eslint,
             ignorePatterns: opts['ignore-pattern'],
           },
-          extensions: ['.ts', '.tsx', '.js', '.jsx'],
+          extensions: ['.js', '.mjs', '.cjs', '.ts', '.tsx', '.jsx'],
           fix: opts.fix,
         });
         const results = await linter.lintFiles(opts['_']);

@@ -1,4 +1,5 @@
 /node_modules/
 dist/
 /docs
-fixtures/
+# fixtures/
+/conf/eslint-config-react-app/
