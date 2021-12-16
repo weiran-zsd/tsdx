@@ -2602,7 +2602,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*":
+"@types/react@npm:*, @types/react@npm:^17.0.37":
   version: 17.0.37
   resolution: "@types/react@npm:17.0.37"
   dependencies:
@@ -2610,17 +2610,6 @@ __metadata:
     "@types/scheduler": "*"
     csstype: ^3.0.2
   checksum: e68b0d59aa69577fc6a6d654b25d5d8408625498f4c483f160b557fac21e840f6e8807cbde93e9f039949b6d624a019b1990d18499c1d65aecf3605c25e30242
-  languageName: node
-  linkType: hard
-
-"@types/react@npm:^16.14.21":
-  version: 16.14.21
-  resolution: "@types/react@npm:16.14.21"
-  dependencies:
-    "@types/prop-types": "*"
-    "@types/scheduler": "*"
-    csstype: ^3.0.2
-  checksum: 9660ea0a2c7ad364295c1e5abd6b98a05fd372a0f06f97850f60fcc254bcec766d19b101c0acc382746a4e0b71848d88097a1db7124e3fd441c0472fb6b3f849
   languageName: node
   linkType: hard
 
@@ -4923,7 +4912,7 @@ __metadata:
     "@types/jest": ^27.0.3
     "@types/lodash": ^4.14.178
     "@types/node": ^16.11.14
-    "@types/react": ^16.14.21
+    "@types/react": ^17.0.37
     "@types/rollup-plugin-json": ^3.0.3
     "@types/sade": ^1.7.4
     "@types/semver": ^7.3.9
