@@ -1,9 +1,8 @@
 import fs from 'fs-extra';
 import path from 'path';
-import { CLIEngine } from 'eslint';
+import { Linter } from 'eslint';
 import { PackageJson } from './types';
 import { getReactVersion } from './utils';
-
 interface CreateEslintConfigArgs {
   pkg: PackageJson;
   rootDir: string;
@@ -13,11 +12,15 @@ export async function createEslintConfig({
   pkg,
   rootDir,
   writeFile,
-}: CreateEslintConfigArgs): Promise<CLIEngine.Options['baseConfig'] | void> {
+}: CreateEslintConfigArgs): Promise<Linter.Config | void> {
   const isReactLibrary = Boolean(getReactVersion(pkg));
 
   const config = {
-    extends: ['react-app', 'prettier', 'plugin:prettier/recommended'],
+    extends: [
+      path.join(__dirname, '../conf/eslint-config-react-app/index.js'),
+      'prettier',
+      'plugin:prettier/recommended',
+    ],
     settings: {
       react: {
         // Fix for https://github.com/jaredpalmer/tsdx/issues/279
