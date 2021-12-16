@@ -1,3 +1,14 @@
+## [1.0.0](https://github.com/weiran-zsd/dts-cli/compare/v0.20.0...v1.0.0) (2021-12-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* upgrade eslint v8 (fixes #61) (#99)
+
+### Features
+
+* upgrade eslint v8 (fixes [#61](https://github.com/weiran-zsd/dts-cli/issues/61)) ([#99](https://github.com/weiran-zsd/dts-cli/issues/99)) ([63d37b9](https://github.com/weiran-zsd/dts-cli/commit/63d37b901eaa5a692977d2b67f1521fb770f4883))
+
 ## [0.20.0](https://github.com/weiran-zsd/dts-cli/compare/v0.19.7...v0.20.0) (2021-12-01)
 
 
