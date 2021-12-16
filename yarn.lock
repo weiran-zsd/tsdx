@@ -21,7 +21,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:^7.1.0, @babel/core@npm:^7.12.3, @babel/core@npm:^7.16.0, @babel/core@npm:^7.7.2, @babel/core@npm:^7.7.5":
+"@babel/core@npm:^7.1.0, @babel/core@npm:^7.12.3, @babel/core@npm:^7.16.0, @babel/core@npm:^7.16.5, @babel/core@npm:^7.7.2, @babel/core@npm:^7.7.5":
   version: 7.16.5
   resolution: "@babel/core@npm:7.16.5"
   dependencies:
@@ -345,7 +345,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/parser@npm:^7.1.0, @babel/parser@npm:^7.14.7, @babel/parser@npm:^7.16.0, @babel/parser@npm:^7.16.4, @babel/parser@npm:^7.16.5, @babel/parser@npm:^7.7.2":
+"@babel/parser@npm:^7.1.0, @babel/parser@npm:^7.14.7, @babel/parser@npm:^7.16.0, @babel/parser@npm:^7.16.5, @babel/parser@npm:^7.16.6, @babel/parser@npm:^7.7.2":
   version: 7.16.6
   resolution: "@babel/parser@npm:7.16.6"
   bin:
@@ -1266,7 +1266,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:^7.16.4":
+"@babel/preset-env@npm:^7.16.4, @babel/preset-env@npm:^7.16.5":
   version: 7.16.5
   resolution: "@babel/preset-env@npm:7.16.5"
   dependencies:
@@ -1424,7 +1424,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/traverse@npm:^7.1.0, @babel/traverse@npm:^7.13.0, @babel/traverse@npm:^7.16.3, @babel/traverse@npm:^7.16.5, @babel/traverse@npm:^7.4.5, @babel/traverse@npm:^7.7.2":
+"@babel/traverse@npm:^7.1.0, @babel/traverse@npm:^7.13.0, @babel/traverse@npm:^7.16.5, @babel/traverse@npm:^7.4.5, @babel/traverse@npm:^7.7.2":
   version: 7.16.5
   resolution: "@babel/traverse@npm:7.16.5"
   dependencies:
@@ -2191,7 +2191,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-node-resolve@npm:^13.0.6":
+"@rollup/plugin-node-resolve@npm:^13.1.1":
   version: 13.1.1
   resolution: "@rollup/plugin-node-resolve@npm:13.1.1"
   dependencies:
@@ -2532,7 +2532,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash@npm:^4.14.177":
+"@types/lodash@npm:^4.14.178":
   version: 4.14.178
   resolution: "@types/lodash@npm:4.14.178"
   checksum: a69a04a60bfc5257c3130a554b4efa0c383f0141b7b3db8ab7cf07ad2a46ea085fce66d0242da41da7e5647b133d5dfb2c15add9cbed8d7fef955e4a1e5b3128
@@ -2567,7 +2567,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^14.17.34":
+"@types/node@npm:^14.18.0":
   version: 14.18.0
   resolution: "@types/node@npm:14.18.0"
   checksum: b120c26fe5f30bc358e861db8d7e401e419d14bd9dd25c022f3c2ea8b0b429d4c9efd77ad5d6d2a8bde61702a6786fb74d409f1b2cbb61c79133e2a65aab4fb1
@@ -2652,7 +2652,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/sade@npm:^1.7.3":
+"@types/sade@npm:^1.7.4":
   version: 1.7.4
   resolution: "@types/sade@npm:1.7.4"
   dependencies:
@@ -2692,7 +2692,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/styled-components@npm:^5.1.15":
+"@types/styled-components@npm:^5.1.18":
   version: 5.1.18
   resolution: "@types/styled-components@npm:5.1.18"
   dependencies:
@@ -4489,7 +4489,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cssnano@npm:^5.0.1, cssnano@npm:^5.0.12":
+"cssnano@npm:^5.0.1, cssnano@npm:^5.0.13":
   version: 5.0.13
   resolution: "cssnano@npm:5.0.13"
   dependencies:
@@ -4903,32 +4903,32 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "dts-cli@workspace:."
   dependencies:
-    "@babel/core": ^7.16.0
+    "@babel/core": ^7.16.5
     "@babel/helper-module-imports": ^7.16.0
-    "@babel/parser": ^7.16.4
-    "@babel/plugin-proposal-class-properties": ^7.16.0
-    "@babel/preset-env": ^7.16.4
-    "@babel/traverse": ^7.16.3
+    "@babel/parser": ^7.16.6
+    "@babel/plugin-proposal-class-properties": ^7.16.5
+    "@babel/preset-env": ^7.16.5
+    "@babel/traverse": ^7.16.5
     "@commitlint/cli": ^15.0.0
     "@commitlint/config-conventional": ^15.0.0
     "@release-it/conventional-changelog": ^3.3.0
     "@rollup/plugin-babel": ^5.3.0
     "@rollup/plugin-commonjs": ^20.0.0
     "@rollup/plugin-json": ^4.1.0
-    "@rollup/plugin-node-resolve": ^13.0.6
+    "@rollup/plugin-node-resolve": ^13.1.1
     "@rollup/plugin-replace": ^3.0.0
     "@types/eslint": ^7.29.0
     "@types/figlet": ^1.5.4
     "@types/fs-extra": ^9.0.13
     "@types/jest": ^27.0.3
-    "@types/lodash": ^4.14.177
-    "@types/node": ^14.17.34
+    "@types/lodash": ^4.14.178
+    "@types/node": ^14.18.0
     "@types/react": ^16.14.21
     "@types/rollup-plugin-json": ^3.0.3
-    "@types/sade": ^1.7.3
+    "@types/sade": ^1.7.4
     "@types/semver": ^7.3.9
     "@types/shelljs": ^0.8.9
-    "@types/styled-components": ^5.1.15
+    "@types/styled-components": ^5.1.18
     ansi-escapes: ^4.3.2
     asyncro: ^3.0.0
     auto-changelog: ^2.3.0
@@ -4941,7 +4941,7 @@ __metadata:
     babel-plugin-transform-rename-import: ^2.3.0
     camelcase: ^6.2.1
     chalk: ^4.1.2
-    cssnano: ^5.0.12
+    cssnano: ^5.0.13
     doctoc: ^2.1.0
     enquirer: ^2.3.6
     eslint: ^8.3.0
@@ -4959,7 +4959,7 @@ __metadata:
     ora: ^5.4.1
     pascal-case: ^3.1.2
     pinst: ^2.1.6
-    postcss: ^8.4.4
+    postcss: ^8.4.5
     prettier: ^2.5.1
     pretty-quick: ^3.1.2
     progress-estimator: ^0.3.0
@@ -4981,9 +4981,9 @@ __metadata:
     tiny-glob: ^0.2.9
     tiny-invariant: ^1.2.0
     tiny-warning: ^1.0.3
-    ts-jest: ^27.0.7
+    ts-jest: ^27.1.1
     tslib: ^2.3.1
-    type-fest: ^2.6.0
+    type-fest: ^2.8.0
     typescript: ^4.5.2
   bin:
     dts: ./dist/index.js
@@ -9634,7 +9634,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.4.4":
+"postcss@npm:^8.4.5":
   version: 8.4.5
   resolution: "postcss@npm:8.4.5"
   dependencies:
@@ -11435,7 +11435,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-jest@npm:^27.0.7":
+"ts-jest@npm:^27.1.1":
   version: 27.1.1
   resolution: "ts-jest@npm:27.1.1"
   dependencies:
@@ -11622,7 +11622,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"type-fest@npm:^2.6.0":
+"type-fest@npm:^2.8.0":
   version: 2.8.0
   resolution: "type-fest@npm:2.8.0"
   checksum: 9f5afbe9d2ec8daeae4b9002ea320eac78487bef71f3d6937810ac6066cdaeaeec2dd1c4bb785edd12fd8b73412ab6beced2d81c5edd113e6c6bcb76bbe1c5bf
