@@ -1,3 +1,10 @@
+### [1.0.1](https://github.com/weiran-zsd/dts-cli/compare/v1.0.0...v1.0.1) (2021-12-16)
+
+
+### Bug Fixes
+
+* npm publish conf/ ([de49af7](https://github.com/weiran-zsd/dts-cli/commit/de49af730a71898a71878b32c10cbc897fcd3820))
+
 ## [1.0.0](https://github.com/weiran-zsd/dts-cli/compare/v0.20.0...v1.0.0) (2021-12-16)
 
 
