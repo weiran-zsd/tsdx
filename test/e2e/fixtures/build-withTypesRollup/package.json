@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "build": "dts build"
+  },
+  "name": "build-with-types-rollup",
+  "license": "MIT"
+}

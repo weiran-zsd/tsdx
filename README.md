@@ -41,6 +41,7 @@ Despite all the recent hype, setting up a new TypeScript (x React) library can b
       - [`warning`](#warning)
   - [Using lodash](#using-lodash)
   - [Error extraction](#error-extraction)
+  - [Types rollup](#types-rollup)
 - [Customization](#customization)
   - [Rollup](#rollup)
     - [Example: Adding Postcss](#example-adding-postcss)
@@ -317,6 +318,18 @@ Note: We don't provide this function for you, it is up to you how you want it to
 
 _TODO: Simple guide to host error codes to be completed_
 
+### Types rollup
+
+DTS automatically rolls up TypeScript type definitions into a single `index.d.ts` file via [rollup-plugin-dts](https://github.com/Swatinem/rollup-plugin-dts) plugin. This feature is enabled by default for new projects created via `dts-cli create`. To enable it for an existing project, please add `"declarationDir": "dist/types"` to your compiler options in`tsconfig.json`.
+
+```json
+{
+    "compilerOptions": {
+        "declarationDir": "dist/types"
+    }
+}
+```
+
 ## Customization
 
 ### Rollup
@@ -446,6 +459,7 @@ Options
   --onFailure           Run a command on a failed build
   --noClean             Don't clean the dist folder
   --transpileOnly       Skip type checking
+  --noTypesRollup       Skip types rollup
   -h, --help            Displays this message
 
 Examples
@@ -478,6 +492,7 @@ Options
   --extractErrors       Opt-in to extracting invariant error codes
   --tsconfig            Specify your custom tsconfig path (default <root-folder>/tsconfig.json)
   --transpileOnly       Skip type checking
+  --noTypesRollup       Skip types rollup
   -h, --help            Displays this message
 
 Examples

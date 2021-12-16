@@ -16,6 +16,7 @@ import ts from 'typescript';
 import { extractErrors } from './errors/extractErrors';
 import { babelPluginDts } from './babelPluginDts';
 import { DtsOptions } from './types';
+import { typescriptCompilerOptions } from './tsconfig';
 
 const errorCodeOpts = {
   errorMapFilePath: paths.appErrorsJson,
@@ -46,15 +47,7 @@ export async function createRollupConfig(
     .filter(Boolean)
     .join('.');
 
-  const tsconfigPath = opts.tsconfig || paths.tsconfigJson;
-  // borrowed from https://github.com/facebook/create-react-app/pull/7248
-  const tsconfigJSON = ts.readConfigFile(tsconfigPath, ts.sys.readFile).config;
-  // borrowed from https://github.com/ezolenko/rollup-plugin-typescript2/blob/42173460541b0c444326bf14f2c8c27269c4cb11/src/parse-tsconfig.ts#L48
-  const tsCompilerOptions = ts.parseJsonConfigFileContent(
-    tsconfigJSON,
-    ts.sys,
-    './'
-  ).options;
+  const tsCompilerOptions = typescriptCompilerOptions(opts.tsconfig);
 
   return {
     // Tell Rollup the entry point to the package
