@@ -2664,13 +2664,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/shelljs@npm:^0.8.9":
-  version: 0.8.9
-  resolution: "@types/shelljs@npm:0.8.9"
+"@types/shelljs@npm:^0.8.10":
+  version: 0.8.10
+  resolution: "@types/shelljs@npm:0.8.10"
   dependencies:
     "@types/glob": "*"
     "@types/node": "*"
-  checksum: 3d36b010d84665eed34076b4d4501c81f327df5e0c4062183bd2ce14ad927e82de2d1b00d49d356f9cc48390dd6b4db7b38fa221bc9f0eeb63cb7f873cd09fe4
+  checksum: 3e17ba788e7f1a22563ca2f09c938f5fde80ea9097cee14c39cf5b7c52dc8b29742eb0c323cf774a672401523b24a74ed02a27ceaef884c9843701a6c2d350b6
   languageName: node
   linkType: hard
 
@@ -4932,7 +4932,7 @@ __metadata:
     "@types/rollup-plugin-json": ^3.0.3
     "@types/sade": ^1.7.4
     "@types/semver": ^7.3.9
-    "@types/shelljs": ^0.8.9
+    "@types/shelljs": ^0.8.10
     "@types/styled-components": ^5.1.18
     ansi-escapes: ^4.3.2
     asyncro: ^3.0.0
@@ -4949,7 +4949,7 @@ __metadata:
     cssnano: ^5.0.13
     doctoc: ^2.1.0
     enquirer: ^2.3.6
-    eslint: ^8.3.0
+    eslint: ^8.4.1
     eslint-config-prettier: ^8.3.0
     eslint-config-react-app: ^7.0.0
     eslint-plugin-prettier: ^4.0.0
@@ -4957,7 +4957,7 @@ __metadata:
     figlet: ^1.5.2
     fs-extra: ^10.0.0
     husky: ^7.0.4
-    jest: ^27.4.0
+    jest: ^27.4.5
     jest-watch-typeahead: ^0.6.5
     jpjs: ^1.2.1
     lodash.merge: ^4.6.2
@@ -4973,7 +4973,7 @@ __metadata:
     react-is: ^16.13.1
     regenerator-runtime: ^0.13.9
     release-it: ^14.11.8
-    rollup: ^2.60.2
+    rollup: ^2.61.1
     rollup-plugin-delete: ^2.0.0
     rollup-plugin-dts: ^4.0.1
     rollup-plugin-postcss: ^4.0.2
@@ -4988,10 +4988,10 @@ __metadata:
     tiny-glob: ^0.2.9
     tiny-invariant: ^1.2.0
     tiny-warning: ^1.0.3
-    ts-jest: ^27.1.1
+    ts-jest: ^27.1.2
     tslib: ^2.3.1
     type-fest: ^2.8.0
-    typescript: ^4.5.2
+    typescript: ^4.5.4
   bin:
     dts: ./dist/index.js
   languageName: unknown
@@ -5432,7 +5432,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8.3.0":
+"eslint@npm:^8.4.1":
   version: 8.4.1
   resolution: "eslint@npm:8.4.1"
   dependencies:
@@ -7675,7 +7675,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest@npm:^27.4.0":
+"jest@npm:^27.4.5":
   version: 27.4.5
   resolution: "jest@npm:27.4.5"
   dependencies:
@@ -10538,7 +10538,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^2.60.2":
+"rollup@npm:^2.61.1":
   version: 2.61.1
   resolution: "rollup@npm:2.61.1"
   dependencies:
@@ -11499,9 +11499,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-jest@npm:^27.1.1":
-  version: 27.1.1
-  resolution: "ts-jest@npm:27.1.1"
+"ts-jest@npm:^27.1.2":
+  version: 27.1.2
+  resolution: "ts-jest@npm:27.1.2"
   dependencies:
     bs-logger: 0.x
     fast-json-stable-stringify: 2.x
@@ -11529,7 +11529,7 @@ __metadata:
       optional: true
   bin:
     ts-jest: cli.js
-  checksum: 3aea68083399c49e9079dbd1583ee5cce7da9648a6cdaef96c2b5f2f85de375c186227724336f359ecd2bc7871bff0911667d1f4867e0e275417b3e4887841d9
+  checksum: 2e7275f8a3545ec1340b37c458ace9244b5903e86861eb108beffff97d433f296c1254f76a41b573b1fe6245110b21bb62150bb88d55159f1dc7a929886535cb
   languageName: node
   linkType: hard
 
@@ -11716,7 +11716,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.4.3, typescript@npm:^4.5.2":
+"typescript@npm:^4.4.3, typescript@npm:^4.5.4":
   version: 4.5.4
   resolution: "typescript@npm:4.5.4"
   bin:
@@ -11726,7 +11726,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>, typescript@patch:typescript@^4.5.2#~builtin<compat/typescript>":
+"typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>, typescript@patch:typescript@^4.5.4#~builtin<compat/typescript>":
   version: 4.5.4
   resolution: "typescript@patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=493e53"
   bin:
