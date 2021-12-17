@@ -1,3 +1,18 @@
+## [1.1.0](https://github.com/weiran-zsd/dts-cli/compare/v1.0.1...v1.1.0) (2021-12-17)
+
+
+### Features
+
+* rollup type definitions (fixes [#108](https://github.com/weiran-zsd/dts-cli/issues/108)) ([#111](https://github.com/weiran-zsd/dts-cli/issues/111)) ([26a6950](https://github.com/weiran-zsd/dts-cli/commit/26a69503c75d29bc107db6014cdf52bd2276c7bc))
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#104](https://github.com/weiran-zsd/dts-cli/issues/104)) ([94bc741](https://github.com/weiran-zsd/dts-cli/commit/94bc7416245f7571b99b0e69d70cf373915ecd7d))
+* **deps:** update dependency @rollup/plugin-commonjs to v21 ([#65](https://github.com/weiran-zsd/dts-cli/issues/65)) ([fb6235f](https://github.com/weiran-zsd/dts-cli/commit/fb6235f5e9b683660b6255608b0a3bea4e6dd683))
+* **deps:** update dependency react-app-polyfill to v3 ([#109](https://github.com/weiran-zsd/dts-cli/issues/109)) ([fd05b72](https://github.com/weiran-zsd/dts-cli/commit/fd05b72da667494a0351b77f909c4679a68bd9db))
+* doctoc pre-commit hook ([#112](https://github.com/weiran-zsd/dts-cli/issues/112)) ([#113](https://github.com/weiran-zsd/dts-cli/issues/113)) ([7519492](https://github.com/weiran-zsd/dts-cli/commit/7519492b9517b001cb8ffd09aa44d27cb96e8fcf))
+
 ### [1.0.1](https://github.com/weiran-zsd/dts-cli/compare/v1.0.0...v1.0.1) (2021-12-16)
 
 
