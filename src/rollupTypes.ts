@@ -16,37 +16,39 @@ function descendantOfDist(declarationDir: string): boolean {
   );
 }
 
+function getTypesEntryPoint(appPackageJson: PackageJson): string | undefined {
+  // https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html#including-declarations-in-your-npm-package
+  return appPackageJson.types || appPackageJson.typings;
+}
+
+export function isTypesRollupEnabled(appPackageJson: PackageJson): boolean {
+  return Boolean(getTypesEntryPoint(appPackageJson));
+}
+
 export async function rollupTypes(
   tsconfig: string | undefined,
   appPackageJson: PackageJson
 ) {
   const tsCompilerOptions = typescriptCompilerOptions(tsconfig);
+  const declarationDir =
+    tsCompilerOptions.declarationDir || path.resolve('dist', 'types');
 
   // define bailout conditions
-  // - when `declaration` is explicitly set to 'false'
-  // - when `declarationDir` is not defined (can't clean up all the generated .d.ts files when compiled to dist root)
+  // - when no 'typings' or 'types' entrypoint is defined in package.json
+  // - when tsconfig.json `declaration` is explicitly set to false
   // - when `declarationDir` is not a descendant of `dist` (this must be a configuration error, but bailing out just to be safe)
   if (
+    !isTypesRollupEnabled(appPackageJson) ||
     tsCompilerOptions.declaration === false ||
-    !tsCompilerOptions.declarationDir ||
-    !descendantOfDist(tsCompilerOptions.declarationDir)
+    !descendantOfDist(declarationDir)
   ) {
     return;
   }
 
-  // https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html#including-declarations-in-your-npm-package
-  const typesEntryPoint =
-    appPackageJson.types ||
-    appPackageJson.typings ||
-    path.join(paths.appDist, 'index.d.ts');
-
   const config = {
-    input: path.join(tsCompilerOptions.declarationDir, 'index.d.ts'),
-    output: { file: typesEntryPoint, format: 'es' },
-    plugins: [
-      dts(),
-      del({ hook: 'buildEnd', targets: tsCompilerOptions.declarationDir }),
-    ],
+    input: path.join(declarationDir, 'index.d.ts'),
+    output: { file: getTypesEntryPoint(appPackageJson), format: 'es' },
+    plugins: [dts(), del({ hook: 'buildEnd', targets: declarationDir })],
   } as RollupOptions & { output: OutputOptions };
 
   const bundle = await rollup(config);

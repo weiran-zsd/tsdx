@@ -320,15 +320,7 @@ _TODO: Simple guide to host error codes to be completed_
 
 ### Types rollup
 
-DTS automatically rolls up TypeScript type definitions into a single `index.d.ts` file via [rollup-plugin-dts](https://github.com/Swatinem/rollup-plugin-dts) plugin. This feature is enabled by default for new projects created via `dts-cli create`. To enable it for an existing project, please add `"declarationDir": "dist/types"` to your compiler options in`tsconfig.json`.
-
-```json
-{
-    "compilerOptions": {
-        "declarationDir": "dist/types"
-    }
-}
-```
+DTS automatically rolls up TypeScript type definitions into a single `index.d.ts` file via [rollup-plugin-dts](https://github.com/Swatinem/rollup-plugin-dts) plugin. If this approach does not meet your project's needs, you can disable it via  `--noTypesRollup` flag.
 
 ## Customization
 

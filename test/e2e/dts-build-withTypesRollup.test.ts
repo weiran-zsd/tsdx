@@ -1,3 +1,4 @@
+import * as path from 'path';
 import * as shell from 'shelljs';
 
 import * as util from '../utils/fixture';
@@ -15,7 +16,7 @@ describe('dts build :: types rollup', () => {
     util.setupStageWithFixture(testDir, stageName, fixtureName);
   });
 
-  it('should rollup types into dist/index.d.ts', () => {
+  it('should rollup types into index.d.ts', () => {
     const output = execWithCache('node ../dist/index.js build');
 
     expect(shell.test('-f', 'dist/index.d.ts')).toBeTruthy();
@@ -30,32 +31,60 @@ describe('dts build :: types rollup', () => {
   it('should honor --noTypesRollup flag', () => {
     const output = execWithCache('node ../dist/index.js build --noTypesRollup');
 
-    expect(shell.test('-f', 'dist/index.d.ts')).toBeFalsy();
-
     expect(shell.test('-f', 'dist/types/index.d.ts')).toBeTruthy();
+
     expect(shell.test('-f', 'dist/types/foo/foo.d.ts')).toBeTruthy();
     expect(shell.test('-f', 'dist/types/bar/bar.d.ts')).toBeTruthy();
 
     expect(output.code).toBe(0);
   });
 
-  it('should not rollup types when declarationDir points to the dist root', () => {
+  it('should honor custom declarationDir', () => {
     shell.sed(
       '-i',
-      '"declarationDir": "dist/types"',
-      '"declarationDir": "dist"',
+      '"declaration": true,',
+      '"declaration": true, "declarationDir": "' +
+        path.resolve('dist', 'my-types') +
+        '",',
       'tsconfig.json'
     );
 
-    const output = execWithCache('node ../dist/index.js build', {
-      noCache: true,
-    });
+    try {
+      const output = execWithCache('node ../dist/index.js build');
 
-    expect(shell.test('-f', 'dist/index.d.ts')).toBeTruthy();
-    expect(shell.test('-f', 'dist/foo/foo.d.ts')).toBeTruthy();
-    expect(shell.test('-f', 'dist/bar/bar.d.ts')).toBeTruthy();
+      expect(shell.test('-f', 'dist/index.d.ts')).toBeTruthy();
 
-    expect(output.code).toBe(0);
+      expect(shell.test('-d', 'dist/my-types')).toBeFalsy();
+
+      expect(output.code).toBe(0);
+    } finally {
+      shell.sed(
+        '-i',
+        '"declaration": true, "declarationDir": "' +
+          path.resolve('dist', 'my-types') +
+          '",',
+        '"declaration": true,',
+        'tsconfig.json'
+      );
+    }
+  });
+
+  it('should not rollup types when there are no types or typings definition in package.json', () => {
+    shell.sed('-i', '"types"', '"types-disabled"', 'package.json');
+
+    try {
+      const output = execWithCache('node ../dist/index.js build', {
+        noCache: true,
+      });
+
+      expect(shell.test('-f', 'dist/index.d.ts')).toBeTruthy();
+      expect(shell.test('-f', 'dist/foo/foo.d.ts')).toBeTruthy();
+      expect(shell.test('-f', 'dist/bar/bar.d.ts')).toBeTruthy();
+
+      expect(output.code).toBe(0);
+    } finally {
+      shell.sed('-i', '"types-disabled"', '"types"', 'package.json');
+    }
   });
 
   afterAll(() => {

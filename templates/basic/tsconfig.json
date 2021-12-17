@@ -3,6 +3,5 @@
   "include": ["src", "types"],
   "compilerOptions": {
     "module": "esnext",
-    "declarationDir": "dist/types"
   }
 }

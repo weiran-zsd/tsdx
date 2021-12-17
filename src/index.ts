@@ -286,7 +286,7 @@ prog
   .example('watch --noTypesRollup')
   .action(async (dirtyOpts: WatchOpts) => {
     const opts = await normalizeOpts(dirtyOpts);
-    const buildConfigs = await createBuildConfigs(opts);
+    const buildConfigs = await createBuildConfigs(opts, appPackageJson);
     if (!opts.noClean) {
       await cleanDistFolder();
     }
@@ -394,7 +394,7 @@ prog
   )
   .action(async (dirtyOpts: BuildOpts) => {
     const opts = await normalizeOpts(dirtyOpts);
-    const buildConfigs = await createBuildConfigs(opts);
+    const buildConfigs = await createBuildConfigs(opts, appPackageJson);
     if (!opts.noClean) {
       await cleanDistFolder();
     }
