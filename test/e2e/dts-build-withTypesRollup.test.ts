@@ -1,4 +1,3 @@
-import * as path from 'path';
 import * as shell from 'shelljs';
 
 import * as util from '../utils/fixture';
@@ -43,14 +42,14 @@ describe('dts build :: types rollup', () => {
     shell.sed(
       '-i',
       '"declaration": true,',
-      '"declaration": true, "declarationDir": "' +
-        path.join('dist', 'my-types') +
-        '",',
+      '"declaration": true, "declarationDir": "dist/my-types",',
       'tsconfig.json'
     );
 
     try {
-      const output = execWithCache('node ../dist/index.js build');
+      const output = execWithCache('node ../dist/index.js build', {
+        noCache: true,
+      });
 
       expect(shell.test('-f', 'dist/index.d.ts')).toBeTruthy();
 
@@ -60,9 +59,7 @@ describe('dts build :: types rollup', () => {
     } finally {
       shell.sed(
         '-i',
-        '"declaration": true, "declarationDir": "' +
-          path.join('dist', 'my-types') +
-          '",',
+        '"declaration": true, "declarationDir": "dist/my-types",',
         '"declaration": true,',
         'tsconfig.json'
       );
