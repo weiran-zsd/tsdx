@@ -31,7 +31,7 @@ export async function rollupTypes(
 ) {
   const tsCompilerOptions = typescriptCompilerOptions(tsconfig);
   const declarationDir =
-    tsCompilerOptions.declarationDir || path.resolve('dist', 'types');
+    tsCompilerOptions.declarationDir || path.join('dist', 'types');
 
   // define bailout conditions
   // - when no 'typings' or 'types' entrypoint is defined in package.json

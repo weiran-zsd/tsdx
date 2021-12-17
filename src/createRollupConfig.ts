@@ -54,7 +54,7 @@ export async function createRollupConfig(
   const typesRollupEnabled = isTypesRollupEnabled(appPackageJson);
   const declarationDir =
     typescriptCompilerOptions(opts.tsconfig).declarationDir ||
-    (typesRollupEnabled ? path.resolve('dist', 'types') : undefined);
+    (typesRollupEnabled ? path.join('dist', 'types') : undefined);
 
   return {
     // Tell Rollup the entry point to the package

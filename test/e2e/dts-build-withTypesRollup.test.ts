@@ -44,7 +44,7 @@ describe('dts build :: types rollup', () => {
       '-i',
       '"declaration": true,',
       '"declaration": true, "declarationDir": "' +
-        path.resolve('dist', 'my-types') +
+        path.join('dist', 'my-types') +
         '",',
       'tsconfig.json'
     );
@@ -61,7 +61,7 @@ describe('dts build :: types rollup', () => {
       shell.sed(
         '-i',
         '"declaration": true, "declarationDir": "' +
-          path.resolve('dist', 'my-types') +
+          path.join('dist', 'my-types') +
           '",',
         '"declaration": true,',
         'tsconfig.json'
