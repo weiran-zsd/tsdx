@@ -49,6 +49,7 @@ import { templates } from './templates';
 import { composePackageJson } from './templates/utils';
 import * as deprecated from './deprecated';
 import sortPackageJson from 'sort-package-json';
+import { rollupTypes } from './rollupTypes';
 const pkg = require('../package.json');
 
 const prog = sade('dts');
@@ -281,9 +282,11 @@ prog
   .example('watch --transpileOnly')
   .option('--extractErrors', 'Extract invariant errors to ./errors/codes.json.')
   .example('watch --extractErrors')
+  .option('--noTypesRollup', 'Skip types rollup')
+  .example('watch --noTypesRollup')
   .action(async (dirtyOpts: WatchOpts) => {
     const opts = await normalizeOpts(dirtyOpts);
-    const buildConfigs = await createBuildConfigs(opts);
+    const buildConfigs = await createBuildConfigs(opts, appPackageJson);
     if (!opts.noClean) {
       await cleanDistFolder();
     }
@@ -345,6 +348,9 @@ prog
         console.log(`
   ${chalk.dim('Watching for changes')}
 `);
+        if (!opts.noTypesRollup) {
+          await rollupTypes(opts.tsconfig, appPackageJson);
+        }
 
         try {
           await deprecated.moveTypes();
@@ -377,6 +383,8 @@ prog
   .example('build --tsconfig ./tsconfig.foo.json')
   .option('--transpileOnly', 'Skip type checking')
   .example('build --transpileOnly')
+  .option('--noTypesRollup', 'Skip types rollup')
+  .example('build --noTypesRollup')
   .option(
     '--extractErrors',
     'Extract errors to ./errors/codes.json and provide a url for decoding.'
@@ -386,7 +394,7 @@ prog
   )
   .action(async (dirtyOpts: BuildOpts) => {
     const opts = await normalizeOpts(dirtyOpts);
-    const buildConfigs = await createBuildConfigs(opts);
+    const buildConfigs = await createBuildConfigs(opts, appPackageJson);
     if (!opts.noClean) {
       await cleanDistFolder();
     }
@@ -406,6 +414,11 @@ prog
         )
         .catch((e: any) => {
           throw e;
+        })
+        .then(async () => {
+          if (!opts.noTypesRollup) {
+            await rollupTypes(opts.tsconfig, appPackageJson);
+          }
         })
         .then(async () => {
           await deprecated.moveTypes();

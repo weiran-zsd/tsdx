@@ -24,7 +24,6 @@ Despite all the recent hype, setting up a new TypeScript (x React) library can b
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-
 - [Features](#features)
 - [Quick Start](#quick-start)
   - [`npm start` or `yarn start`](#npm-start-or-yarn-start)
@@ -41,6 +40,7 @@ Despite all the recent hype, setting up a new TypeScript (x React) library can b
       - [`warning`](#warning)
   - [Using lodash](#using-lodash)
   - [Error extraction](#error-extraction)
+  - [Types rollup](#types-rollup)
 - [Customization](#customization)
   - [Rollup](#rollup)
     - [Example: Adding Postcss](#example-adding-postcss)
@@ -317,6 +317,10 @@ Note: We don't provide this function for you, it is up to you how you want it to
 
 _TODO: Simple guide to host error codes to be completed_
 
+### Types rollup
+
+DTS automatically rolls up TypeScript type definitions into a single `index.d.ts` file via [rollup-plugin-dts](https://github.com/Swatinem/rollup-plugin-dts) plugin. If this approach does not meet your project's needs, you can disable it via  `--noTypesRollup` flag.
+
 ## Customization
 
 ### Rollup
@@ -446,6 +450,7 @@ Options
   --onFailure           Run a command on a failed build
   --noClean             Don't clean the dist folder
   --transpileOnly       Skip type checking
+  --noTypesRollup       Skip types rollup
   -h, --help            Displays this message
 
 Examples
@@ -478,6 +483,7 @@ Options
   --extractErrors       Opt-in to extracting invariant error codes
   --tsconfig            Specify your custom tsconfig path (default <root-folder>/tsconfig.json)
   --transpileOnly       Skip type checking
+  --noTypesRollup       Skip types rollup
   -h, --help            Displays this message
 
 Examples

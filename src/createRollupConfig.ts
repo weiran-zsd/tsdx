@@ -12,10 +12,13 @@ import resolve, {
 import sourceMaps from 'rollup-plugin-sourcemaps';
 import typescript from 'rollup-plugin-typescript2';
 import ts from 'typescript';
+import path from 'path';
 
 import { extractErrors } from './errors/extractErrors';
 import { babelPluginDts } from './babelPluginDts';
-import { DtsOptions } from './types';
+import { DtsOptions, PackageJson } from './types';
+import { typescriptCompilerOptions } from './tsconfig';
+import { isTypesRollupEnabled } from './rollupTypes';
 
 const errorCodeOpts = {
   errorMapFilePath: paths.appErrorsJson,
@@ -25,6 +28,7 @@ const errorCodeOpts = {
 let shebang: any = {};
 
 export async function createRollupConfig(
+  appPackageJson: PackageJson,
   opts: DtsOptions,
   outputNum: number
 ): Promise<RollupOptions> {
@@ -46,15 +50,11 @@ export async function createRollupConfig(
     .filter(Boolean)
     .join('.');
 
-  const tsconfigPath = opts.tsconfig || paths.tsconfigJson;
-  // borrowed from https://github.com/facebook/create-react-app/pull/7248
-  const tsconfigJSON = ts.readConfigFile(tsconfigPath, ts.sys.readFile).config;
-  // borrowed from https://github.com/ezolenko/rollup-plugin-typescript2/blob/42173460541b0c444326bf14f2c8c27269c4cb11/src/parse-tsconfig.ts#L48
-  const tsCompilerOptions = ts.parseJsonConfigFileContent(
-    tsconfigJSON,
-    ts.sys,
-    './'
-  ).options;
+  const tsCompilerOptions = typescriptCompilerOptions(opts.tsconfig);
+  const typesRollupEnabled = isTypesRollupEnabled(appPackageJson);
+  const declarationDir =
+    typescriptCompilerOptions(opts.tsconfig).declarationDir ||
+    (typesRollupEnabled ? path.join('dist', 'types') : undefined);
 
   return {
     // Tell Rollup the entry point to the package
@@ -175,6 +175,7 @@ export async function createRollupConfig(
           compilerOptions: {
             // TS -> esnext, then leave the rest to babel-preset-env
             target: 'esnext',
+            ...(Boolean(declarationDir) ? { declarationDir } : {}),
             // don't output declarations more than once
             ...(outputNum > 0
               ? { declaration: false, declarationMap: false }
@@ -182,7 +183,7 @@ export async function createRollupConfig(
           },
         },
         check: !opts.transpileOnly && outputNum === 0,
-        useTsconfigDeclarationDir: Boolean(tsCompilerOptions?.declarationDir),
+        useTsconfigDeclarationDir: Boolean(declarationDir),
       }),
       babelPluginDts({
         exclude: 'node_modules/**',
