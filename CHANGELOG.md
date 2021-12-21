@@ -1,3 +1,10 @@
+### [1.1.1](https://github.com/weiran-zsd/dts-cli/compare/v1.1.0...v1.1.1) (2021-12-21)
+
+
+### Bug Fixes
+
+* remove deps eslint-config-react-app as it requires node>=14 ([d247666](https://github.com/weiran-zsd/dts-cli/commit/d247666d985bba221417c82d6a15b2f9e4d34eab))
+
 ## [1.1.0](https://github.com/weiran-zsd/dts-cli/compare/v1.0.1...v1.1.0) (2021-12-17)
 
 
