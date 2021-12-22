@@ -3,7 +3,7 @@ import * as fs from 'fs-extra';
 import { concatAllArray } from 'jpjs';
 
 import { paths } from './constants';
-import { DtsOptions, NormalizedOpts, PackageJson } from './types';
+import { DtsOptions, NormalizedOpts } from './types';
 
 import { createRollupConfig } from './createRollupConfig';
 
@@ -19,8 +19,7 @@ if (fs.existsSync(paths.appConfig)) {
 }
 
 export async function createBuildConfigs(
-  opts: NormalizedOpts,
-  appPackageJson: PackageJson
+  opts: NormalizedOpts
 ): Promise<Array<RollupOptions & { output: OutputOptions }>> {
   const allInputs = concatAllArray(
     opts.input.map((input: string) =>
@@ -38,7 +37,7 @@ export async function createBuildConfigs(
   return await Promise.all(
     allInputs.map(async (options: DtsOptions, index: number) => {
       // pass the full rollup config to dts-cli.config.js override
-      const config = await createRollupConfig(appPackageJson, options, index);
+      const config = await createRollupConfig(options, index);
       return dtsBuildConfig.rollup(config, options);
     })
   );

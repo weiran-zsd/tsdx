@@ -14,12 +14,11 @@ export interface BuildOpts extends SharedOpts {
   entry?: string | string[];
   format: 'cjs,esm';
   target: 'browser';
-  noClean?: boolean;
-  noTypesRollup?: boolean;
 }
 
 export interface WatchOpts extends BuildOpts {
   verbose?: boolean;
+  noClean?: boolean;
   // callback hooks
   onFirstSuccess?: string;
   onSuccess?: string;
@@ -60,6 +59,4 @@ export interface PackageJson {
   engines?: {
     node?: string;
   };
-  types?: string;
-  typings?: string;
 }

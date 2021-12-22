@@ -1,8 +1,0 @@
-{
-  "scripts": {
-    "build": "dts build"
-  },
-  "name": "build-with-types-rollup",
-  "license": "MIT",
-  "types": "dist/index.d.ts"
-}
