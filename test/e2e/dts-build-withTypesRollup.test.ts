@@ -16,7 +16,7 @@ describe('dts build :: types rollup', () => {
   });
 
   it('should rollup types into index.d.ts', () => {
-    const output = execWithCache('node ../dist/index.js build');
+    const output = execWithCache('node ../dist/index.js build --rollupTypes');
 
     expect(shell.test('-f', 'dist/index.d.ts')).toBeTruthy();
 
@@ -27,8 +27,8 @@ describe('dts build :: types rollup', () => {
     expect(output.code).toBe(0);
   });
 
-  it('should honor --noTypesRollup flag', () => {
-    const output = execWithCache('node ../dist/index.js build --noTypesRollup');
+  it('should not run by default', () => {
+    const output = execWithCache('node ../dist/index.js build');
 
     expect(shell.test('-f', 'dist/types/index.d.ts')).toBeTruthy();
 
@@ -47,9 +47,12 @@ describe('dts build :: types rollup', () => {
     );
 
     try {
-      const output = execWithCache('node ../dist/index.js build', {
-        noCache: true,
-      });
+      const output = execWithCache(
+        'node ../dist/index.js build --rollupTypes',
+        {
+          noCache: true,
+        }
+      );
 
       expect(shell.test('-f', 'dist/index.d.ts')).toBeTruthy();
 
@@ -70,9 +73,12 @@ describe('dts build :: types rollup', () => {
     shell.sed('-i', '"types"', '"types-disabled"', 'package.json');
 
     try {
-      const output = execWithCache('node ../dist/index.js build', {
-        noCache: true,
-      });
+      const output = execWithCache(
+        'node ../dist/index.js build --rollupTypes',
+        {
+          noCache: true,
+        }
+      );
 
       expect(shell.test('-f', 'dist/index.d.ts')).toBeTruthy();
       expect(shell.test('-f', 'dist/foo/foo.d.ts')).toBeTruthy();

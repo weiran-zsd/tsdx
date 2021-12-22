@@ -282,8 +282,8 @@ prog
   .example('watch --transpileOnly')
   .option('--extractErrors', 'Extract invariant errors to ./errors/codes.json.')
   .example('watch --extractErrors')
-  .option('--noTypesRollup', 'Skip types rollup')
-  .example('watch --noTypesRollup')
+  .option('--rollupTypes', 'Enable types rollup')
+  .example('watch --rollupTypes')
   .action(async (dirtyOpts: WatchOpts) => {
     const opts = await normalizeOpts(dirtyOpts);
     const buildConfigs = await createBuildConfigs(opts, appPackageJson);
@@ -348,7 +348,7 @@ prog
         console.log(`
   ${chalk.dim('Watching for changes')}
 `);
-        if (!opts.noTypesRollup) {
+        if (opts.rollupTypes) {
           await rollupTypes(opts.tsconfig, appPackageJson);
         }
 
@@ -383,8 +383,8 @@ prog
   .example('build --tsconfig ./tsconfig.foo.json')
   .option('--transpileOnly', 'Skip type checking')
   .example('build --transpileOnly')
-  .option('--noTypesRollup', 'Skip types rollup')
-  .example('build --noTypesRollup')
+  .option('--rollupTypes', 'Enable types rollup')
+  .example('build --rollupTypes')
   .option(
     '--extractErrors',
     'Extract errors to ./errors/codes.json and provide a url for decoding.'
@@ -416,7 +416,7 @@ prog
           throw e;
         })
         .then(async () => {
-          if (!opts.noTypesRollup) {
+          if (opts.rollupTypes) {
             await rollupTypes(opts.tsconfig, appPackageJson);
           }
         })
