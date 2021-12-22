@@ -457,7 +457,7 @@ Options
   --onFailure           Run a command on a failed build
   --noClean             Don't clean the dist folder
   --transpileOnly       Skip type checking
-  --rollupTypes         ENable types rollup
+  --rollupTypes         Enable types rollup
   -h, --help            Displays this message
 
 Examples
