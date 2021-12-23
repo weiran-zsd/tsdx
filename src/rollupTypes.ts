@@ -51,6 +51,10 @@ export async function rollupTypes(
     plugins: [dts(), del({ hook: 'buildEnd', targets: declarationDir })],
   } as RollupOptions & { output: OutputOptions };
 
-  const bundle = await rollup(config);
-  await bundle.write(config.output);
+  try {
+    const bundle = await rollup(config);
+    await bundle.write(config.output);
+  } catch (e) {
+    console.log('Failed to rollup types:', e);
+  }
 }

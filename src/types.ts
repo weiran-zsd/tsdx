@@ -15,7 +15,7 @@ export interface BuildOpts extends SharedOpts {
   format: 'cjs,esm';
   target: 'browser';
   noClean?: boolean;
-  noTypesRollup?: boolean;
+  rollupTypes?: boolean;
 }
 
 export interface WatchOpts extends BuildOpts {

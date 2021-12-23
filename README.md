@@ -319,7 +319,14 @@ _TODO: Simple guide to host error codes to be completed_
 
 ### Types rollup
 
-DTS automatically rolls up TypeScript type definitions into a single `index.d.ts` file via [rollup-plugin-dts](https://github.com/Swatinem/rollup-plugin-dts) plugin. If this approach does not meet your project's needs, you can disable it via  `--noTypesRollup` flag.
+DTS can automatically rollup TypeScript type definitions into a single `index.d.ts` file via [rollup-plugin-dts](https://github.com/Swatinem/rollup-plugin-dts) plugin. To enable types rollup, add `--rollupTypes` flag to your `build` and `watch` scripts.
+
+```json
+    "build": "dts build --rollupTypes",
+    "start": "dts watch --rollupTypes",
+```
+
+[rollup-plugin-dts](https://github.com/Swatinem/rollup-plugin-dts) was seen to cause issues when using json and less imports. Use with caution.
 
 ## Customization
 
@@ -450,7 +457,7 @@ Options
   --onFailure           Run a command on a failed build
   --noClean             Don't clean the dist folder
   --transpileOnly       Skip type checking
-  --noTypesRollup       Skip types rollup
+  --rollupTypes         Enable types rollup
   -h, --help            Displays this message
 
 Examples
@@ -483,7 +490,7 @@ Options
   --extractErrors       Opt-in to extracting invariant error codes
   --tsconfig            Specify your custom tsconfig path (default <root-folder>/tsconfig.json)
   --transpileOnly       Skip type checking
-  --noTypesRollup       Skip types rollup
+  --rollupTypes         Enable types rollup
   -h, --help            Displays this message
 
 Examples

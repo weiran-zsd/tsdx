@@ -16,3 +16,6 @@ package-lock.json
 !.yarn/sdks
 !.yarn/versions
 .pnp.*
+
+# WebStorm project files
+.idea
