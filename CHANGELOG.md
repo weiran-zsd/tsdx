@@ -1,3 +1,10 @@
+### [1.1.2](https://github.com/weiran-zsd/dts-cli/compare/v1.1.1...v1.1.2) (2021-12-23)
+
+
+### Bug Fixes
+
+* switch types rollup feature to opt-in ([#117](https://github.com/weiran-zsd/dts-cli/issues/117)) ([56a078e](https://github.com/weiran-zsd/dts-cli/commit/56a078e92438f29ca18dce575b2510ecb07de037))
+
 ### [1.1.1](https://github.com/weiran-zsd/dts-cli/compare/v1.1.0...v1.1.1) (2021-12-21)
 
 
