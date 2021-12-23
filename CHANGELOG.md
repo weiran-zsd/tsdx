@@ -1,3 +1,10 @@
+### [1.1.3](https://github.com/weiran-zsd/dts-cli/compare/v1.1.2...v1.1.3) (2021-12-23)
+
+
+### Bug Fixes
+
+* eslint should be deps, not dev deps ([e8e239f](https://github.com/weiran-zsd/dts-cli/commit/e8e239f10a446d1d34f666fc4a23565eeb9a8793))
+
 ### [1.1.2](https://github.com/weiran-zsd/dts-cli/compare/v1.1.1...v1.1.2) (2021-12-23)
 
 
