@@ -1,7 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn pretty-quick --staged --pattern '!test/tests/lint/**'
-yarn lint
-yarn deduplicate:check
-yarn doctoc
+yarn build
+yarn lint-staged

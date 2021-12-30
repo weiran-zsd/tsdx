@@ -19,3 +19,6 @@ package-lock.json
 
 # WebStorm project files
 .idea
+
+# tsc cache
+tsconfig.tsbuildinfo
