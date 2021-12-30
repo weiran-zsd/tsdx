@@ -1,5 +1,5 @@
-import * as shell from 'shelljs';
-
+import shell from 'shelljs';
+import path from 'path';
 import * as util from '../utils/fixture';
 
 shell.config.silent = true;
@@ -100,10 +100,22 @@ describe('dts lint', () => {
       util.setupStageWithFixture(testDir, stageName, 'build-default');
     });
 
-    it('should create the file', () => {
+    it('should create a valid eslint config file', () => {
+      const cwd = shell.pwd().stdout;
+
       const output = shell.exec(`node ../dist/index.js lint --write-file`);
       expect(shell.test('-f', '.eslintrc.js')).toBeTruthy();
       expect(output.code).toBe(0);
+
+      // https://github.com/weiran-zsd/dts-cli/issues/118
+      const eslintrc: { extends: any[] } = require(path.join(
+        cwd,
+        '.eslintrc.js'
+      ));
+      const configs: string[] = eslintrc.extends;
+      configs.map((item) =>
+        expect(typeof item === 'string' && !item.startsWith('/')).toBe(true)
+      );
     });
 
     afterAll(() => {
