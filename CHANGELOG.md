@@ -1,3 +1,10 @@
+### [1.1.4](https://github.com/weiran-zsd/dts-cli/compare/v1.1.3...v1.1.4) (2021-12-30)
+
+
+### Bug Fixes
+
+* `dts lint --write-file` should not ouput abs path ([#120](https://github.com/weiran-zsd/dts-cli/issues/120)) ([7371abe](https://github.com/weiran-zsd/dts-cli/commit/7371abe9e79bca71634e86e59432303f5116cc83)), closes [#118](https://github.com/weiran-zsd/dts-cli/issues/118)
+
 ### [1.1.3](https://github.com/weiran-zsd/dts-cli/compare/v1.1.2...v1.1.3) (2021-12-23)
 
 
