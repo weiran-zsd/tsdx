@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Thing } from '../src';
+import { Thing } from '../src/index';
 
 describe('Thing', () => {
   it('renders without crashing', () => {

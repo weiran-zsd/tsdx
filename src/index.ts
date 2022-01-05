@@ -591,7 +591,6 @@ prog
           )
         );
       }
-      console.log(opts);
       try {
         const config = await createEslintConfig({
           pkg: appPackageJson,
