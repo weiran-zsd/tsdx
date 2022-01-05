@@ -558,7 +558,7 @@ prog
   .command('lint')
   .describe('Run eslint with Prettier')
   .example('lint src test')
-  .option('--fix', 'Fixes fixable errors and warnings')
+  .option('--fix', 'Fixes fixable errors and warnings', false)
   .example('lint src test --fix')
   .option('--ignore-pattern', 'Ignore a pattern')
   .example('lint src test --ignore-pattern test/foobar.ts')
@@ -591,6 +591,7 @@ prog
           )
         );
       }
+      console.log(opts);
       try {
         const config = await createEslintConfig({
           pkg: appPackageJson,
