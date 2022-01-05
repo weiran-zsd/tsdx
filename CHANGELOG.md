@@ -1,119 +1,113 @@
-### [1.1.4](https://github.com/weiran-zsd/dts-cli/compare/v1.1.3...v1.1.4) (2021-12-30)
-
+### [1.1.5](https://github.com/weiran-zsd/dts-cli/compare/v1.1.4...v1.1.5) (2022-01-05)
 
 ### Bug Fixes
 
-* `dts lint --write-file` should not ouput abs path ([#120](https://github.com/weiran-zsd/dts-cli/issues/120)) ([7371abe](https://github.com/weiran-zsd/dts-cli/commit/7371abe9e79bca71634e86e59432303f5116cc83)), closes [#118](https://github.com/weiran-zsd/dts-cli/issues/118)
+- cannot find module '../src' or its corresponding type declarations ([7dbac65](https://github.com/weiran-zsd/dts-cli/commit/7dbac659681b5f9b37a341ededf3fcb3b49bb219))
+- **deps:** update all non-major dependencies ([6dbcd0e](https://github.com/weiran-zsd/dts-cli/commit/6dbcd0eefefd3212750bc436f350f7e3fbfdace1))
+- dts lint --fix src/index.js was incorrectly parsed ([2188b69](https://github.com/weiran-zsd/dts-cli/commit/2188b69b44c21169328f0ed287e983424b591bda))
+
+### [1.1.4](https://github.com/weiran-zsd/dts-cli/compare/v1.1.3...v1.1.4) (2021-12-30)
+
+### Bug Fixes
+
+- `dts lint --write-file` should not ouput abs path ([#120](https://github.com/weiran-zsd/dts-cli/issues/120)) ([7371abe](https://github.com/weiran-zsd/dts-cli/commit/7371abe9e79bca71634e86e59432303f5116cc83)), closes [#118](https://github.com/weiran-zsd/dts-cli/issues/118)
 
 ### [1.1.3](https://github.com/weiran-zsd/dts-cli/compare/v1.1.2...v1.1.3) (2021-12-23)
 
-
 ### Bug Fixes
 
-* eslint should be deps, not dev deps ([e8e239f](https://github.com/weiran-zsd/dts-cli/commit/e8e239f10a446d1d34f666fc4a23565eeb9a8793))
+- eslint should be deps, not dev deps ([e8e239f](https://github.com/weiran-zsd/dts-cli/commit/e8e239f10a446d1d34f666fc4a23565eeb9a8793))
 
 ### [1.1.2](https://github.com/weiran-zsd/dts-cli/compare/v1.1.1...v1.1.2) (2021-12-23)
 
-
 ### Bug Fixes
 
-* switch types rollup feature to opt-in ([#117](https://github.com/weiran-zsd/dts-cli/issues/117)) ([56a078e](https://github.com/weiran-zsd/dts-cli/commit/56a078e92438f29ca18dce575b2510ecb07de037))
+- switch types rollup feature to opt-in ([#117](https://github.com/weiran-zsd/dts-cli/issues/117)) ([56a078e](https://github.com/weiran-zsd/dts-cli/commit/56a078e92438f29ca18dce575b2510ecb07de037))
 
 ### [1.1.1](https://github.com/weiran-zsd/dts-cli/compare/v1.1.0...v1.1.1) (2021-12-21)
 
-
 ### Bug Fixes
 
-* remove deps eslint-config-react-app as it requires node>=14 ([d247666](https://github.com/weiran-zsd/dts-cli/commit/d247666d985bba221417c82d6a15b2f9e4d34eab))
+- remove deps eslint-config-react-app as it requires node>=14 ([d247666](https://github.com/weiran-zsd/dts-cli/commit/d247666d985bba221417c82d6a15b2f9e4d34eab))
 
 ## [1.1.0](https://github.com/weiran-zsd/dts-cli/compare/v1.0.1...v1.1.0) (2021-12-17)
 
-
 ### Features
 
-* rollup type definitions (fixes [#108](https://github.com/weiran-zsd/dts-cli/issues/108)) ([#111](https://github.com/weiran-zsd/dts-cli/issues/111)) ([26a6950](https://github.com/weiran-zsd/dts-cli/commit/26a69503c75d29bc107db6014cdf52bd2276c7bc))
-
+- rollup type definitions (fixes [#108](https://github.com/weiran-zsd/dts-cli/issues/108)) ([#111](https://github.com/weiran-zsd/dts-cli/issues/111)) ([26a6950](https://github.com/weiran-zsd/dts-cli/commit/26a69503c75d29bc107db6014cdf52bd2276c7bc))
 
 ### Bug Fixes
 
-* **deps:** update all non-major dependencies ([#104](https://github.com/weiran-zsd/dts-cli/issues/104)) ([94bc741](https://github.com/weiran-zsd/dts-cli/commit/94bc7416245f7571b99b0e69d70cf373915ecd7d))
-* **deps:** update dependency @rollup/plugin-commonjs to v21 ([#65](https://github.com/weiran-zsd/dts-cli/issues/65)) ([fb6235f](https://github.com/weiran-zsd/dts-cli/commit/fb6235f5e9b683660b6255608b0a3bea4e6dd683))
-* **deps:** update dependency react-app-polyfill to v3 ([#109](https://github.com/weiran-zsd/dts-cli/issues/109)) ([fd05b72](https://github.com/weiran-zsd/dts-cli/commit/fd05b72da667494a0351b77f909c4679a68bd9db))
-* doctoc pre-commit hook ([#112](https://github.com/weiran-zsd/dts-cli/issues/112)) ([#113](https://github.com/weiran-zsd/dts-cli/issues/113)) ([7519492](https://github.com/weiran-zsd/dts-cli/commit/7519492b9517b001cb8ffd09aa44d27cb96e8fcf))
+- **deps:** update all non-major dependencies ([#104](https://github.com/weiran-zsd/dts-cli/issues/104)) ([94bc741](https://github.com/weiran-zsd/dts-cli/commit/94bc7416245f7571b99b0e69d70cf373915ecd7d))
+- **deps:** update dependency @rollup/plugin-commonjs to v21 ([#65](https://github.com/weiran-zsd/dts-cli/issues/65)) ([fb6235f](https://github.com/weiran-zsd/dts-cli/commit/fb6235f5e9b683660b6255608b0a3bea4e6dd683))
+- **deps:** update dependency react-app-polyfill to v3 ([#109](https://github.com/weiran-zsd/dts-cli/issues/109)) ([fd05b72](https://github.com/weiran-zsd/dts-cli/commit/fd05b72da667494a0351b77f909c4679a68bd9db))
+- doctoc pre-commit hook ([#112](https://github.com/weiran-zsd/dts-cli/issues/112)) ([#113](https://github.com/weiran-zsd/dts-cli/issues/113)) ([7519492](https://github.com/weiran-zsd/dts-cli/commit/7519492b9517b001cb8ffd09aa44d27cb96e8fcf))
 
 ### [1.0.1](https://github.com/weiran-zsd/dts-cli/compare/v1.0.0...v1.0.1) (2021-12-16)
 
-
 ### Bug Fixes
 
-* npm publish conf/ ([de49af7](https://github.com/weiran-zsd/dts-cli/commit/de49af730a71898a71878b32c10cbc897fcd3820))
+- npm publish conf/ ([de49af7](https://github.com/weiran-zsd/dts-cli/commit/de49af730a71898a71878b32c10cbc897fcd3820))
 
 ## [1.0.0](https://github.com/weiran-zsd/dts-cli/compare/v0.20.0...v1.0.0) (2021-12-16)
 
-
 ### ⚠ BREAKING CHANGES
 
-* upgrade eslint v8 (fixes #61) (#99)
+- upgrade eslint v8 (fixes #61) (#99)
 
 ### Features
 
-* upgrade eslint v8 (fixes [#61](https://github.com/weiran-zsd/dts-cli/issues/61)) ([#99](https://github.com/weiran-zsd/dts-cli/issues/99)) ([63d37b9](https://github.com/weiran-zsd/dts-cli/commit/63d37b901eaa5a692977d2b67f1521fb770f4883))
+- upgrade eslint v8 (fixes [#61](https://github.com/weiran-zsd/dts-cli/issues/61)) ([#99](https://github.com/weiran-zsd/dts-cli/issues/99)) ([63d37b9](https://github.com/weiran-zsd/dts-cli/commit/63d37b901eaa5a692977d2b67f1521fb770f4883))
 
 ## [0.20.0](https://github.com/weiran-zsd/dts-cli/compare/v0.19.7...v0.20.0) (2021-12-01)
 
-
 ### Features
 
-* support `dts build --noClean` (fixes [#103](https://github.com/weiran-zsd/dts-cli/issues/103)) ([#105](https://github.com/weiran-zsd/dts-cli/issues/105)) ([e55136e](https://github.com/weiran-zsd/dts-cli/commit/e55136e3220c8c12eb88f152265257855914b868))
-* upgrade prettier 2.5 ([0ee72fd](https://github.com/weiran-zsd/dts-cli/commit/0ee72fd6f6f7ae2ef0dadb3e4c0277a72df38b61))
-
+- support `dts build --noClean` (fixes [#103](https://github.com/weiran-zsd/dts-cli/issues/103)) ([#105](https://github.com/weiran-zsd/dts-cli/issues/105)) ([e55136e](https://github.com/weiran-zsd/dts-cli/commit/e55136e3220c8c12eb88f152265257855914b868))
+- upgrade prettier 2.5 ([0ee72fd](https://github.com/weiran-zsd/dts-cli/commit/0ee72fd6f6f7ae2ef0dadb3e4c0277a72df38b61))
 
 ### Bug Fixes
 
-* **deps:** update dependency react-app-polyfill to v2 ([#46](https://github.com/weiran-zsd/dts-cli/issues/46)) ([079b4eb](https://github.com/weiran-zsd/dts-cli/commit/079b4eb293299d5159ab3a76b6c9ae9bb6668f30))
-* **deps:** update typescript-eslint monorepo to v5 ([#74](https://github.com/weiran-zsd/dts-cli/issues/74)) ([a84727d](https://github.com/weiran-zsd/dts-cli/commit/a84727d18692ac9cce1427344f55fb85f6e4ea88))
-* upgrade ts/rollup/prettier to latest ([64566df](https://github.com/weiran-zsd/dts-cli/commit/64566dfddfc67966c17d1a42c91d7dd54c02973f))
-* website eslint config ([6b8be5b](https://github.com/weiran-zsd/dts-cli/commit/6b8be5bbf4a48242b0055942cd7400096125e373))
+- **deps:** update dependency react-app-polyfill to v2 ([#46](https://github.com/weiran-zsd/dts-cli/issues/46)) ([079b4eb](https://github.com/weiran-zsd/dts-cli/commit/079b4eb293299d5159ab3a76b6c9ae9bb6668f30))
+- **deps:** update typescript-eslint monorepo to v5 ([#74](https://github.com/weiran-zsd/dts-cli/issues/74)) ([a84727d](https://github.com/weiran-zsd/dts-cli/commit/a84727d18692ac9cce1427344f55fb85f6e4ea88))
+- upgrade ts/rollup/prettier to latest ([64566df](https://github.com/weiran-zsd/dts-cli/commit/64566dfddfc67966c17d1a42c91d7dd54c02973f))
+- website eslint config ([6b8be5b](https://github.com/weiran-zsd/dts-cli/commit/6b8be5bbf4a48242b0055942cd7400096125e373))
 
 ### [0.19.7](https://github.com/weiran-zsd/dts-cli/compare/v0.19.6...v0.19.7) (2021-11-23)
 
-
 ### Bug Fixes
 
-* **deps:** update all non-major dependencies ([#62](https://github.com/weiran-zsd/dts-cli/issues/62)) ([b58b110](https://github.com/weiran-zsd/dts-cli/commit/b58b1104e9f8c147cf859a6def7a08f6c006684c))
-* sort generated package.json (fixes [#97](https://github.com/weiran-zsd/dts-cli/issues/97)) ([#98](https://github.com/weiran-zsd/dts-cli/issues/98)) ([f73cb4e](https://github.com/weiran-zsd/dts-cli/commit/f73cb4e63e2f83443d01513cc53eeb2989cb1257))
+- **deps:** update all non-major dependencies ([#62](https://github.com/weiran-zsd/dts-cli/issues/62)) ([b58b110](https://github.com/weiran-zsd/dts-cli/commit/b58b1104e9f8c147cf859a6def7a08f6c006684c))
+- sort generated package.json (fixes [#97](https://github.com/weiran-zsd/dts-cli/issues/97)) ([#98](https://github.com/weiran-zsd/dts-cli/issues/98)) ([f73cb4e](https://github.com/weiran-zsd/dts-cli/commit/f73cb4e63e2f83443d01513cc53eeb2989cb1257))
 
 ### [0.19.6](https://github.com/weiran-zsd/dts-cli/compare/v0.19.5...v0.19.6) (2021-11-17)
 
-
 ### Bug Fixes
 
-* lint always fails on windows github runners due to line endings ([#92](https://github.com/weiran-zsd/dts-cli/issues/92)) ([c6f0b8b](https://github.com/weiran-zsd/dts-cli/commit/c6f0b8bfd864cc6e8b45d7db671cc62e95b71113))
-* node v17 => Error loading tslib helper library (fixes [#78](https://github.com/weiran-zsd/dts-cli/issues/78)) ([#93](https://github.com/weiran-zsd/dts-cli/issues/93)) ([e298771](https://github.com/weiran-zsd/dts-cli/commit/e29877190f85fb9bb6b9b11def16d944e2411476))
+- lint always fails on windows github runners due to line endings ([#92](https://github.com/weiran-zsd/dts-cli/issues/92)) ([c6f0b8b](https://github.com/weiran-zsd/dts-cli/commit/c6f0b8bfd864cc6e8b45d7db671cc62e95b71113))
+- node v17 => Error loading tslib helper library (fixes [#78](https://github.com/weiran-zsd/dts-cli/issues/78)) ([#93](https://github.com/weiran-zsd/dts-cli/issues/93)) ([e298771](https://github.com/weiran-zsd/dts-cli/commit/e29877190f85fb9bb6b9b11def16d944e2411476))
 
 ### [0.19.5](https://github.com/weiran-zsd/dts-cli/compare/v0.19.4...v0.19.5) (2021-11-12)
 
-
 ### Bug Fixes
 
-* add jest config in the templates ([#91](https://github.com/weiran-zsd/dts-cli/issues/91)) ([711f414](https://github.com/weiran-zsd/dts-cli/commit/711f4146b7f9d5162b988199ade723e29801c64a))
+- add jest config in the templates ([#91](https://github.com/weiran-zsd/dts-cli/issues/91)) ([711f414](https://github.com/weiran-zsd/dts-cli/commit/711f4146b7f9d5162b988199ade723e29801c64a))
 
 ### [0.19.4](https://github.com/weiran-zsd/dts-cli/compare/v0.19.3...v0.19.4) (2021-10-21)
 
-
 ### Bug Fixes
 
-* rollup module incompatibility with tsconfig.json (fixes [#79](https://github.com/weiran-zsd/dts-cli/issues/79)) ([b72472a](https://github.com/weiran-zsd/dts-cli/commit/b72472ab4e637927b67f73111f1f5b33d5197daf))
+- rollup module incompatibility with tsconfig.json (fixes [#79](https://github.com/weiran-zsd/dts-cli/issues/79)) ([b72472a](https://github.com/weiran-zsd/dts-cli/commit/b72472ab4e637927b67f73111f1f5b33d5197daf))
 
 ### [0.19.3](https://github.com/weiran-zsd/dts-cli/compare/v0.19.3-0...v0.19.3) (2021-10-21)
 
 ### [0.19.3-0](https://github.com/weiran-zsd/dts-cli/compare/v0.19.2...v0.19.3-0) (2021-10-21)
 
-
 ### Bug Fixes
 
-* add pkg.private=>true in examples ([707f267](https://github.com/weiran-zsd/dts-cli/commit/707f26717ec67cfbad817d67f0afe2f88264010b))
-* use @tsconfig/recommended & @tsconfig/create-react-app ([be42ffb](https://github.com/weiran-zsd/dts-cli/commit/be42ffbad25170a8bc803dc4331874ca24435e6d))
+- add pkg.private=>true in examples ([707f267](https://github.com/weiran-zsd/dts-cli/commit/707f26717ec67cfbad817d67f0afe2f88264010b))
+- use @tsconfig/recommended & @tsconfig/create-react-app ([be42ffb](https://github.com/weiran-zsd/dts-cli/commit/be42ffbad25170a8bc803dc4331874ca24435e6d))
+
 #### [v0.19.2](https://github.com/weiran-zsd/dts-cli/compare/v0.19.1...v0.19.2)
 
 - fix: tsconfig.json [`9e370ce`](https://github.com/weiran-zsd/dts-cli/commit/9e370ce2dbd43ade299b60508adcf885508a7e79)
@@ -555,7 +549,7 @@
 
 - (deps/lint): upgrade @typescript-eslint to support ?. and ?? [`#377`](https://github.com/weiran-zsd/dts-cli/pull/377)
 - (ci): add a lint job so PRs will require passing lint [`#378`](https://github.com/weiran-zsd/dts-cli/pull/378)
-- (clean): remove .rts_cache_* from storybook gitignore [`#375`](https://github.com/weiran-zsd/dts-cli/pull/375)
+- (clean): remove .rts*cache*\* from storybook gitignore [`#375`](https://github.com/weiran-zsd/dts-cli/pull/375)
 - Add optional chaining and nullish coalescing operators support [`#370`](https://github.com/weiran-zsd/dts-cli/pull/370)
 - Added Storybook template [`#318`](https://github.com/weiran-zsd/dts-cli/pull/318)
 - (fix/ci): GitHub Actions should run on PRs as well [`#373`](https://github.com/weiran-zsd/dts-cli/pull/373)
@@ -816,7 +810,7 @@
 - fix: remove falsey build configs [`#77`](https://github.com/weiran-zsd/dts-cli/pull/77)
 - feat: use tslib by default [`#73`](https://github.com/weiran-zsd/dts-cli/pull/73)
 - Write Jest configuration file [`#75`](https://github.com/weiran-zsd/dts-cli/pull/75)
-- docs(readme): specify Jest v24 is used.  Clarify jsdom flag [`#68`](https://github.com/weiran-zsd/dts-cli/pull/68)
+- docs(readme): specify Jest v24 is used. Clarify jsdom flag [`#68`](https://github.com/weiran-zsd/dts-cli/pull/68)
 - Fix testMatch to find test files correctly [`#71`](https://github.com/weiran-zsd/dts-cli/pull/71)
 - Catch + throw errors before passing to p-estimator [`851da83`](https://github.com/weiran-zsd/dts-cli/commit/851da83213126271ca085fc8420a2a0ceadcd3a5)
 - Use require.resolve for babel plugins [`29fb3c8`](https://github.com/weiran-zsd/dts-cli/commit/29fb3c851dd5b39cdd59559e70c8e488f265b135)
@@ -869,7 +863,7 @@
 - Use npm, if yarn is not installed [`#50`](https://github.com/weiran-zsd/dts-cli/pull/50)
 - feat: use pretty-quick [`#49`](https://github.com/weiran-zsd/dts-cli/pull/49)
 - Upgrade to jest 24 + ts-jest [`#47`](https://github.com/weiran-zsd/dts-cli/pull/47)
-- replace f**k in template [`#46`](https://github.com/weiran-zsd/dts-cli/pull/46)
+- replace f\*\*k in template [`#46`](https://github.com/weiran-zsd/dts-cli/pull/46)
 - Add prettier to template [`#45`](https://github.com/weiran-zsd/dts-cli/pull/45)
 - Add tests and fixtures [`89c0470`](https://github.com/weiran-zsd/dts-cli/commit/89c0470fef6f664bf8a8ce4b7d233395f42f62f1)
 - Fix lint-staged and husky internally [`c4bd98b`](https://github.com/weiran-zsd/dts-cli/commit/c4bd98b1f4994b38f76973c698ff3e3c8170c38b)
