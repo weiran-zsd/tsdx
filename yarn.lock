@@ -2411,13 +2411,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/mri@npm:*":
-  version: 1.1.1
-  resolution: "@types/mri@npm:1.1.1"
-  checksum: aaec14ec6e3071eb71d54fe7e1f83bf839a9807007fcc344b91fbe18a2a085dec2dc7d769f487c6688b31a433dacda918b18a14282ffb7f9757de4d055259980
-  languageName: node
-  linkType: hard
-
 "@types/node@npm:*":
   version: 17.0.8
   resolution: "@types/node@npm:17.0.8"
@@ -2496,15 +2489,6 @@ __metadata:
     "@types/node": "*"
     rollup: ^0.63.4
   checksum: 8ff7dc994a0b4dfa02ac33313c8df030e982a0adb9c886ba72f7b04942db4d2efb9e94ccd0caad454441a9e10e2a26fcc5a370785987aa16cbea26f2703d99dd
-  languageName: node
-  linkType: hard
-
-"@types/sade@npm:^1.7.4":
-  version: 1.7.4
-  resolution: "@types/sade@npm:1.7.4"
-  dependencies:
-    "@types/mri": "*"
-  checksum: b706688c62c52f2adc3b2ce620667cbe6bb69d2da30df6d4381ce64cdecc593019b772357ad25f371debbd697107dc86b25fb533df88e281ad3bcfd0284cc162
   languageName: node
   linkType: hard
 
@@ -4818,7 +4802,6 @@ __metadata:
     "@types/node": ^16.11.19
     "@types/react": ^17.0.38
     "@types/rollup-plugin-json": ^3.0.3
-    "@types/sade": ^1.7.4
     "@types/semver": ^7.3.9
     "@types/shelljs": ^0.8.10
     "@types/styled-components": ^5.1.19
@@ -4877,7 +4860,7 @@ __metadata:
     rollup-plugin-sourcemaps: ^0.6.3
     rollup-plugin-terser: ^7.0.2
     rollup-plugin-typescript2: ^0.31.1
-    sade: 1.7.4
+    sade: ^1.8.1
     semver: ^7.3.5
     shelljs: ^0.8.4
     sort-package-json: ^1.53.1
@@ -10456,12 +10439,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sade@npm:1.7.4":
-  version: 1.7.4
-  resolution: "sade@npm:1.7.4"
+"sade@npm:^1.8.1":
+  version: 1.8.1
+  resolution: "sade@npm:1.8.1"
   dependencies:
     mri: ^1.1.0
-  checksum: 80a2c4ca086c25cdb62cb084a38a0cc72afc657ed4b1874d6e7b3fd0b7f748cf806567ece6d68f13e19d0ed1779cd226ca8c24d8fd7ae692bf09bff1e1966522
+  checksum: 0756e5b04c51ccdc8221ebffd1548d0ce5a783a44a0fa9017a026659b97d632913e78f7dca59f2496aa996a0be0b0c322afd87ca72ccd909406f49dbffa0f45d
   languageName: node
   linkType: hard
 
