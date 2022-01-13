@@ -27,13 +27,13 @@ describe('dts build :: types rollup', () => {
     expect(output.code).toBe(0);
   });
 
-  it('should not run by default', () => {
+  it('should not run by default and types should be output into the dist root', () => {
     const output = execWithCache('node ../dist/index.js build');
 
-    expect(shell.test('-f', 'dist/types/index.d.ts')).toBeTruthy();
+    expect(shell.test('-f', 'dist/index.d.ts')).toBeTruthy();
 
-    expect(shell.test('-f', 'dist/types/foo/foo.d.ts')).toBeTruthy();
-    expect(shell.test('-f', 'dist/types/bar/bar.d.ts')).toBeTruthy();
+    expect(shell.test('-f', 'dist/foo/foo.d.ts')).toBeTruthy();
+    expect(shell.test('-f', 'dist/bar/bar.d.ts')).toBeTruthy();
 
     expect(output.code).toBe(0);
   });

@@ -51,7 +51,8 @@ export async function createRollupConfig(
     .join('.');
 
   const tsCompilerOptions = typescriptCompilerOptions(opts.tsconfig);
-  const typesRollupEnabled = isTypesRollupEnabled(appPackageJson);
+  const typesRollupEnabled =
+    opts.rollupTypes && isTypesRollupEnabled(appPackageJson);
   const declarationDir =
     typescriptCompilerOptions(opts.tsconfig).declarationDir ||
     (typesRollupEnabled ? path.join('dist', 'types') : undefined);
