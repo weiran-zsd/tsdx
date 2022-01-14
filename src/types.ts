@@ -48,6 +48,8 @@ export interface DtsOptions extends SharedOpts {
   writeMeta?: boolean;
   // Only transpile, do not type check (makes compilation faster)
   transpileOnly?: boolean;
+  // Is rolling up types?
+  rollupTypes?: boolean;
 }
 
 export interface PackageJson {
