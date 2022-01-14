@@ -2024,17 +2024,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@release-it/conventional-changelog@npm:^3.3.0":
-  version: 3.3.0
-  resolution: "@release-it/conventional-changelog@npm:3.3.0"
+"@release-it/conventional-changelog@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "@release-it/conventional-changelog@npm:4.1.0"
   dependencies:
     concat-stream: ^2.0.0
-    conventional-changelog: ^3.1.24
+    conventional-changelog: ^3.1.25
     conventional-recommended-bump: ^6.1.0
     prepend-file: ^2.0.0
   peerDependencies:
-    release-it: ^14.11.5
-  checksum: af3d74e1715278926f9516822df23db444982e44622506012711675b1b5172617fabae977161c2bd8958cf12b190d0816e8a81ec7f11c82efbe7307cc2c53a3f
+    release-it: ^14.12.1
+  checksum: 7168a9eb60f0f8eeec5ce96f6c5d4de18aaf9047fdd1fe5e6c9a422e11e8b9ae72efe9e8847146c3f3f025eadc5259952510f24f594abccc10f7340d62b8171e
   languageName: node
   linkType: hard
 
@@ -4203,7 +4203,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"conventional-changelog@npm:^3.1.24":
+"conventional-changelog@npm:^3.1.25":
   version: 3.1.25
   resolution: "conventional-changelog@npm:3.1.25"
   dependencies:
@@ -4892,7 +4892,7 @@ __metadata:
     "@babel/traverse": ^7.16.8
     "@commitlint/cli": ^16.0.2
     "@commitlint/config-conventional": ^16.0.0
-    "@release-it/conventional-changelog": ^3.3.0
+    "@release-it/conventional-changelog": ^4.1.0
     "@rollup/plugin-babel": ^5.3.0
     "@rollup/plugin-commonjs": ^21.0.1
     "@rollup/plugin-json": ^4.1.0

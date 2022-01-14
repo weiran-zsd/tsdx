@@ -113,7 +113,7 @@
   "devDependencies": {
     "@commitlint/cli": "^16.0.2",
     "@commitlint/config-conventional": "^16.0.0",
-    "@release-it/conventional-changelog": "^3.3.0",
+    "@release-it/conventional-changelog": "^4.1.0",
     "@types/eslint": "^8.2.2",
     "@types/figlet": "^1.5.4",
     "@types/fs-extra": "^9.0.13",
