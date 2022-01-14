@@ -1,3 +1,10 @@
+### [1.1.6](https://github.com/weiran-zsd/dts-cli/compare/v1.1.5...v1.1.6) (2022-01-14)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([#110](https://github.com/weiran-zsd/dts-cli/issues/110)) ([f6a2915](https://github.com/weiran-zsd/dts-cli/commit/f6a2915c261fc7b95dc7b245b00850d822d77404))
+- types declaration default location ([#124](https://github.com/weiran-zsd/dts-cli/issues/124)) ([2d6931e](https://github.com/weiran-zsd/dts-cli/commit/2d6931e5018297597b8a065b254611bbb055f741))
+
 ### [1.1.5](https://github.com/weiran-zsd/dts-cli/compare/v1.1.4...v1.1.5) (2022-01-05)
 
 ### Bug Fixes
