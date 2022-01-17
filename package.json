@@ -31,7 +31,10 @@
     "trailingComma": "es5"
   },
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "moduleNameMapper":{
+      "^@/(.*)$": "<rootDir>/src/$1"
+    }
   },
   "engines": {
     "node": ">=12"
