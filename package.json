@@ -1,0 +1,59 @@
+{
+  "name": "t",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "weiran",
+  "main": "dist/index.js",
+  "module": "dist/t.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "analyze": "size-limit --why",
+    "build": "dts build",
+    "lint": "dts lint",
+    "prepare": "dts build",
+    "size": "size-limit",
+    "start": "dts watch",
+    "test": "dts test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "dts lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "size-limit": [
+    {
+      "path": "dist/t.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/t.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@rollup/plugin-alias": "^3.1.9",
+    "@size-limit/preset-small-lib": "^7.0.5",
+    "@tsconfig/recommended": "^1.0.1",
+    "dts-cli": "^1.1.6",
+    "husky": "^7.0.4",
+    "size-limit": "^7.0.5",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.4"
+  }
+}
