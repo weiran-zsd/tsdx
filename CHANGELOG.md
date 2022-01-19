@@ -1,3 +1,9 @@
+## [1.2.0](https://github.com/weiran-zsd/dts-cli/compare/v1.1.6...v1.2.0) (2022-01-19)
+
+### Features
+
+- add --no-husky flag ([#129](https://github.com/weiran-zsd/dts-cli/issues/129)) ([5a07aeb](https://github.com/weiran-zsd/dts-cli/commit/5a07aeb7bb632027193272f0a2ded468f9918642)), closes [#101](https://github.com/weiran-zsd/dts-cli/issues/101)
+
 ### [1.1.6](https://github.com/weiran-zsd/dts-cli/compare/v1.1.5...v1.1.6) (2022-01-14)
 
 ### Bug Fixes
