@@ -46,7 +46,7 @@ import {
 } from './types';
 import { createProgressEstimator } from './createProgressEstimator';
 import { templates } from './templates';
-import { composePackageJson } from './templates/utils';
+import { composeDependencies, composePackageJson } from './templates/utils';
 import * as deprecated from './deprecated';
 import sortPackageJson from 'sort-package-json';
 import { rollupTypes } from './rollupTypes';
@@ -112,6 +112,10 @@ prog
     )}]`
   )
   .example('create --template react mypackage')
+  .option('--husky', 'Should husky be added to the generated project?', true)
+  .example('create --husky mypackage')
+  .example('create --no-husky mypackage')
+  .example('create --husky false mypackage')
   .action(async (pkg: string, opts: any) => {
     console.log(
       chalk.cyan(figlet.textSync('DTS', { horizontalLayout: 'full' }))
@@ -213,7 +217,11 @@ prog
       // Install deps
       process.chdir(projectPath);
       const safeName = safePackageName(pkg);
-      const pkgJson = generatePackageJson({ name: safeName, author });
+      const pkgJson = generatePackageJson({
+        name: safeName,
+        author,
+        includeHuskyConfig: !!opts.husky,
+      });
 
       const nodeVersionReq = getNodeEngineRequirement(pkgJson);
       if (
@@ -237,12 +245,17 @@ prog
     }
 
     const templateConfig = templates[template as keyof typeof templates];
-    const { dependencies: deps } = templateConfig;
+    const generateDependencies = composeDependencies(templateConfig);
+    const dependencies = generateDependencies({
+      includeHusky: !!opts.husky,
+    });
 
-    const installSpinner = ora(Messages.installing(deps.sort())).start();
+    const installSpinner = ora(
+      Messages.installing(dependencies.sort())
+    ).start();
     try {
       const cmd = await getInstallCmd();
-      await execa(cmd, getInstallArgs(cmd, deps));
+      await execa(cmd, getInstallArgs(cmd, dependencies));
       installSpinner.succeed('Installed dependencies');
       console.log(await Messages.start(pkg));
     } catch (error) {
