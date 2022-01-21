@@ -1,6 +1,14 @@
 {
   "extends": ["config:base", ":dependencyDashboard", "group:allNonMajor"],
-  "ignorePaths": ["website/*", "docs/*", "./stage-*", "./test/*", "example/*", "templates/*" ],
+  "ignorePaths": [
+    "website/*",
+    "docs/*",
+    "./stage-*",
+    "./test/*",
+    "example/*",
+    "templates/*",
+    "conf/*"
+  ],
   "pin": false,
   "node": false,
   "rangeStrategy": "bump",
