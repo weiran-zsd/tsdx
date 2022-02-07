@@ -8,8 +8,8 @@ export function createJestConfig(
 ): JestConfigOptions {
   const config: JestConfigOptions = {
     transform: {
-      '.(ts|tsx)$': require.resolve('ts-jest/dist'),
-      '.(js|jsx)$': require.resolve('babel-jest'), // jest's default
+      '.(ts|tsx)$': 'ts-jest/dist',
+      '.(js|jsx)$': 'babel-jest', // jest's default
     },
     transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$'],
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
@@ -18,8 +18,8 @@ export function createJestConfig(
     testURL: 'http://localhost',
     rootDir,
     watchPlugins: [
-      require.resolve('jest-watch-typeahead/filename'),
-      require.resolve('jest-watch-typeahead/testname'),
+      'jest-watch-typeahead/filename',
+      'jest-watch-typeahead/testname',
     ],
   };
 
