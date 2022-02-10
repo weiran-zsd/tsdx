@@ -9,7 +9,8 @@ export const paths = {
   appErrorsJson: resolveApp('errors/codes.json'),
   appErrors: resolveApp('errors'),
   appDist: resolveApp('dist'),
-  appConfig: resolveApp('dts.config.js'),
+  appConfigJs: resolveApp('dts.config.js'),
+  appConfigTs: resolveApp('dts.config.ts'),
   jestConfig: resolveApp('jest.config.js'),
   progressEstimatorCache: resolveApp('node_modules/.cache/.progress-estimator'),
 };
