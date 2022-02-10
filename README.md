@@ -77,7 +77,7 @@ DTS comes with the "battery-pack included" and is part of a complete TypeScript 
 - Jest test runner setup with sensible defaults via `dts test`
 - ESLint with Prettier setup with sensible defaults via `dts lint`
 - Zero-config, single dependency
-- Escape hatches for customization via `.babelrc.js`, `jest.config.js`, `.eslintrc.js`, and `dts.config.js`
+- Escape hatches for customization via `.babelrc.js`, `jest.config.js`, `.eslintrc.js`, and `dts.config.js`/`dts.config.ts`
 
 ## Quick Start
 
@@ -336,7 +336,9 @@ DTS can automatically rollup TypeScript type definitions into a single `index.d.
 > **❗⚠️❗ Warning**: <br>
 > These modifications will override the default behavior and configuration of DTS. As such they can invalidate internal guarantees and assumptions. These types of changes can break internal behavior and can be very fragile against updates. Use with discretion!
 
-DTS uses Rollup under the hood. The defaults are solid for most packages (Formik uses the defaults!). However, if you do wish to alter the rollup configuration, you can do so by creating a file called `dts.config.js` at the root of your project like so:
+DTS uses Rollup under the hood. The defaults are solid for most packages (Formik uses the defaults!). However, if you do wish to alter the rollup configuration, you can do so by creating a file called `dts.config.js` (or `dts.config.ts`) at the root of your project like so:
+
+**dts.config.js**
 
 ```js
 // Not transpiled with TypeScript or Babel, so use plain Es6/Node.js!
@@ -348,10 +350,23 @@ module.exports = {
 };
 ```
 
+**dts.config.ts**
+
+```typescript
+import { DtsOptions, RollupOptions } from 'dts-cli';
+
+export default {
+  // This function will run for each entry/format/env combination
+  rollup(config: RollupOptions, options: DtsOptions) {
+    return config; // always return a config.
+  },
+};
+```
+
 The `options` object contains the following:
 
 ```tsx
-export interface TsdxOptions {
+export interface DtsOptions {
   // path to file
   input: string;
   // Name of package
