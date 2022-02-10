@@ -116,6 +116,7 @@
     "@commitlint/cli": "^16.1.0",
     "@commitlint/config-conventional": "^16.0.0",
     "@release-it/conventional-changelog": "^4.1.0",
+    "@types/cssnano": "^5.0.0",
     "@types/eslint": "^8.4.1",
     "@types/figlet": "^1.5.4",
     "@types/fs-extra": "^9.0.13",
