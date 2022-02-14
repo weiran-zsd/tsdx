@@ -1,3 +1,15 @@
+## [1.3.0](https://github.com/weiran-zsd/dts-cli/compare/v1.2.0...v1.3.0) (2022-02-14)
+
+### Features
+
+- add support for dts.config.ts ([#132](https://github.com/weiran-zsd/dts-cli/issues/132)) ([a5b4365](https://github.com/weiran-zsd/dts-cli/commit/a5b4365301eb092c756c93f1155daf4a8e5ced22)), closes [#128](https://github.com/weiran-zsd/dts-cli/issues/128)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([#125](https://github.com/weiran-zsd/dts-cli/issues/125)) ([e427ac8](https://github.com/weiran-zsd/dts-cli/commit/e427ac855fb075d300341a62ddfea63f892aef38))
+- **deps:** update dependency eslint-plugin-jest to v26 ([#130](https://github.com/weiran-zsd/dts-cli/issues/130)) ([af7c1cc](https://github.com/weiran-zsd/dts-cli/commit/af7c1cc4584b0c0f87c75b24b0c880f5628dbb5f))
+- rm reuqire.resolve('babel-jest') ([4768b77](https://github.com/weiran-zsd/dts-cli/commit/4768b77c0ad1e04e4d9e36d0b3e831a3f56be5a6))
+
 ## [1.2.0](https://github.com/weiran-zsd/dts-cli/compare/v1.1.6...v1.2.0) (2022-01-19)
 
 ### Features
