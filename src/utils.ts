@@ -51,3 +51,8 @@ export function getReactVersion({
 export function getNodeEngineRequirement({ engines }: PackageJson) {
   return engines && engines.node;
 }
+
+// copied from https://github.com/facebook/jest/blob/5b14366bf3726d48c67b1c6609764556052d909f/packages/jest-util/src/interopRequireDefault.ts#L10
+export function interopRequireDefault(obj: any): any {
+  return obj && obj.__esModule ? obj : { default: obj };
+}

@@ -6,6 +6,8 @@ import { paths } from './constants';
 import { DtsOptions, NormalizedOpts, PackageJson } from './types';
 
 import { createRollupConfig } from './createRollupConfig';
+import logError from './logError';
+import { interopRequireDefault } from './utils';
 
 // check for custom dts.config.js
 let dtsBuildConfig = {
@@ -14,8 +16,20 @@ let dtsBuildConfig = {
   },
 };
 
-if (fs.existsSync(paths.appConfig)) {
-  dtsBuildConfig = require(paths.appConfig);
+if (fs.existsSync(paths.appConfigTs)) {
+  try {
+    require('ts-node').register({
+      compilerOptions: {
+        module: 'CommonJS',
+      },
+    });
+    dtsBuildConfig = interopRequireDefault(require(paths.appConfigTs)).default;
+  } catch (error) {
+    logError(error);
+    process.exit(1);
+  }
+} else if (fs.existsSync(paths.appConfigJs)) {
+  dtsBuildConfig = require(paths.appConfigJs);
 }
 
 export async function createBuildConfigs(

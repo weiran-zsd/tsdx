@@ -655,3 +655,6 @@ prog
   );
 
 prog.parse(process.argv);
+
+export { RollupOptions } from 'rollup';
+export { DtsOptions } from './types';

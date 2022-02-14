@@ -2260,6 +2260,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/cssnano@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "@types/cssnano@npm:5.0.0"
+  dependencies:
+    postcss: ^8
+  checksum: 7d05401db3c419a0bdab9a2889e5a8568dca33b9fedb4cb0ba883d13d76f436cc99f0b25317630cd10d4f1700577a70b76e83a37684589e3541a05aa3b31662f
+  languageName: node
+  linkType: hard
+
 "@types/eslint@npm:^8.4.1":
   version: 8.4.1
   resolution: "@types/eslint@npm:8.4.1"
@@ -4843,6 +4852,7 @@ __metadata:
     "@rollup/plugin-json": ^4.1.0
     "@rollup/plugin-node-resolve": ^13.1.3
     "@rollup/plugin-replace": ^3.0.1
+    "@types/cssnano": ^5.0.0
     "@types/eslint": ^8.4.1
     "@types/figlet": ^1.5.4
     "@types/fs-extra": ^9.0.13
@@ -4918,6 +4928,7 @@ __metadata:
     tiny-invariant: ^1.2.0
     tiny-warning: ^1.0.3
     ts-jest: ^27.1.3
+    ts-node: ^10.5.0
     tslib: ^2.3.1
     type-fest: ^2.10.0
     typescript: ^4.5.5
@@ -8435,7 +8446,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nanoid@npm:^3.1.30":
+"nanoid@npm:^3.1.30, nanoid@npm:^3.2.0":
   version: 3.2.0
   resolution: "nanoid@npm:3.2.0"
   bin:
@@ -9575,6 +9586,17 @@ __metadata:
   version: 4.2.0
   resolution: "postcss-value-parser@npm:4.2.0"
   checksum: 819ffab0c9d51cf0acbabf8996dffbfafbafa57afc0e4c98db88b67f2094cb44488758f06e5da95d7036f19556a4a732525e84289a425f4f6fd8e412a9d7442f
+  languageName: node
+  linkType: hard
+
+"postcss@npm:^8":
+  version: 8.4.6
+  resolution: "postcss@npm:8.4.6"
+  dependencies:
+    nanoid: ^3.2.0
+    picocolors: ^1.0.0
+    source-map-js: ^1.0.2
+  checksum: 60e7808f39c4a9d0fa067bfd5eb906168c4eb6d3ff0093f7d314d1979b001a16363deedccd368a7df869c63ad4ae350d27da439c94ff3fb0f8fc93d49fe38a90
   languageName: node
   linkType: hard
 
@@ -10757,7 +10779,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-js@npm:^1.0.1":
+"source-map-js@npm:^1.0.1, source-map-js@npm:^1.0.2":
   version: 1.0.2
   resolution: "source-map-js@npm:1.0.2"
   checksum: c049a7fc4deb9a7e9b481ae3d424cc793cb4845daa690bc5a05d428bf41bf231ced49b4cf0c9e77f9d42fdb3d20d6187619fc586605f5eabe995a316da8d377c
@@ -11552,6 +11574,43 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ts-node@npm:^10.5.0":
+  version: 10.5.0
+  resolution: "ts-node@npm:10.5.0"
+  dependencies:
+    "@cspotcode/source-map-support": 0.7.0
+    "@tsconfig/node10": ^1.0.7
+    "@tsconfig/node12": ^1.0.7
+    "@tsconfig/node14": ^1.0.0
+    "@tsconfig/node16": ^1.0.2
+    acorn: ^8.4.1
+    acorn-walk: ^8.1.1
+    arg: ^4.1.0
+    create-require: ^1.1.0
+    diff: ^4.0.1
+    make-error: ^1.1.1
+    v8-compile-cache-lib: ^3.0.0
+    yn: 3.1.1
+  peerDependencies:
+    "@swc/core": ">=1.2.50"
+    "@swc/wasm": ">=1.2.50"
+    "@types/node": "*"
+    typescript: ">=2.7"
+  peerDependenciesMeta:
+    "@swc/core":
+      optional: true
+    "@swc/wasm":
+      optional: true
+  bin:
+    ts-node: dist/bin.js
+    ts-node-cwd: dist/bin-cwd.js
+    ts-node-script: dist/bin-script.js
+    ts-node-transpile-only: dist/bin-transpile.js
+    ts-script: dist/bin-script-deprecated.js
+  checksum: d51ac8a9b3582ce3705cef8d35f3372e40caa277dbd7c7baeb651961538f13d2f11f22402614348f78d9b10501bd1cb5f05ec4f2ec9a74bd0e288de769c32335
+  languageName: node
+  linkType: hard
+
 "ts-type@npm:^2.1.4":
   version: 2.1.4
   resolution: "ts-type@npm:2.1.4"
@@ -11988,6 +12047,13 @@ __metadata:
   bin:
     uuid: ./bin/uuid
   checksum: 58de2feed61c59060b40f8203c0e4ed7fd6f99d42534a499f1741218a1dd0c129f4aa1de797bcf822c8ea5da7e4137aa3673431a96dae729047f7aca7b27866f
+  languageName: node
+  linkType: hard
+
+"v8-compile-cache-lib@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "v8-compile-cache-lib@npm:3.0.0"
+  checksum: 674e312bbca796584b61dc915f33c7e7dc4e06d196e0048cb772c8964493a1ec723f1dd014d9419fd55c24a6eae148f60769da23f622e05cd13268063fa1ed6b
   languageName: node
   linkType: hard
 
