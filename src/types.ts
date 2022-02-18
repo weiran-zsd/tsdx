@@ -28,16 +28,21 @@ export interface WatchOpts extends BuildOpts {
 
 export interface NormalizedOpts
   extends Omit<WatchOpts, 'name' | 'input' | 'format'> {
-  name: string;
+  name: string | string[];
   input: string[];
   format: [ModuleFormat, ...ModuleFormat[]];
+  output: {
+    file: string[];
+  };
 }
+
+export type DtsOptionsInput = { [entryAlias: string]: string };
 
 export interface DtsOptions extends SharedOpts {
   // Name of package
   name: string;
   // path to file
-  input: string;
+  input: string | DtsOptionsInput;
   // Environment
   env: 'development' | 'production';
   // Module format

@@ -56,6 +56,7 @@ Despite all the recent hype, setting up a new TypeScript (x React) library can b
   - [`dts test`](#dts-test)
   - [`dts lint`](#dts-lint)
   - [`dts create`](#dts-create)
+  - [Multiple Entry Files](#multiple-entry-files)
 - [Contributing](#contributing)
 - [Author](#author)
 - [License](#license)
@@ -580,6 +581,23 @@ Examples
   $ dts create --no-husky mypackage
   $ dts create --husky false mypackage
 ```
+
+### Multiple Entry Files
+
+You can run `dts watch` or `dts build` with multiple entry files, for example:
+
+```shell
+dts build \
+  --entry src/index.ts \
+  --entry src/foo.ts \
+  --entry src/subdir/index.ts \
+  --entry src/globdir/**/*.ts
+```
+
+When given multiple entries, dts-cli will output separate bundles for each file for each format, as well as their
+declarations. Each file will be output to `dist/` with the same name it has in the `src/` directory. Entries in
+subdirectories of `src/` will be mapped to equivalently named subdirectories in `dist/`.
+dts-cli will also expand any globs.
 
 ## Contributing
 

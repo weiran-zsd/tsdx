@@ -1,9 +1,13 @@
-import { RollupOptions, OutputOptions } from 'rollup';
+import { RollupOptions } from 'rollup';
 import * as fs from 'fs-extra';
-import { concatAllArray } from 'jpjs';
 
 import { paths } from './constants';
-import { DtsOptions, NormalizedOpts, PackageJson } from './types';
+import {
+  DtsOptions,
+  DtsOptionsInput,
+  NormalizedOpts,
+  PackageJson,
+} from './types';
 
 import { createRollupConfig } from './createRollupConfig';
 import logError from './logError';
@@ -35,18 +39,14 @@ if (fs.existsSync(paths.appConfigTs)) {
 export async function createBuildConfigs(
   opts: NormalizedOpts,
   appPackageJson: PackageJson
-): Promise<Array<RollupOptions & { output: OutputOptions }>> {
-  const allInputs = concatAllArray(
-    opts.input.map((input: string) =>
-      createAllFormats(opts, input).map(
-        (options: DtsOptions, index: number) => ({
-          ...options,
-          // We want to know if this is the first run for each entryfile
-          // for certain plugins (e.g. css)
-          writeMeta: index === 0,
-        })
-      )
-    )
+): Promise<Array<RollupOptions>> {
+  const allInputs = createAllFormats(opts).map(
+    (options: DtsOptions, index: number) => ({
+      ...options,
+      // We want to know if this is the first run for each entryfile
+      // for certain plugins (e.g. css)
+      writeMeta: index === 0,
+    })
   );
 
   return await Promise.all(
@@ -58,47 +58,51 @@ export async function createBuildConfigs(
   );
 }
 
-function createAllFormats(
-  opts: NormalizedOpts,
-  input: string
-): [DtsOptions, ...DtsOptions[]] {
+function createAllFormats(opts: NormalizedOpts): [DtsOptions, ...DtsOptions[]] {
+  const sharedOpts: Omit<DtsOptions, 'format' | 'env'> = {
+    ...opts,
+    // for multi-entry, we use an input object to specify where to put each
+    // file instead of output.file
+    input: opts.input.reduce((dict: DtsOptionsInput, input, index) => {
+      dict[`${opts.output.file[index]}`] = input;
+      return dict;
+    }, {}),
+    // multiple UMD names aren't currently supported for multi-entry
+    // (can't code-split UMD anyway)
+    name: Array.isArray(opts.name) ? opts.name[0] : opts.name,
+  };
+
   return [
     opts.format.includes('cjs') && {
-      ...opts,
+      ...sharedOpts,
       format: 'cjs',
       env: 'development',
-      input,
     },
     opts.format.includes('cjs') && {
-      ...opts,
+      ...sharedOpts,
       format: 'cjs',
       env: 'production',
-      input,
     },
-    opts.format.includes('esm') && { ...opts, format: 'esm', input },
+    opts.format.includes('esm') && { ...sharedOpts, format: 'esm' },
     opts.format.includes('umd') && {
-      ...opts,
+      ...sharedOpts,
       format: 'umd',
       env: 'development',
-      input,
     },
     opts.format.includes('umd') && {
-      ...opts,
+      ...sharedOpts,
       format: 'umd',
       env: 'production',
-      input,
     },
     opts.format.includes('system') && {
-      ...opts,
+      ...sharedOpts,
       format: 'system',
       env: 'development',
-      input,
     },
     opts.format.includes('system') && {
-      ...opts,
+      ...sharedOpts,
       format: 'system',
       env: 'production',
-      input,
     },
   ].filter(Boolean) as [DtsOptions, ...DtsOptions[]];
 }
