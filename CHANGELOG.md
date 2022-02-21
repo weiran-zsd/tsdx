@@ -1,3 +1,9 @@
+## [1.4.0](https://github.com/weiran-zsd/dts-cli/compare/v1.3.0...v1.4.0) (2022-02-21)
+
+### Features
+
+- add support for multiple entry files ([#134](https://github.com/weiran-zsd/dts-cli/issues/134)) ([2651cd6](https://github.com/weiran-zsd/dts-cli/commit/2651cd63285d37cde3ec5006c4abaf6f18da63c0)), closes [#55](https://github.com/weiran-zsd/dts-cli/issues/55)
+
 ## [1.3.0](https://github.com/weiran-zsd/dts-cli/compare/v1.2.0...v1.3.0) (2022-02-14)
 
 ### Features
