@@ -1,0 +1,19 @@
+{
+  "extends": "@tsconfig/create-react-app/tsconfig.json",
+  "include": [
+    "src",
+    "types",
+    "stories"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@Components": [
+        "src/Components"
+      ],
+      "@Components/*": [
+        "src/Components/*"
+      ]
+    }
+  }
+}
