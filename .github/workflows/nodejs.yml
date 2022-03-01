@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Use Node 12.x
         uses: actions/setup-node@v3
         with:
@@ -46,7 +46,7 @@ jobs:
             node: "17.x"
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Use Node ${{ matrix.node }}
         uses: actions/setup-node@v3
         with:
