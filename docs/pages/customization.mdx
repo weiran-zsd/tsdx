@@ -9,10 +9,15 @@ name: Customization
 > **❗⚠️❗ Warning**: <br/>
 > These modifications will override the default behavior and configuration of DTS. As such they can invalidate internal guarantees and assumptions. These types of changes can break internal behavior and can be very fragile against updates. Use with discretion!
 
-DTS uses Rollup under the hood. The defaults are solid for most packages (Formik uses the defaults!). However, if you do wish to alter the rollup configuration, you can do so by creating a file called `dts.config.js` at the root of your project like so:
+DTS uses Rollup under the hood. The defaults are solid for most packages (Formik uses the defaults!). However, if you do wish to alter the rollup configuration, you can do so by creating a file called `dts.config.js` (or `dts.config.ts`) at the root of your project like so:
+
+**dts.config.js**
 
 ```js
 // Not transpiled with TypeScript or Babel, so use plain Es6/Node.js!
+/**
+ * @type {import('dts-cli').DtsConfig}
+ */
 module.exports = {
   // This function will run for each entry/format/env combination
   rollup(config, options) {
@@ -21,10 +26,35 @@ module.exports = {
 };
 ```
 
+or
+
+```js
+const defineConfig = require('dts-cli').defineConfig;
+
+module.exports = defineConfig({
+  // This function will run for each entry/format/env combination
+  rollup: (config, options) => {
+    return config; // always return a config.
+  },
+});
+```
+
+**dts.config.ts**
+
+```typescript
+import { defineConfig } from 'dts-cli';
+
+export default defineConfig({
+  rollup: (config, options) => {
+    return config; // always return a config.
+  },
+});
+```
+
 The `options` object contains the following:
 
 ```tsx
-export interface TsdxOptions {
+export interface DtsOptions {
   // path to file
   input: string;
   // Name of package

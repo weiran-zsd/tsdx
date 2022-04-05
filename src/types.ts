@@ -1,3 +1,5 @@
+import { RollupOptions } from 'rollup';
+
 interface SharedOpts {
   // JS target
   target: 'node' | 'browser';
@@ -69,4 +71,12 @@ export interface PackageJson {
   };
   types?: string;
   typings?: string;
+}
+
+export interface DtsConfig {
+  rollup?: (config: RollupOptions, options: DtsOptions) => RollupOptions;
+}
+
+export interface NormalizedDtsConfig extends DtsConfig {
+  rollup: (config: RollupOptions, options: DtsOptions) => RollupOptions;
 }
