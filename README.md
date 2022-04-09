@@ -343,6 +343,9 @@ DTS uses Rollup under the hood. The defaults are solid for most packages (Formik
 
 ```js
 // Not transpiled with TypeScript or Babel, so use plain Es6/Node.js!
+/**
+ * @type {import('dts-cli').DtsConfig}
+ */
 module.exports = {
   // This function will run for each entry/format/env combination
   rollup(config, options) {
@@ -351,17 +354,30 @@ module.exports = {
 };
 ```
 
+or
+
+```js
+const defineConfig = require('dts-cli').defineConfig;
+
+module.exports = defineConfig({
+  // This function will run for each entry/format/env combination
+  rollup: (config, options) => {
+    return config; // always return a config.
+  },
+});
+```
+
 **dts.config.ts**
 
 ```typescript
-import { DtsOptions, RollupOptions } from 'dts-cli';
+import { defineConfig } from 'dts-cli';
 
-export default {
+export default defineConfig({
   // This function will run for each entry/format/env combination
-  rollup(config: RollupOptions, options: DtsOptions) {
+  rollup: (config, options) => {
     return config; // always return a config.
   },
-};
+});
 ```
 
 The `options` object contains the following:

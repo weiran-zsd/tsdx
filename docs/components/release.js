@@ -8,7 +8,7 @@ const Release = (props) => {
     <Box>
       <Text fontWeight="bold" fontSize="3xl">
         #{' '}
-        <a href={url} target="_blank" rel="noopener">
+        <a href={url} target="_blank" rel="noopener noreferrer">
           {name}
         </a>
       </Text>

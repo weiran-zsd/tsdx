@@ -43,6 +43,8 @@ import {
   BuildOpts,
   ModuleFormat,
   NormalizedOpts,
+  DtsConfig,
+  DtsOptions,
 } from './types';
 import { createProgressEstimator } from './createProgressEstimator';
 import { templates } from './templates';
@@ -704,5 +706,8 @@ prog
 
 prog.parse(process.argv);
 
-export { RollupOptions } from 'rollup';
-export { DtsOptions } from './types';
+export const defineConfig = (config: DtsConfig) => {
+  return config;
+};
+
+export { DtsConfig, DtsOptions, RollupOptions };

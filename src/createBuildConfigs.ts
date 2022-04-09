@@ -1,10 +1,13 @@
 import { RollupOptions } from 'rollup';
 import * as fs from 'fs-extra';
+import chalk from 'chalk';
 
 import { paths } from './constants';
 import {
+  DtsConfig,
   DtsOptions,
   DtsOptionsInput,
+  NormalizedDtsConfig,
   NormalizedOpts,
   PackageJson,
 } from './types';
@@ -12,29 +15,7 @@ import {
 import { createRollupConfig } from './createRollupConfig';
 import logError from './logError';
 import { interopRequireDefault } from './utils';
-
-// check for custom dts.config.js
-let dtsBuildConfig = {
-  rollup(config: RollupOptions, _options: DtsOptions): RollupOptions {
-    return config;
-  },
-};
-
-if (fs.existsSync(paths.appConfigTs)) {
-  try {
-    require('ts-node').register({
-      compilerOptions: {
-        module: 'CommonJS',
-      },
-    });
-    dtsBuildConfig = interopRequireDefault(require(paths.appConfigTs)).default;
-  } catch (error) {
-    logError(error);
-    process.exit(1);
-  }
-} else if (fs.existsSync(paths.appConfigJs)) {
-  dtsBuildConfig = require(paths.appConfigJs);
-}
+import { configDefaults } from './defaults';
 
 export async function createBuildConfigs(
   opts: NormalizedOpts,
@@ -48,6 +29,9 @@ export async function createBuildConfigs(
       writeMeta: index === 0,
     })
   );
+
+  // check for custom dts.config.ts/dts.config.js
+  const dtsBuildConfig: NormalizedDtsConfig = getNormalizedDtsConfig();
 
   return await Promise.all(
     allInputs.map(async (options: DtsOptions, index: number) => {
@@ -105,4 +89,65 @@ function createAllFormats(opts: NormalizedOpts): [DtsOptions, ...DtsOptions[]] {
       env: 'production',
     },
   ].filter(Boolean) as [DtsOptions, ...DtsOptions[]];
+}
+
+function getNormalizedDtsConfig(): NormalizedDtsConfig {
+  const dtsConfig = getDtsConfig();
+
+  if (!dtsConfig.rollup) {
+    console.log(
+      chalk.yellow(
+        'rollup configuration not provided. Using default no-op configuration.'
+      )
+    );
+  }
+
+  return {
+    ...dtsConfig,
+    rollup: dtsConfig.rollup ?? configDefaults.rollup,
+  };
+}
+
+function getDtsConfig(): DtsConfig {
+  // check for custom dts.config.js
+  let dtsConfig: any = configDefaults;
+
+  if (fs.existsSync(paths.appConfigTs)) {
+    dtsConfig = loadDtsConfigTs();
+  } else if (fs.existsSync(paths.appConfigJs)) {
+    dtsConfig = loadDtsConfigJs();
+  }
+
+  return isDtsConfig(dtsConfig) ? dtsConfig : configDefaults;
+}
+
+// This can return undefined if they don't export anything in
+// dts.config.ts
+function loadDtsConfigTs(): DtsConfig | undefined {
+  try {
+    require('ts-node').register({
+      compilerOptions: {
+        module: 'CommonJS',
+      },
+    });
+    return interopRequireDefault(require(paths.appConfigTs)).default;
+  } catch (error) {
+    logError(error);
+    process.exit(1);
+  }
+}
+
+// This can return undefined if they don't export anything in
+// dts.config.js
+function loadDtsConfigJs(): DtsConfig | undefined {
+  // babel-node could easily be injected here if so desired.
+  return require(paths.appConfigJs);
+}
+
+function isDtsConfig(required: any): required is DtsConfig {
+  return isDefined(required) && isDefined(required);
+}
+
+function isDefined<T>(required: T | undefined | null): required is T {
+  return required !== null && required !== undefined;
 }

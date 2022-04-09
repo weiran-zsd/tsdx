@@ -1,4 +1,4 @@
-import { DtsOptions, RollupOptions } from '../dist';
+import { defineConfig } from '../dist';
 import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
 import postcss from 'rollup-plugin-postcss';
@@ -15,8 +15,8 @@ const getPlugins = () => {
   return plugins;
 };
 
-export default {
-  rollup(config: RollupOptions, options: DtsOptions) {
+export default defineConfig({
+  rollup: (config, options) => {
     config?.plugins?.push(
       postcss({
         plugins: getPlugins(),
@@ -27,4 +27,4 @@ export default {
     );
     return config;
   },
-};
+});
