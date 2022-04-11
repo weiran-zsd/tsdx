@@ -1,4 +1,12 @@
-## [1.4.0](https://github.com/weiran-zsd/dts-cli/compare/v1.3.0...v1.4.0) (2022-02-21)
+## [1.5.0](https://github.com/weiran-zsd/dts-cli/compare/v1.4.0...v1.5.0) (2022-04-11)
+
+### Features
+
+- add defineConfig function in dts-cli ([#142](https://github.com/weiran-zsd/dts-cli/issues/142)) ([0b3b2dd](https://github.com/weiran-zsd/dts-cli/commit/0b3b2ddd5943b123bc9524fe5fb9fbf2ccff83d3))
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([#133](https://github.com/weiran-zsd/dts-cli/issues/133)) ([f16c85d](https://github.com/weiran-zsd/dts-cli/commit/f16c85d23cf329835ecf2e2eea9965676f902591))## [1.4.0](https://github.com/weiran-zsd/dts-cli/compare/v1.3.0...v1.4.0) (2022-02-21)
 
 ### Features
 
