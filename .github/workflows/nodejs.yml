@@ -10,15 +10,15 @@ jobs:
   lint-and-dedupe:
     runs-on: ubuntu-latest
 
-    name: Lint & Deduplicate deps on node 12.x and ubuntu-latest
+    name: Lint & Deduplicate deps on node 16.x and ubuntu-latest
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-      - name: Use Node 12.x
+      - name: Use Node 16.x
         uses: actions/setup-node@v3
         with:
-          node-version: 12.x
+          node-version: 16.x
 
       - name: Install deps and build (with cache)
         run: yarn install && yarn build
@@ -26,8 +26,8 @@ jobs:
       - name: Lint codebase
         run: yarn lint:post-build
 
-#       - name: Deduplicate dependencies
-#         run: yarn deduplicate:check
+  #       - name: Deduplicate dependencies
+  #         run: yarn deduplicate:check
 
   test:
     name: Test on Node ${{ matrix.node }} and ${{ matrix.os }}
@@ -35,17 +35,17 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node: ["16.x"]
+        node: ['16.x']
         os: [ubuntu-latest, windows-latest, macOS-latest]
         include:
           - os: ubuntu-latest
-            node: "12.x"
+            node: '12.x'
           - os: ubuntu-latest
-            node: "14.x"
+            node: '14.x'
           - os: ubuntu-latest
-            node: "17.x"
+            node: '17.x'
           - os: ubuntu-latest
-            node: "18.x"
+            node: '18.x'
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -56,7 +56,6 @@ jobs:
 
       - name: Install deps and build (with cache)
         run: yarn install && yarn build
-
 
       - name: Test package
         run: yarn test:post-build
