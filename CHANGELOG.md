@@ -1,3 +1,9 @@
+### [1.5.1](https://github.com/weiran-zsd/dts-cli/compare/v1.5.0...v1.5.1) (2022-04-21)
+
+### Bug Fixes
+
+- dts lint --write-file ([bc3c10d](https://github.com/weiran-zsd/dts-cli/commit/bc3c10d0d3ff99564132c1eba34c4478bf6b779e)), closes [#148](https://github.com/weiran-zsd/dts-cli/issues/148)
+
 ## [1.5.0](https://github.com/weiran-zsd/dts-cli/compare/v1.4.0...v1.5.0) (2022-04-11)
 
 ### Features
