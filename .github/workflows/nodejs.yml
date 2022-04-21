@@ -21,13 +21,10 @@ jobs:
           node-version: 16.x
 
       - name: Install deps and build (with cache)
-        run: yarn install && yarn build
+        run: npm install && npm run build
 
       - name: Lint codebase
-        run: yarn lint:post-build
-
-  #       - name: Deduplicate dependencies
-  #         run: yarn deduplicate:check
+        run: npm run lint:post-build
 
   test:
     name: Test on Node ${{ matrix.node }} and ${{ matrix.os }}
@@ -55,7 +52,7 @@ jobs:
           node-version: ${{ matrix.node }}
 
       - name: Install deps and build (with cache)
-        run: yarn install && yarn build
+        run: npm install && npm run build
 
       - name: Test package
-        run: yarn test:post-build
+        run: npm run test:post-build
