@@ -19,6 +19,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
+      - name: npm latest
+        run: npm i -g npm@latest
 
       - name: Install deps and build (with cache)
         run: npm install && npm run build
@@ -50,6 +52,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
+
+      - name: npm latest
+        run: npm i -g npm@latest
 
       - name: Install deps and build (with cache)
         run: npm install && npm run build
