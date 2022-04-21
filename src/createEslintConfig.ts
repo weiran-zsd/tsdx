@@ -36,9 +36,7 @@ export async function createEslintConfig({
   const file = path.join(rootDir, '.eslintrc.js');
   // if the path is an abs path(e.g. "/Users/user/my-project/.eslintrc.js"),
   // need to convert a rel path to app root.
-  config.extends = config.extends.map((it) =>
-    /^\//u.test(it) ? path.relative(rootDir, it) : it
-  );
+  config.extends[0] = './' + path.relative(rootDir, config.extends[0]);
   try {
     await fs.writeFile(
       file,
