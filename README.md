@@ -31,6 +31,7 @@ Despite all the recent hype, setting up a new TypeScript (x React) library can b
   - [`npm test` or `yarn test`](#npm-test-or-yarn-test)
   - [`npm run lint` or `yarn lint`](#npm-run-lint-or-yarn-lint)
   - [`prepare` script](#prepare-script)
+- [Setting up VSCode](#setting-up-vscode)
 - [Optimizations](#optimizations)
   - [Development-only Expressions + Treeshaking](#development-only-expressions--treeshaking)
     - [Rollup Treeshaking](#rollup-treeshaking)
@@ -120,6 +121,10 @@ If you want to customize eslint you can add an `eslint` block to your package.js
 
 Bundles and packages to the `dist` folder.
 Runs automatically when you run either `npm publish` or `yarn publish`. The `prepare` script will run the equivalent of `npm run build` or `yarn build`. It will also be run if your module is installed as a git dependency (ie: `"mymodule": "github:myuser/mymodule#some-branch"`) so it can be depended on without checking the transpiled code into git.
+
+## Setting up VSCode
+
+By default the eslint VSCode extension won't work, since it can't find the configuration file needed in order to start the eslint server. Run `npm run lint --write-file` in order to write the config file in the correct location.
 
 ## Optimizations
 
