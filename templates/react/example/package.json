@@ -17,8 +17,8 @@
     "scheduler/tracing": "../node_modules/scheduler/tracing-profiling"
   },
   "devDependencies": {
-    "@types/react": "^17.0.40",
-    "@types/react-dom": "^17.0.13",
+    "@types/react": "^17.0.44",
+    "@types/react-dom": "^17.0.15",
     "vite": "latest",
     "vite-preset-react": "latest",
     "typescript": "^4"
