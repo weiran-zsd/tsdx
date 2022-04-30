@@ -115,7 +115,7 @@
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
-    "@release-it/conventional-changelog": "^4.3.0",
+    "@release-it/conventional-changelog": "^5.0.0",
     "@types/cssnano": "^5.0.0",
     "@types/eslint": "^8.4.1",
     "@types/figlet": "^1.5.4",
