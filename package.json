@@ -140,7 +140,7 @@
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-is": "^16.13.1",
-    "release-it": "^14.14.2",
+    "release-it": "^15.0.0",
     "rollup-plugin-postcss": "^4.0.2",
     "styled-components": "^5.3.5",
     "tiny-invariant": "^1.2.0",
