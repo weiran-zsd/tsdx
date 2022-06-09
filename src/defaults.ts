@@ -1,5 +1,5 @@
 import { NormalizedDtsConfig } from './types';
 
 export const configDefaults: NormalizedDtsConfig = Object.freeze({
-  rollup: (config) => config,
+  rollup: (config: any) => config,
 });
