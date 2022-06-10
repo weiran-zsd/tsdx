@@ -62,7 +62,7 @@ describe('dts build :: zero-config defaults', () => {
     const output = execWithCache('node ../dist/index.js build');
     expect(output.code).toBe(0);
 
-    const matched = grep(/regeneratorRuntime = r/, ['dist/build-default.*.js']);
+    const matched = grep(/regeneratorRuntime = /, ['dist/build-default.*.js']);
     expect(matched).toBeTruthy();
   });
 

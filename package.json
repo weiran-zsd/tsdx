@@ -23,16 +23,13 @@
   },
   "typings": "./dist/index.d.ts",
   "scripts": {
-    "prepare": "tsc -p tsconfig.json",
     "build": "tsc -p tsconfig.json",
-    "lint": "yarn build && yarn lint:post-build",
+    "lint": "npm run build && npm run lint:post-build",
     "lint:post-build": "node dist/index.js lint ./ --ignore-pattern 'test/e2e/fixtures/lint'",
-    "test": "yarn build && yarn test:post-build",
+    "test": "npm run build && npm run test:post-build",
     "test:post-build": "node dist/index.js test",
     "start": "tsc -p tsconfig.json --watch",
-    "release": "yarn test && release-it",
-    "deduplicate": "yarn dedupe",
-    "deduplicate:check": "yarn dedupe -c",
+    "release": "npm run test && release-it",
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable",
@@ -134,6 +131,7 @@
     "babel-plugin-replace-identifiers": "^0.1.1",
     "cssnano": "^5.1.7",
     "doctoc": "^2.1.0",
+    "dts-cli": "file:.",
     "husky": "^7.0.4",
     "lint-staged": "^12.4.0",
     "pinst": "^3.0.0",
@@ -180,6 +178,5 @@
     "*.{js,jsx,ts,tsx}": [
       "node dist/index.js lint --fix"
     ]
-  },
-  "packageManager": "yarn@3.2.0"
+  }
 }

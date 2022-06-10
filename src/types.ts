@@ -64,8 +64,8 @@ export interface PackageJson {
   source?: string;
   jest?: any;
   eslint?: any;
-  dependencies?: { [packageName: string]: string };
-  devDependencies?: { [packageName: string]: string };
+  dependencies?: { [packageName: string]: string | undefined };
+  devDependencies?: { [packageName: string]: string | undefined };
   engines?: {
     node?: string;
   };

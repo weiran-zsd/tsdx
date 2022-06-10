@@ -19,15 +19,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
+      - name: npm latest
+        run: npm i -g npm@latest
 
       - name: Install deps and build (with cache)
-        run: yarn install && yarn build
+        run: npm install && npm run build
 
       - name: Lint codebase
-        run: yarn lint:post-build
-
-  #       - name: Deduplicate dependencies
-  #         run: yarn deduplicate:check
+        run: npm run lint:post-build
 
   test:
     name: Test on Node ${{ matrix.node }} and ${{ matrix.os }}
@@ -54,8 +53,11 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
+      - name: npm latest
+        run: npm i -g npm@latest
+
       - name: Install deps and build (with cache)
-        run: yarn install && yarn build
+        run: npm install && npm run build
 
       - name: Test package
-        run: yarn test:post-build
+        run: npm run test:post-build
