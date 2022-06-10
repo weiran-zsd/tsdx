@@ -20,10 +20,10 @@ Thanks for your interest in DTS! You are very welcome to contribute. If you are 
 1. Install the dependencies and build the TypeScript files to JavaScript:
 
    ```
-   yarn && yarn build
+   npm i && npm run build
    ```
 
-   > **Note:** you'll need to run `yarn build` any time you want to see your changes, or run `yarn watch` to leave it in watch mode.
+   > **Note:** you'll need to run `npm run build` any time you want to see your changes, or run `npm run watch` to leave it in watch mode.
 
 1. Make it so running `dts` anywhere will run your local dev version:
 
@@ -31,14 +31,14 @@ Thanks for your interest in DTS! You are very welcome to contribute. If you are 
    yarn link
    ```
 
-4) To use your local version when running `yarn build`/`yarn start`/`yarn test` in a DTS project, run this in the project:
+4) To use your local version when running `npm run build`/`npm start`/`npm test` in a DTS project, run this in the project:
 
    ```
-   yarn link dts-cli
+   npm link dts-cli
    ```
 
    You should see a success message: `success Using linked package for "dts".` The project will now use the locally linked version instead of a copy from `node_modules`.
 
 ## Submitting a PR
 
-Be sure to run `yarn test` before you make your PR to make sure you haven't broken anything.
+Be sure to run `npm test` before you make your PR to make sure you haven't broken anything.
