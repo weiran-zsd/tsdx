@@ -83,7 +83,7 @@
     "figlet": "^1.5.2",
     "fs-extra": "^10.1.0",
     "jest": "^27.4.7",
-    "jest-watch-typeahead": "^0.6.5",
+    "jest-watch-typeahead": "^1.1.0",
     "jpjs": "^1.2.1",
     "lodash.merge": "^4.6.2",
     "ora": "^5.4.1",
