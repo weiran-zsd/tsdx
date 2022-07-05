@@ -289,9 +289,12 @@ prog
       Messages.installing(dependencies.sort())
     ).start();
     try {
+      await execa('git', ['init']);
+      await execa('git', ['add', '.']);
       const cmd = await getInstallCmd();
       await execa(cmd, getInstallArgs(cmd, dependencies));
       installSpinner.succeed('Installed dependencies');
+      await execa('git', ['commit', '-m', 'feat: first commit(by dts)']);
       console.log(await Messages.start(pkg));
     } catch (error) {
       installSpinner.fail('Failed to install dependencies');
