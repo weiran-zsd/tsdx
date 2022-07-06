@@ -1,5 +1,5 @@
 [![NPM version](https://img.shields.io/npm/v/dts-cli.svg?style=flat)](https://npmjs.org/package/dts-cli)
-[![Downloads/month](https://img.shields.io/npm/dm/dts-cli.svg)](http://www.npmtrends.com/eslint-plugin-dts-cli)
+[![Downloads/month](https://img.shields.io/npm/dm/dts-cli.svg)](http://www.npmtrends.com/dts-cli)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
 > a fork of the official tsdx.
