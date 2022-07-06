@@ -1,3 +1,11 @@
+### [1.5.2](https://github.com/weiran-zsd/dts-cli/compare/v1.5.1...v1.5.2) (2022-07-06)
+
+### Bug Fixes
+
+- **deps:** update all non-major dependencies ([#140](https://github.com/weiran-zsd/dts-cli/issues/140)) ([4d47de7](https://github.com/weiran-zsd/dts-cli/commit/4d47de7c45a16eee43502fe4c79a2524a147ec81))
+- **deps:** update all non-major dependencies ([#153](https://github.com/weiran-zsd/dts-cli/issues/153)) ([628d790](https://github.com/weiran-zsd/dts-cli/commit/628d790b403c44919acab32bc034d1b86992c175))
+- run `git init` when creating a new lib ([5b9aee7](https://github.com/weiran-zsd/dts-cli/commit/5b9aee76b5ac339aec5f0911f79357dbe6a8d589))
+
 ### [1.5.1](https://github.com/weiran-zsd/dts-cli/compare/v1.5.0...v1.5.1) (2022-04-21)
 
 ### Bug Fixes

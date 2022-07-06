@@ -1,6 +1,6 @@
 {
   "name": "dts-cli",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "author": "唯然<weiran.zsd@outlook.com>",
   "description": "Zero-config TypeScript package development",
   "license": "MIT",
