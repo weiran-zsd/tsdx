@@ -124,7 +124,7 @@ Runs automatically when you run either `npm publish` or `yarn publish`. The `pre
 
 ## Setting up VSCode
 
-By default the eslint VSCode extension won't work, since it can't find the configuration file needed in order to start the eslint server. Run `npm run lint --write-file` in order to write the config file in the correct location.
+By default the eslint VSCode extension won't work, since it can't find the configuration file needed in order to start the eslint server. Run `npm run lint -- --write-file` in order to write the config file in the correct location.
 
 ## Optimizations
 
