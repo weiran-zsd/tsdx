@@ -25,7 +25,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "lint": "npm run build && npm run lint:post-build",
-    "lint:post-build": "node dist/index.js lint ./ --ignore-pattern 'test/e2e/fixtures/lint'",
+    "lint:post-build": "node dist/index.js lint ./ --ignore-pattern 'test/e2e/fixtures/'",
     "test": "npm run build && npm run test:post-build",
     "test:post-build": "node dist/index.js test",
     "start": "tsc -p tsconfig.json --watch",
