@@ -116,6 +116,8 @@ function getDtsConfig(): DtsConfig {
     dtsConfig = loadDtsConfigTs();
   } else if (fs.existsSync(paths.appConfigJs)) {
     dtsConfig = loadDtsConfigJs();
+  } else if (fs.existsSync(paths.appConfigCjs)) {
+    dtsConfig = loadDtsConfigCjs(); 
   }
 
   return isDtsConfig(dtsConfig) ? dtsConfig : configDefaults;
@@ -142,6 +144,10 @@ function loadDtsConfigTs(): DtsConfig | undefined {
 function loadDtsConfigJs(): DtsConfig | undefined {
   // babel-node could easily be injected here if so desired.
   return require(paths.appConfigJs);
+}
+
+function loadDtsConfigCjs(): DtsConfig | undefined {
+  return require(paths.appConfigCjs); 
 }
 
 function isDtsConfig(required: any): required is DtsConfig {
