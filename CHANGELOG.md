@@ -1,3 +1,9 @@
+## [1.6.0](https://github.com/weiran-zsd/dts-cli/compare/v1.5.2...v1.6.0) (2022-08-15)
+
+### Features
+
+- Add Ability to use cjs file extenstion for config file ([#169](https://github.com/weiran-zsd/dts-cli/issues/169)) ([15929a3](https://github.com/weiran-zsd/dts-cli/commit/15929a3087d380b314bfb45e74601f9c8caa3f12))
+
 ### [1.5.2](https://github.com/weiran-zsd/dts-cli/compare/v1.5.1...v1.5.2) (2022-07-06)
 
 ### Bug Fixes
