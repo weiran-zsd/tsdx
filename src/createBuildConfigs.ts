@@ -117,7 +117,7 @@ function getDtsConfig(): DtsConfig {
   } else if (fs.existsSync(paths.appConfigJs)) {
     dtsConfig = loadDtsConfigJs();
   } else if (fs.existsSync(paths.appConfigCjs)) {
-    dtsConfig = loadDtsConfigCjs(); 
+    dtsConfig = loadDtsConfigCjs();
   }
 
   return isDtsConfig(dtsConfig) ? dtsConfig : configDefaults;
@@ -147,7 +147,7 @@ function loadDtsConfigJs(): DtsConfig | undefined {
 }
 
 function loadDtsConfigCjs(): DtsConfig | undefined {
-  return require(paths.appConfigCjs); 
+  return require(paths.appConfigCjs);
 }
 
 function isDtsConfig(required: any): required is DtsConfig {
