@@ -11,6 +11,7 @@ export const paths = {
   appDist: resolveApp('dist'),
   appConfigJs: resolveApp('dts.config.js'),
   appConfigTs: resolveApp('dts.config.ts'),
+  appConfigCjs: resolveApp('dts.config.cjs'),
   jestConfig: resolveApp('jest.config.js'),
   progressEstimatorCache: resolveApp('node_modules/.cache/.progress-estimator'),
 };
