@@ -1,3 +1,9 @@
+### [1.6.1](https://github.com/weiran-zsd/dts-cli/compare/v1.6.0...v1.6.1) (2022-12-22)
+
+### Bug Fixes
+
+- upgrade non-major deps ([b90cc74](https://github.com/weiran-zsd/dts-cli/commit/b90cc74fdfa95becb627170903a41723a40076d7))
+
 ## [1.6.0](https://github.com/weiran-zsd/dts-cli/compare/v1.5.2...v1.6.0) (2022-08-15)
 
 ### Features
