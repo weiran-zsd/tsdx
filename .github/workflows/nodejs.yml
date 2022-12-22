@@ -10,15 +10,15 @@ jobs:
   lint-and-dedupe:
     runs-on: ubuntu-latest
 
-    name: Lint & Deduplicate deps on node 16.x and ubuntu-latest
+    name: Lint & Deduplicate deps on node 18.x and ubuntu-latest
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-      - name: Use Node 16.x
+      - name: Use Node 18.x
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 18.x
       - name: npm latest
         run: npm i -g npm@latest
 
@@ -34,17 +34,15 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node: ['16.x']
+        node: ['18.x']
         os: [ubuntu-latest, windows-latest, macOS-latest]
         include:
           - os: ubuntu-latest
-            node: '12.x'
-          - os: ubuntu-latest
             node: '14.x'
           - os: ubuntu-latest
-            node: '17.x'
+            node: '16.x'
           - os: ubuntu-latest
-            node: '18.x'
+            node: '19.x'
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
