@@ -1,3 +1,9 @@
+### [1.6.2](https://github.com/weiran-zsd/dts-cli/compare/v1.6.1...v1.6.2) (2022-12-22)
+
+### Bug Fixes
+
+- revert node v12 support ([90105e6](https://github.com/weiran-zsd/dts-cli/commit/90105e68a2ee48023d0db74fc2d46e911f0362df))
+
 ### [1.6.1](https://github.com/weiran-zsd/dts-cli/compare/v1.6.0...v1.6.1) (2022-12-22)
 
 ### Bug Fixes
