@@ -41,7 +41,7 @@
     "conf"
   ],
   "engines": {
-    "node": ">=12.0.0"
+    "node": "^14.18.0 || >=16.0.0"
   },
   "dependencies": {
     "@babel/core": "^7.20.5",
