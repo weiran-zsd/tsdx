@@ -1,3 +1,9 @@
+### [1.6.3](https://github.com/weiran-zsd/dts-cli/compare/v1.6.2...v1.6.3) (2022-12-23)
+
+### Bug Fixes
+
+- mv [@typescript-eslint](https://github.com/typescript-eslint) to deps (fixes [#180](https://github.com/weiran-zsd/dts-cli/issues/180)) ([636c5e7](https://github.com/weiran-zsd/dts-cli/commit/636c5e722f54a02d89ad8a0b511e0d351aaf8607))
+
 ### [1.6.2](https://github.com/weiran-zsd/dts-cli/compare/v1.6.1...v1.6.2) (2022-12-22)
 
 ### Bug Fixes
