@@ -9,7 +9,7 @@ import replace from '@rollup/plugin-replace';
 import resolve, {
   DEFAULTS as RESOLVE_DEFAULTS,
 } from '@rollup/plugin-node-resolve';
-import sourceMaps from 'rollup-plugin-sourcemaps';
+// import sourceMaps from 'rollup-plugin-sourcemaps';
 import typescript from 'rollup-plugin-typescript2';
 import ts from 'typescript';
 import path from 'path';
@@ -207,7 +207,9 @@ export async function createRollupConfig(
           'process.env.NODE_ENV': JSON.stringify(opts.env),
           preventAssignment: true,
         }),
-      sourceMaps(),
+      // removed as it does not support rollup v3 yet.
+      // TODO: we could move to babel's inputSourceMap option(as it is supported in its readme)
+      // sourceMaps(),
       shouldMinify &&
         terser({
           output: { comments: false },
