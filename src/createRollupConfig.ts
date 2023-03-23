@@ -1,7 +1,7 @@
 import { safeVariableName, external } from './utils';
 import { paths } from './constants';
 import { RollupOptions } from 'rollup';
-import { terser } from 'rollup-plugin-terser';
+import terser from '@rollup/plugin-terser';
 import { DEFAULT_EXTENSIONS as DEFAULT_BABEL_EXTENSIONS } from '@babel/core';
 import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
@@ -111,6 +111,7 @@ export async function createRollupConfig(
     },
     plugins: [
       !!opts.extractErrors && {
+        name: 'error-extractor',
         async transform(source: any) {
           await findAndRecordErrorCodes(source);
           return source;
@@ -134,6 +135,7 @@ export async function createRollupConfig(
       }),
       json(),
       {
+        name: 'shebang',
         // Custom plugin that removes shebang from code because newer
         // versions of bublé bundle their own private version of `acorn`
         // and I don't know a way to patch in the option `allowHashBang`
@@ -216,7 +218,6 @@ export async function createRollupConfig(
           },
           ecma: 5,
           toplevel: opts.format === 'cjs',
-          warnings: true,
         }),
     ],
   };

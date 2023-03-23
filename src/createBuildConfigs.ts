@@ -131,6 +131,7 @@ function loadDtsConfigTs(): DtsConfig | undefined {
       compilerOptions: {
         module: 'CommonJS',
       },
+      transpileOnly: true, // skip type checking
     });
     return interopRequireDefault(require(paths.appConfigTs)).default;
   } catch (error) {
