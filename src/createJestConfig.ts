@@ -15,7 +15,7 @@ export function createJestConfig(
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
     collectCoverageFrom: ['src/**/*.{ts,tsx,js,jsx}'],
     testMatch: ['<rootDir>/**/*.(spec|test).{ts,tsx,js,jsx}'],
-    testURL: 'http://localhost',
+    testEnvironmentOptions: { testURL: 'http://localhost' },
     rootDir,
     watchPlugins: [
       'jest-watch-typeahead/filename',
