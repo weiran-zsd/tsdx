@@ -11,7 +11,7 @@ const reactTemplate: Template = {
     '@types/react-dom',
     'react',
     'react-dom',
-    '@tsconfig/create-react-app',
+    '@tsconfig/vite-react',
   ],
   packageJson: {
     ...basicTemplate.packageJson,
