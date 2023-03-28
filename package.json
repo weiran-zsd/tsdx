@@ -30,6 +30,7 @@
     "test:post-build": "node dist/index.js test",
     "start": "tsc -p tsconfig.json --watch",
     "release": "npm run test && release-it",
+    "release:beta": "npm run test && release-it major --preRelease=beta",
     "doctoc": "doctoc README.md",
     "prepare": "husky install"
   },
