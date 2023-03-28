@@ -65,7 +65,7 @@
     "babel-plugin-macros": "^3.1.0",
     "babel-plugin-polyfill-regenerator": "^0.3.1",
     "babel-plugin-transform-rename-import": "^2.3.0",
-    "camelcase": "^6.3.0",
+    "camelcase": "^7.0.1",
     "chalk": "^4.1.2",
     "confusing-browser-globals": "^1.0.11",
     "enquirer": "^2.3.6",
