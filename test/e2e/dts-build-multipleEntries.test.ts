@@ -19,9 +19,9 @@ describe('dts build :: multiple entries', () => {
     const output = execWithCache(
       [
         'node ../dist/index.js build',
-        '--entry src/index.ts',
-        '--entry src/returnsFalse.ts',
-        '--entry src/returnsTrue.ts',
+        '--entry ./src/index.ts',
+        '--entry ./src/returnsFalse.ts',
+        '--entry ./src/returnsTrue.ts',
       ].join(' ')
     );
 

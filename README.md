@@ -609,10 +609,10 @@ You can run `dts watch` or `dts build` with multiple entry files, for example:
 
 ```shell
 dts build \
-  --entry src/index.ts \
-  --entry src/foo.ts \
-  --entry src/subdir/index.ts \
-  --entry src/globdir/**/*.ts
+  --entry ./src/index.ts \
+  --entry ./src/foo.ts \
+  --entry ./src/subdir/index.ts \
+  --entry ./src/globdir/**/*.ts
 ```
 
 When given multiple entries, dts-cli will output separate bundles for each file for each format, as well as their
