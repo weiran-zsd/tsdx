@@ -55,7 +55,7 @@
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-replace": "^5.0.2",
     "@rollup/plugin-terser": "^0.4.0",
-    "@types/jest": "^27.5.2",
+    "@types/jest": "^29.5.0",
     "@typescript-eslint/eslint-plugin": "^5.47.0",
     "@typescript-eslint/parser": "^5.47.0",
     "ansi-escapes": "^4.3.2",
