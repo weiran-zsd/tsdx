@@ -11,16 +11,11 @@
   "dependencies": {
     "react-app-polyfill": "^3.0.0"
   },
-  "alias": {
-    "react": "../node_modules/react",
-    "react-dom": "../node_modules/react-dom/profiling",
-    "scheduler/tracing": "../node_modules/scheduler/tracing-profiling"
-  },
   "devDependencies": {
     "@types/react": "^17.0.47",
     "@types/react-dom": "^17.0.17",
     "vite": "latest",
-    "vite-preset-react": "latest",
-    "typescript": "^4"
+    "@vitejs/plugin-react": "latest",
+    "typescript": "^5"
   }
 }
