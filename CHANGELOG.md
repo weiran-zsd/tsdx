@@ -1,3 +1,26 @@
+## [2.0.0-beta.0](https://github.com/weiran-zsd/dts-cli/compare/v1.6.3...v2.0.0-beta.0) (2023-03-28)
+
+### ⚠ BREAKING CHANGES
+
+- upgrade storybook v7
+- upgrade to rollup v3
+- upgrade to jest v29
+- upgrade to jest v28
+- drop node v12/v13/v14/v15/v17 support
+
+### Features
+
+- drop node v12/v13/v14/v15/v17 support ([38fbed3](https://github.com/weiran-zsd/dts-cli/commit/38fbed3425a219330ec20f50ce2076ab49999e6c))
+- upgrade storybook v7 ([b8cb417](https://github.com/weiran-zsd/dts-cli/commit/b8cb41714cc43214fb53c68abd9aac7dd4acbbd2))
+- upgrade to jest v28 ([15e5452](https://github.com/weiran-zsd/dts-cli/commit/15e5452f570a79a3f6757a01b9bbfb083b636341))
+- upgrade to jest v29 ([aa9018b](https://github.com/weiran-zsd/dts-cli/commit/aa9018bfe30c4fb85b1a926879bfa5191636e8e9))
+- upgrade to rollup v3 ([92c1d0d](https://github.com/weiran-zsd/dts-cli/commit/92c1d0deceeff1843870da5642fb5b446118aabf))
+
+### Bug Fixes
+
+- multi-entries should startwith './' to avoid error ([3ed4ec1](https://github.com/weiran-zsd/dts-cli/commit/3ed4ec1cfeb9e161e5b2b2255b3527e89e45b9ad))
+- remove rollup-plugin-sourcemaps ([23dcdae](https://github.com/weiran-zsd/dts-cli/commit/23dcdae13ab495002671cc2d1038caee9260b464))
+
 ### [1.6.3](https://github.com/weiran-zsd/dts-cli/compare/v1.6.2...v1.6.3) (2022-12-23)
 
 ### Bug Fixes
