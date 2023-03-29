@@ -5,7 +5,7 @@ export default function getInstallArgs(
   packages: string[]
 ) {
   // replace 'package#version' with 'package@version'
-  packages = packages.map(pkg => pkg.replace(/#/, '@'));
+  packages = packages.map((pkg) => pkg.replace(/#/, '@'));
 
   switch (cmd) {
     case 'npm':
