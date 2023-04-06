@@ -1,3 +1,5 @@
+## [2.0.0](https://github.com/weiran-zsd/dts-cli/compare/v2.0.0-beta.2...v2.0.0) (2023-04-06)
+
 ## [2.0.0-beta.2](https://github.com/weiran-zsd/dts-cli/compare/v2.0.0-beta.1...v2.0.0-beta.2) (2023-04-06)
 
 ### Bug Fixes
