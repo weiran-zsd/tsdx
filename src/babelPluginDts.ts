@@ -1,6 +1,7 @@
 import { createConfigItem } from '@babel/core';
 import { createBabelInputPluginFactory } from '@rollup/plugin-babel';
 import merge from 'lodash.merge';
+import { resolve } from './utils';
 
 export const isTruthy = (obj?: any) => {
   if (!obj) {
@@ -68,20 +69,20 @@ export const babelPluginDts = createBabelInputPluginFactory(() => ({
         //   pragma: customOptions.jsx || 'h',
         //   pragmaFrag: customOptions.jsxFragment || 'Fragment',
         // },
-        { name: 'babel-plugin-macros' },
-        { name: 'babel-plugin-annotate-pure-calls' },
-        { name: 'babel-plugin-dev-expression' },
+        { name: resolve('babel-plugin-macros') },
+        { name: resolve('babel-plugin-annotate-pure-calls') },
+        { name: resolve('babel-plugin-dev-expression') },
         customOptions.format !== 'cjs' && {
-          name: 'babel-plugin-transform-rename-import',
+          name: resolve('babel-plugin-transform-rename-import'),
           replacements,
         },
         {
-          name: 'babel-plugin-polyfill-regenerator',
+          name: resolve('babel-plugin-polyfill-regenerator'),
           // don't pollute global env as this is being used in a library
           method: 'usage-pure',
         },
         {
-          name: '@babel/plugin-proposal-class-properties',
+          name: resolve('@babel/plugin-proposal-class-properties'),
           loose: true,
         },
         isTruthy(customOptions.extractErrors) && {
@@ -122,7 +123,7 @@ export const babelPluginDts = createBabelInputPluginFactory(() => ({
       // if no preset-env, add it & merge with their presets
       const defaultPresets = createConfigItems('preset', [
         {
-          name: '@babel/preset-env',
+          name: resolve('@babel/preset-env'),
           targets: customOptions.targets,
           modules: false,
           loose: true,

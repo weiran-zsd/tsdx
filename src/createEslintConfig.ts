@@ -2,7 +2,8 @@ import fs from 'fs-extra';
 import path from 'path';
 import { Linter } from 'eslint';
 import { PackageJson } from './types';
-import { getReactVersion } from './utils';
+import { getReactVersion, resolve } from './utils';
+
 interface CreateEslintConfigArgs {
   pkg: PackageJson;
   rootDir: string;
@@ -18,7 +19,7 @@ export async function createEslintConfig({
   const config = {
     extends: [
       path.join(__dirname, '../conf/eslint-config-react-app/index.js'),
-      'prettier',
+      resolve('eslint-config-prettier'),
       'plugin:prettier/recommended',
     ],
     settings: {
@@ -37,6 +38,7 @@ export async function createEslintConfig({
   // if the path is an abs path(e.g. "/Users/user/my-project/.eslintrc.js"),
   // need to convert a rel path to app root.
   config.extends[0] = './' + path.relative(rootDir, config.extends[0]);
+  config.extends[1] = './' + path.relative(rootDir, config.extends[1]);
   try {
     await fs.writeFile(
       file,

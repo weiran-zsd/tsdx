@@ -1,4 +1,5 @@
 import { Config } from '@jest/types';
+import { resolve } from './utils';
 
 export type JestConfigOptions = Partial<Config.InitialOptions>;
 
@@ -8,8 +9,8 @@ export function createJestConfig(
 ): JestConfigOptions {
   const config: JestConfigOptions = {
     transform: {
-      '.(ts|tsx)$': 'ts-jest/dist',
-      '.(js|jsx)$': 'babel-jest', // jest's default
+      '.(ts|tsx)$': resolve('ts-jest'),
+      '.(js|jsx)$': resolve('babel-jest'), // jest's default
     },
     transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$'],
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],

@@ -56,3 +56,10 @@ export function getNodeEngineRequirement({ engines }: PackageJson) {
 export function interopRequireDefault(obj: any): any {
   return obj && obj.__esModule ? obj : { default: obj };
 }
+
+// resolve a module from where dts was installed
+// this is needed as some package managers failed to hoist the modules
+// e.g. https://github.com/weiran-zsd/dts-cli/issues/186
+export function resolve(mod: string) {
+  return require.resolve(mod, { paths: [__dirname] });
+}
