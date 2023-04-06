@@ -1,3 +1,9 @@
+## [2.0.0-beta.2](https://github.com/weiran-zsd/dts-cli/compare/v2.0.0-beta.1...v2.0.0-beta.2) (2023-04-06)
+
+### Bug Fixes
+
+- resolve plugins from dts-cli ([c5c0ca4](https://github.com/weiran-zsd/dts-cli/commit/c5c0ca49dc057ac08a45b4b6d93aff745c71809d)), closes [#186](https://github.com/weiran-zsd/dts-cli/issues/186)
+
 ## [2.0.0-beta.1](https://github.com/weiran-zsd/dts-cli/compare/v2.0.0-beta.0...v2.0.0-beta.1) (2023-04-06)
 
 ### Bug Fixes
