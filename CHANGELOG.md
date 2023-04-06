@@ -1,3 +1,9 @@
+## [2.0.0-beta.1](https://github.com/weiran-zsd/dts-cli/compare/v2.0.0-beta.0...v2.0.0-beta.1) (2023-04-06)
+
+### Bug Fixes
+
+- add deps jest-environment-jsdom ([8cca98d](https://github.com/weiran-zsd/dts-cli/commit/8cca98d93279957e7e01a4bec7067c15340203fa))
+
 ## [2.0.0-beta.0](https://github.com/weiran-zsd/dts-cli/compare/v1.6.3...v2.0.0-beta.0) (2023-03-28)
 
 ### ⚠ BREAKING CHANGES
