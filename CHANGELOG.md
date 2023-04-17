@@ -1,3 +1,10 @@
+### [2.0.1](https://github.com/weiran-zsd/dts-cli/compare/v2.0.0...v2.0.1) (2023-04-17)
+
+### Bug Fixes
+
+- tsconfig create-react-app => vite-react (fixes [#194](https://github.com/weiran-zsd/dts-cli/issues/194)) ([7101095](https://github.com/weiran-zsd/dts-cli/commit/71010957dc3e3d0268e3d179888e498daa7d0ecd))
+- update pkg.engines.node ([#193](https://github.com/weiran-zsd/dts-cli/issues/193)) ([c2992f8](https://github.com/weiran-zsd/dts-cli/commit/c2992f883d713cd7e75563ea215ff759b78bb77e))
+
 ## [2.0.0](https://github.com/weiran-zsd/dts-cli/compare/v2.0.0-beta.2...v2.0.0) (2023-04-06)
 
 ## [2.0.0-beta.2](https://github.com/weiran-zsd/dts-cli/compare/v2.0.0-beta.1...v2.0.0-beta.2) (2023-04-06)
