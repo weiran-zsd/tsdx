@@ -1,3 +1,9 @@
+### [2.0.2](https://github.com/weiran-zsd/dts-cli/compare/v2.0.1...v2.0.2) (2023-04-19)
+
+### Bug Fixes
+
+- duplicate "\_\_self" prop found (fixes [#187](https://github.com/weiran-zsd/dts-cli/issues/187)) ([2c16227](https://github.com/weiran-zsd/dts-cli/commit/2c16227cbc7175347b088d6f0d04304bd4cc9268))
+
 ### [2.0.1](https://github.com/weiran-zsd/dts-cli/compare/v2.0.0...v2.0.1) (2023-04-17)
 
 ### Bug Fixes
