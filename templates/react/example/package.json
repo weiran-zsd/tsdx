@@ -20,7 +20,7 @@
     "@types/react": "^18.0.31",
     "@types/react-dom": "^18.0.11",
     "vite": "latest",
-    "vite-preset-react": "latest",
+    "@vitejs/plugin-react": "latest",
     "typescript": "^4"
   }
 }

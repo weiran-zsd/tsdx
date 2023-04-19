@@ -1,11 +1,7 @@
 import { defineConfig } from 'vite';
-import ReactPlugin from 'vite-preset-react';
+import ReactPlugin from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    ReactPlugin({
-      injectReact: false,
-    }),
-  ],
+  plugins: [ReactPlugin({})],
 });
