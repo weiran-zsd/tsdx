@@ -33,6 +33,7 @@
 - upgrade to rollup v3
 - upgrade to jest v29
 - upgrade to jest v28
+- upgrade to typescript v5
 - drop node v12/v13/v14/v15/v17 support
 
 ### Features
