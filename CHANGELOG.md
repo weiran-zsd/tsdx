@@ -1,3 +1,9 @@
+### [2.0.3](https://github.com/weiran-zsd/dts-cli/compare/v2.0.2...v2.0.3) (2023-05-04)
+
+### Bug Fixes
+
+- add deps babel-jest (fixes [#197](https://github.com/weiran-zsd/dts-cli/issues/197)) ([a340b88](https://github.com/weiran-zsd/dts-cli/commit/a340b889302a180f83289d85be72a89f06ed2625))
+
 ### [2.0.2](https://github.com/weiran-zsd/dts-cli/compare/v2.0.1...v2.0.2) (2023-04-19)
 
 ### Bug Fixes
