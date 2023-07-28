@@ -10,7 +10,6 @@
     "conf/*"
   ],
   "pin": false,
-  "node": false,
   "rangeStrategy": "bump",
   "ignoreDeps": [
     "node",
