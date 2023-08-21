@@ -131,7 +131,7 @@
     "doctoc": "^2.2.1",
     "dts-cli": "file:.",
     "husky": "^8.0.0",
-    "lint-staged": "^12.5.0",
+    "lint-staged": "^14.0.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-is": "^16.13.1",
