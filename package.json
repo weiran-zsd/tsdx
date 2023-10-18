@@ -118,7 +118,7 @@
     "@types/figlet": "^1.5.5",
     "@types/fs-extra": "^9.0.13",
     "@types/lodash": "^4.14.191",
-    "@types/node": "^16.11.42",
+    "@types/node": "^18.18.6",
     "@types/react": "^18.0.31",
     "@types/rollup-plugin-json": "^3.0.3",
     "@types/semver": "^7.3.13",
