@@ -1,3 +1,9 @@
+### [2.0.4](https://github.com/weiran-zsd/dts-cli/compare/v2.0.3...v2.0.4) (2024-01-09)
+
+### Bug Fixes
+
+- tsconfig allowImportingTsExtensions=>false ([067b1a9](https://github.com/weiran-zsd/dts-cli/commit/067b1a96742aa47e8198d934914985757620500b)), closes [#208](https://github.com/weiran-zsd/dts-cli/issues/208)
+
 ### [2.0.3](https://github.com/weiran-zsd/dts-cli/compare/v2.0.2...v2.0.3) (2023-05-04)
 
 ### Bug Fixes
