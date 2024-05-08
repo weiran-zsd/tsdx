@@ -21,6 +21,7 @@
   "bin": {
     "dts": "./dist/index.js"
   },
+  "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc -p tsconfig.json",
