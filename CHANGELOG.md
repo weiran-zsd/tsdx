@@ -1,3 +1,10 @@
+### [2.0.5](https://github.com/weiran-zsd/dts-cli/compare/v2.0.4...v2.0.5) (2024-05-08)
+
+### Bug Fixes
+
+- add pkg.main (fixes [#211](https://github.com/weiran-zsd/dts-cli/issues/211)) ([457c657](https://github.com/weiran-zsd/dts-cli/commit/457c6573cabf50000ab7af76cd4eca0f825beedd))
+- **deps:** update all non-major dependencies ([#164](https://github.com/weiran-zsd/dts-cli/issues/164)) ([5df4cdf](https://github.com/weiran-zsd/dts-cli/commit/5df4cdf84d6b767f1bc51098506ad87d77a3a997))
+
 ### [2.0.4](https://github.com/weiran-zsd/dts-cli/compare/v2.0.3...v2.0.4) (2024-01-09)
 
 ### Bug Fixes
