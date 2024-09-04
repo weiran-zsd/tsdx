@@ -128,7 +128,7 @@
     "auto-changelog": "^2.4.0",
     "autoprefixer": "^10.4.19",
     "babel-plugin-replace-identifiers": "^0.1.1",
-    "cssnano": "^5.1.15",
+    "cssnano": "^7.0.6",
     "doctoc": "^2.2.1",
     "dts-cli": "file:.",
     "husky": "^8.0.3",
